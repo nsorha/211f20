@@ -41,46 +41,6 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -148,359 +108,476 @@ Finally, please note that I will be updating this book over the course of the se
 
 This work is licensed under a Creative Commons Attribution-NoDerivatives 4.0 International License.
 
-\hypertarget{prerequisites}{%
-\chapter{Prerequisites}\label{prerequisites}}
+\hypertarget{set-up-project-on-rstudio-cloud}{%
+\chapter{Set up project on Rstudio Cloud}\label{set-up-project-on-rstudio-cloud}}
 
-This GitBook is created in Rstudio, using the \texttt{bookdown} package. To get your system set up correctly, you have to install several software packages, and register on GitHub. You only have to perform these steps once, and the entire process should take approximately 1 hour if you start from scratch. In case some software is already installed on your system, you can skip related steps. Follow these steps in order:
+We will use Rstudio cloud on this website: \url{https://rstudio.cloud}.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Install R from \href{https://cloud.r-project.org/}{cloud.r-project.org}
-\item
-  Install Rstudio Desktop (Free) from \href{https://rstudio.com/products/rstudio/download/\#download}{rstudio.com}
-\item
-  Install Git from \href{https://git-scm.com/downloads}{git-scm.com}. Use the default, recommended settings. It is especially important to leave these settings selected:
+You must first make an Rstudio account by clicking the sign up button in the top right corner. (this is free)
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Git from the command line and also from third party software\\
-  \item
-    Use the OpenSSL library\\
-  \item
-    Checkout Windows-style, commit Unix-style line endings\\
-  \item
-    Enable Git Credential Manager\\
-  \item
-    If you run into any trouble, a more comprehensive tutorial on installing Git is available at \href{https://happygitwithr.com/install-git.html}{happygitwithr.com}.
-  \end{itemize}
-\item
-  Register on GitHub
+\includegraphics{img/signup.png}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Go to \url{https://github.com/} and click ``Sign up''. Choose an ``Individual'', ``Free'' plan.
-  \item
-    Request a \href{https://help.github.com/en/articles/applying-for-an-educator-or-researcher-discount}{free academic upgrade}. This allows you to create \emph{private repositories}, which are only visible to you and selected collaborators, and can be made public when your work is published.
-  \end{itemize}
-\item
-  Connect Rstudio to Git and Github (for more support, see \href{https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN}{this Rstudio article}, and \href{https://www.r-bloggers.com/rstudio-and-github/}{this blog post})
+Then join our shared RStudio cloud workspace with the link that I sent you in the email titled `Rstudio cloud shared workspace'.
 
-  \begin{enumerate}
-  \def\labelenumii{\alph{enumii}.}
-  \tightlist
-  \item
-    Open Rstudio, open the Tools menu, click \emph{Global Options}, and click \emph{Git/SVN}
-  \item
-    Verify that \emph{Enable version control interface for RStudio projects} is selected
-  \item
-    Verify that \emph{Git executable:} shows the location of git.exe. If it is missing, manually fix the location of the file.
-  \item
-    Click \emph{Create RSA Key}. Do not enter a passphrase. Press \emph{Create}. A window with some information will open, which you can close.
-  \item
-    Click \emph{View public key}, and copy the entire text to the clipboard.
-  \item
-    Close Rstudio (it might offer to restart by itself; this is fine)
-  \item
-    Go to \url{https://github.com}
-  \item
-    Click your user icon, click \emph{Settings}, and then select the \emph{SSH and GPG keys} tab.
-  \item
-    Click \emph{New SSH key}. Give it an arbitrary name (e.g., your computer ID), and paste the public key from your clipboard into the box labeled ``\emph{Key}''.
-  \item
-    Open Rstudio again (unless it restarted by itself)
-  \end{enumerate}
-\item
-  Install all required packages by running the following code in the Rstudio console. Be prepared for three contingencies:
+\textbf{You MUST join our shared workspace.} I will be checking your work through this shared RStudio cloud workspace. Within this shared workspace, I will be able to see everyone's project, but you will only be able to see your project and my project.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    If you receive any error saying \emph{There is no package called XYZ}, then run the code \texttt{install.packages("XYZ")}\\
-  \item
-    If you are prompted to update packages, just press \texttt{3:\ None}. Updating packages this way in an interactive session sometimes leads to errors, if the packages are loaded.\\
-  \item
-    If you see a pop-up dialog asking \emph{Do you want to install from sources the package which needs compilation?}, click \emph{No}. If this leads to errors, then please follow \emph{Step 3} from \href{https://cjvanlissa.github.io/worcs/articles/setup.html}{this online guide}, and run \texttt{install.packages("devtools")}. This will take a long time, but will allow you to install packages from source.
-  \end{itemize}
-\end{enumerate}
+Once you are in your Rstudio Cloud account\ldots{}
 
-Run the following code to install the required packages:
+Expand the R studio cloud options by clicking on the 3 lines in the top left corner.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
-\KeywordTok{install.packages}\NormalTok{(}\StringTok{"tinytex"}\NormalTok{)}
-\NormalTok{tinytex}\OperatorTok{::}\KeywordTok{install_tinytex}\NormalTok{()}
-\NormalTok{git2r}\OperatorTok{::}\KeywordTok{config}\NormalTok{(}\DataTypeTok{global =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{user.name =} \StringTok{"your.name"}\NormalTok{, }\DataTypeTok{user.email =} \StringTok{"your.email"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\includegraphics{img/Picture1.png}
 
-That's it! Everything should be installed and connected now.
+Then select our course (which will be titled the name of course and the semester). If you cannot see this option -- then you have not been added to our shared workspace.
 
-\hypertarget{getgitbook}{%
-\chapter{Get your GitBook}\label{getgitbook}}
+Once you are in the shared the classes workspace, open a new project.
 
-To get your GitBook, you should follow these steps:
+Call this project your last name by clicking on the box that says `Untitled Project' and typing your last name.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Go to \url{https://github.com/cjvanlissa/gitbook-demo}
-\item
-  In the top right of the page, click \texttt{Fork}.\\
-  This will copy my \texttt{gitbook-demo} repository to your GitHub account.\\
-  \includegraphics{./img/settings.png}
-\item
-  My repository is now copied to your account. It is a template repository, which means that you can create a \emph{new repository} based on this one.
-\item
-  Create a new repository for your own GitBook. Create one for a course you've been wanting to update. In the top-right corner of the GitHub website, click the + icon, and select ``New repository'':\\
-  \includegraphics{./img/new_repo.png}
-\item
-  In the dialog, select the \texttt{gitbook-demo} as ``Repository template'', and give the repository an appropriate name for your course. Then, press \texttt{Create\ repository}:\\
-  \includegraphics{./img/from_template.png}
-\item
-  Now, go back to Rstudio on your computer. In Rstudio, click \texttt{File\ \textgreater{}\ New\ Project}. A dialog will open. If you set up Rstudio with Git correctly, the dialog should have an option to create a new project from Version control. Click it:\\
-  \includegraphics{./img/new_project.png}
-\item
-  In the next dialog window, you should copy the URL of the GitHub repository you created in \emph{Step 5}, like so:\\
-  \includegraphics{./img/new_git_project.png}
-\item
-  Now, in Rstudio, you can open files for editing and create new files (explained in the next Chapter). Open files by clicking them in the Files editor (usually in the bottom right of Rstudio):\\
-  \includegraphics{./img/files_editor.png}
-\item
-  After you make a change, it will show up in the Git tab (usually in the top right of Rstudio). You must Commit the change locally, and then Push the change to GitHub to update your repo. To Commit, select the file and click the Commit button. Write a short message to describe the changes you made, then click the Commit button again. Now, press Push to send your commits to GitHub.\\
-  \includegraphics{./img/commit_push.png}
-\item
-  To render your book as a GitBook, you must ``Build'' it. In the top-right panel of Rstudio, you see a ``Build'' tab. In this tab, simply click the ``Build Book'' button to build your book. You should see a lot of rendering messages, until a window pops up with your brand new GitBook. If you get errors at this stage, you probably made a mistake in preparing your system (see the previous Chapter).\\
-  \includegraphics{./img/build_book.png}
-\item
-  Building the book generated a lot of new files in the \texttt{./docs} directory. This directory contains the website files for your GitBook. Open the Git tab again, verify that the \texttt{./docs} directory is listed, and Commit and Push all of these new files as described in \emph{Step 9}.
-\item
-  There is only one last remaining task: To publish your GitBook on GitHub pages. Once you do this, any change to the \texttt{./docs} folder that you push to GitHub will lead to an immediate update of your GitBook website. Go back to the GitHub page for your Repository. Click on the \texttt{Settings} tab on the top right of the page:\\
-  \includegraphics{./img/settings.png}
-\item
-  On the Settings page, scroll all the way down until you reach a section called \texttt{GitHub\ Pages}. There, under the ``Source'' heading, click the word \texttt{None}, and select \texttt{master\ branch\ /docs\ folder}. When you select it, the page will update, and if you scroll back down to the \texttt{GitHub\ Pages} section, you will see the URL where your GitBook is published. The first time, it will take a few minutes for your GitBook to come online. When you publish updates to the GitBook however (simply by following \emph{Step 11} again), the update will be near-instantaneous. The Pages section should now look like this (and that is hopefully the link where you found this book):\\
-  \includegraphics{./img/pages_published.png}
-\end{enumerate}
+\includegraphics{img/Projname.png}
 
-\hypertarget{editing-the-book}{%
-\chapter{Editing the book}\label{editing-the-book}}
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
 
-The contents of the book are written in \textbf{RMarkdown}. You can use any formatting code that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\). Moreover, you can include chunks of R-code, like this:
+This chapter introduces the Rstudio cloud environment and describes how to import data into the RStudio cloud.
 
-The results of these chunks can be rendered to the GitBook:
+R cannot handle typos and is case sensitive (`Gender' is not the same as `gender'). If your code will not run check for typos and caps. Related to this point, do not be afraid to copy and paste with using R. I often copy and paste code and replace variable or dataset names as needed. (This is one of the few times in education where copy and paste is OK!)
 
-\begin{verbatim}
-## [1] "This is an R-command!"
-\end{verbatim}
+\hypertarget{layout-of-rstudio-cloud}{%
+\section{Layout of Rstudio cloud}\label{layout-of-rstudio-cloud}}
 
-To edit the book, you can change the text in the \texttt{.Rmd} files. Each Rmd file should contain \textbf{one and only one} chapter. A chapter is defined by the first-level heading \texttt{\#}, e.g., \texttt{\#\ Editing\ the\ book}.
+Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describe in turn next.
 
-Any sub-headings within the chapter are indicated with several \texttt{\#} signs, e.g., \texttt{\#\#} (level 2) and \texttt{\#\#\#} (level 3).
+\hypertarget{console}{%
+\subsection{Console}\label{console}}
 
-\hypertarget{creating-new-chapters}{%
-\section{Creating new chapters}\label{creating-new-chapters}}
+The console panel of R studio is where you can type commands and where you will see the output of commands.
 
-To create a new chapter, you must follow two steps: 1) Create the file, and 2) Include it in the list of chapters.
+In its most basic form, you can think of R as a fancy calculator.
 
-First, to create the file for a new chapter in Rstudio, click \texttt{File\ \textgreater{}\ New\ File\ \textgreater{}\ Text\ file}. At the top of the file, write your chapter heading, as explained above. Then, click \texttt{File\ \textgreater{}\ Save}. Save the file as \texttt{.Rmd}, without spaces in the file name, e.g.: \texttt{editing\_the\_book.Rmd}.
+For example:
 
-Second, to include it in the list of chapters, open the file \texttt{\_bookdown.yml} (click it in the Files explorer in the bottom right of Rstudio). This file has a list of \texttt{.Rmd} files to be included in the book. In this example, the list looks like this:
+In the console type \texttt{2+2} and then press RETURN on your keyboard. The answer `4' will apear on the next line.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{tmp <-}\StringTok{ }\KeywordTok{readLines}\NormalTok{(}\StringTok{"_bookdown.yml"}\NormalTok{)}
-\KeywordTok{cat}\NormalTok{(tmp[}\KeywordTok{grep}\NormalTok{(}\StringTok{"^rmd_files"}\NormalTok{, tmp)}\OperatorTok{:}\KeywordTok{grep}\NormalTok{(}\StringTok{"references}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{.Rmd"}\NormalTok{, tmp)], }\DataTypeTok{sep =} \StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+The \texttt{\textgreater{}} in the last line of the console means that the console is ready for a command (see red circle in the picture above).
 
-rmd\_files: {[}``index.Rmd'',
-``prerequisites.Rmd'',
-``get\_your\_gitbook.Rmd'',
-``editing\_the\_book.Rmd'',
-``figures\_tables.Rmd'',
-``examples.Rmd'',
-``open\_educational.Rmd'',
-``use\_in\_course.Rmd'',
-``licenses.Rmd'',
-``references.Rmd''{]}
+\includegraphics{img/twoplus.png}
 
-Insert the file name of your new chapter in the desired position in this list.
+If \texttt{\textgreater{}} is missing from the last line, it means that R is waiting for you to complete a command.
 
-\hypertarget{linking-across-chapters}{%
-\section{Linking across chapters}\label{linking-across-chapters}}
+For example, type \texttt{1+} in the console and then hit enter.
 
-You can label chapter and section titles using \texttt{\{\#label\}} after them. The labels can be used as cross-references. For example, we can link to Chapter \ref{figtab}. If you do not manually label chapters, there will be automatic labels anyway, e.g., Chapter \ref{examples}.
+The plus sign means the command is incomplete.
 
-\hypertarget{advanced-editing}{%
-\section{Advanced editing}\label{advanced-editing}}
+\includegraphics{img/waiting.png}
 
-The convenient \href{https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf}{Rmarkdown Cheat Sheet} by Rstudio covers most of the knowledge required for advanced Rmarkdown editing. You can print it out and stick it to your wall!
+Push the \textbf{ESC} button on your keyboard to get back to the command prompt.
 
-\hypertarget{figtab}{%
-\chapter{Figures and tables}\label{figtab}}
+\hypertarget{script}{%
+\subsection{Script}\label{script}}
 
-Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
+One of the benefits of using R is that you can save a record of your work using scripts. Records of your work allow you to easily start and stop an assignment or research project. You can pick up where you left off whether it is 20 minutes later or 2 years later. It also lets you share with others -- from professors, to collaborators, to peer reviewers.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\FloatTok{.1}\NormalTok{, }\FloatTok{.1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+To create a new script, go to the top bar menu:
 
-\begin{figure}
+\textbf{FILE -\textgreater{} NEW FILE -\textgreater{} R SCRIPT}
 
-{\centering \includegraphics[width=0.8\linewidth]{gitbook-demo_files/figure-latex/nice-fig-1} 
+\includegraphics{img/newscript.png}
 
-}
+A new script will open in the top left of the RStudio platform.
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
-\end{figure}
+\textbf{You should run code from scripts}
 
-Reference a figure by its code chunk label with the \texttt{fig:} prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can reference tables generated from \texttt{knitr::kable()}, e.g., see Table \ref{tab:nice-tab}.
+Scripts are similar to running command in the console (this is what you did in the last section).
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+For example, type \texttt{5+5} in the script panel.
 
-\begin{table}
+In order to run command in a script you should click the run button while the cursor is in the code or the code is selected. You can also run the code by pressing the COMMAND and RETURN keys on your keyboard at the same time (the ALT and RETURN key on a pc).
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
-\toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
-\midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
-\bottomrule
-\end{tabular}
-\end{table}
+After the code is run, the results will automatically appear the in console (see red arrow in the picture below).
 
-You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+\includegraphics{img/script.png}
 
-\hypertarget{examples}{%
-\chapter{Examples}\label{examples}}
+In order to use the script again you must \textbf{save} it.
 
-Here are some examples of other GitBooks for courses; if you want to have your GitBook added to the list, please send a \href{https://github.com/cjvanlissa/gitbook-demo/pulls}{Pull Request} (here's \href{https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request}{how to send a pull request}).
+From the drop-down menu select:
 
-\hypertarget{statistics-with-r-h.-quene}{%
-\section{Statistics with R (H. Quene)}\label{statistics-with-r-h.-quene}}
+\textbf{FILE -\textgreater{} SAVE AS}
 
-\url{https://hugoquene.github.io/emlar2020}
+\includegraphics{img/savescript.png}
 
-A GitBook for a tutorial on \emph{Statistics with R (Basics)}, held as part of the workshop on Experimental Methods in Language Acquisition Research (EMLAR, \url{https://emlar.wp.hum.uu.nl/}), Utrecht, on 17 April 2020. This compact introduction helps you with your first steps into R.
+Type \textbf{lab 1} into the file name box. And then click the SAVE button.
 
-\hypertarget{theory-construction-and-statistical-modeling-c.-j.-van-lissa}{%
-\section{Theory Construction and Statistical Modeling (C. J. van Lissa)}\label{theory-construction-and-statistical-modeling-c.-j.-van-lissa}}
+\includegraphics{img/savescript2.png}
 
-\url{http://cjvanlissa.github.io/TCSM}
+Your file should now be listed in the files window in the bottom right.
 
-A GitBook for the course \emph{``Theory Construction and Statistical Modeling''}, with some interesting code, for example: Blocks of answers to the tutorial questions that can be collapsed and expanded.
+\includegraphics{img/savescript3.png}
 
-\hypertarget{doing-meta-analysis-in-r-c.-j.-van-lissa}{%
-\section{Doing Meta-Analysis in R (C. J. van Lissa)}\label{doing-meta-analysis-in-r-c.-j.-van-lissa}}
+\textbf{This script file is a record of your work and is how you will be graded for this lab. Make sure you saved this file and complete the rest of this lab in your `lab1' script.}
 
-\url{http://cjvanlissa.github.io/Doing-Meta-Analysis-in-R}
+Within a script you should include comments to yourself and others using \texttt{\#}. Anything with a \texttt{\#} in front of it will not run. These comments and explanations are an important part of an R script.
 
-A GitBook on doing meta-analysis in R, based on the book `Doing Meta-Analysis in R', by Mathias Harrer, Pim Cuijpers, \& David Ebert, and adapted to focus on the \href{https://cran.r-project.org/web/packages/metafor/index.html}{metafor} package, and exploring heterogeneity using \href{https://cran.r-project.org/web/packages/metaforest/index.html}{metaforest}. The original can be found here: \url{https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/}
+For example, type the following in to the script and then run it.
 
-\hypertarget{muxe9todos-quantitativos-em-psicologia-com-r-l.-anunciauxe7uxe3o}{%
-\section{Métodos quantitativos em Psicologia com R (L. Anunciação)}\label{muxe9todos-quantitativos-em-psicologia-com-r-l.-anunciauxe7uxe3o}}
+\texttt{\#r\ is\ like\ a\ calculator}
 
-\url{https://anovabr.github.io/mqt/}
+\texttt{2+2}
 
-This book provides a short and to-the-point exposition on the essentials of statistics, and was written for undergraduate students at the Pontifical Catholic University of Rio de Janeiro (PUC-Rio). To a lesser degree, the mathematical modeling of statistical questions will be addressed. This book might be relevant for Portuguese-speaking students who enroll for laboratory-based statistics and anyone who wants to learn R.
+\texttt{\#Answer\ is\ 4}
 
-\hypertarget{open-educational-resources}{%
-\chapter{Open Educational Resources}\label{open-educational-resources}}
+\includegraphics{img/comment.png}
 
-UNESCO defines Open Educational Resources as \href{https://en.unesco.org/themes/building-knowledge-societies/oer}{\emph{teaching, learning and research materials in any medium -- digital or otherwise -- that reside in the public domain or have been released under an open license that permits no-cost access, use, adaptation and redistribution by others with no or limited restrictions.}}
+Note that the comments are green in the script.
 
-Open Educational resources can help lighten the workload on individual teachers, who can collaborate with the development of high-quality open access resources, instead of having to develop their own proprietary materials from scratch. Moreover, Open Educational resources are inclusive, lowering the barrier to knowledge acquisition for learners around the world, and enabling lifelong learning for those outside academia.
+\hypertarget{environment-and-history}{%
+\subsection{Environment and history}\label{environment-and-history}}
 
-Many universities support Open Educational Resources. Here are just a few (feel free to \href{https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request}{send a pull request} with other relevant resources).
+In the top right corner of RStudio is the environment and history window. The \textbf{history tab} shows every line of code that has been run in the current session.
+
+The \textbf{environment tab} is where all active \textbf{objects} are listed. An object is something can hold information for later use. The information can be data, values, output, or functions.
+
+Objects are assigned using \texttt{\textless{}-}. Values on the right side of \texttt{\textless{}-} will be assigned to the object on the left side.
+
+For example, let's tell R that the population mean of IQ scores is 100 and the population standard deviation is 15.
+
+To do this use the following code:
+
+\texttt{mu\ \textless{}-\ 100}
+
+\texttt{sigma\ \textless{}-\ 15}
+
+After you run these commands, the objects will now be listed in the environment panel in the top left.
+
+\includegraphics{img/object.png}
+
+The shortcut for making \texttt{\textless{}-} is the ALT and -- key together. (or OPTION and -- on a mac)
+
+\hypertarget{vectors}{%
+\subsubsection{Vectors}\label{vectors}}
+
+It is possible to store more than one number in an object. One way to do this is to use a a \textbf{vector}. Assign a set of numbers a vector with the \textbf{combine} function: \texttt{c()}. Do use this, type all the numbers you want to store within the parentheses in a comma separated list.
+
+For example, let's enter IQ scores of students in a small class.
+
+To do this use the following code:
+
+\texttt{classIQ\ \textless{}-\ c(112,\ 115,\ 89,\ 95,\ 101)}
+
+After you run this code,the classIQ vector should appear in the environment.
+
+Here is a picture of what your screen should look like:
+
+\includegraphics{img/vector.png}
+
+Calculations with vectors apply to all data points.
+
+For example, let's calculate the z-scores for each of the IQ scores.
+
+To do this use the following code:
+
+\texttt{\#get\ z-scores}
+
+\texttt{(classIQ-mu)/sigma}
+
+The results will appear in the console (See the red box in the picture below)
+
+\includegraphics{img/zscores.png}
+
+It is possible to save these answers as a vector using the \texttt{\textless{}-} function.
+
+For example, let's save those zscores in a vector called zscores.
+
+To do this use the following code:
+
+\texttt{zscores\ \textless{}-\ (classIQ-mu)/sigma}
+
+There should now be a vector in the environmnet called zscores.
+
+Here is a picture so that you can check your progress:
+
+\includegraphics{img/zsaved.png}
+
+\hypertarget{data-frames}{%
+\subsubsection{Data frames}\label{data-frames}}
+
+Right now the IQ scores and the z-scores are in separate objects. Variables often need to be in a single object in order to do some basic analyses. You can combine the classIQ and the zscores variable using the \textbf{data.frame} command.
+
+To do this use the following code:
+
+\texttt{iq\ \textless{}-\ data.frame(classIQ,\ zscores)}
 
 \begin{itemize}
 \tightlist
 \item
-  \href{https://www.oercommons.org/}{\textbf{OER Commons}}: A freely accessible online library of open educational resources.
+  This command takes the form of DatasetName \textless- data.frame(Variable1, Variable2, etc)\\
 \item
-  \href{https://uu.figshare.com/}{\textbf{Utrecht University Figshare}}: Open learning objects from Utrecht University.
-\item
-  \href{https://ocw.jhsph.edu/}{\textbf{Johns Hopkins University OCW}}: Open public health courses and materials.
-\item
-  \href{https://pitt.libguides.com/openeducation/biglist}{\textbf{University of Pittsburgh OER}}: Big List of Open Educational Resources.
-\item
-  \href{https://www.merlot.org/merlot/}{\textbf{MERLOT}}: Online learning and support materials and content creation tools, led by an international community of educators, learners and researchers.
+  The dataset name can be anything you want that you have not already used
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the name must be one word (there cannot be spaces in the name)
+  \end{itemize}
 \end{itemize}
 
-\hypertarget{compatibility-with-existing-systems}{%
-\chapter{Compatibility with existing systems}\label{compatibility-with-existing-systems}}
+This object will be listed under data instead of values in the environment panel.
 
-Many universities offer digital platforms for learning. You might wish to embed your GitBook within these existing systems. Here are two ways in which you might do that. Currently, this section only discusses BlackBoard, but the same principles should apply to other platforms.
+\includegraphics{img/dataframe.png}
 
-\hypertarget{add-a-hyperlink}{%
-\section{Add a hyperlink}\label{add-a-hyperlink}}
+Double-click on the word `iq' in the environment panel to look at the dataset that you just created (it is circled in red in the picture above).
 
-You can add a link to your GitBook in the BlackBoard course menu by following \href{https://help.blackboard.com/Learn/Instructor/Course_Content/Create_Content/Create_Course_Materials/Link_to_Websites}{this tutorial}.
+A new tab will open with a spreadsheet view of the dataset. When you are done viewing the data, you can close it by click on the `x' next to the name iq.
 
-\hypertarget{embed-the-whole-book}{%
-\section{Embed the whole book}\label{embed-the-whole-book}}
+\includegraphics{img/dataframe2.png}
 
-You can add a Blank Page to your BlackBoard course menu, and fill that page with a full-size ``iframe'' - a web page within the web page. \href{https://mycampus.maine.edu/web/uc-faculty-portal/education-technology/-/asset_publisher/vEKuFJYvDY5K/content/inserting-an-iframe-into-blackboard?inheritRedirect=false}{This tutorial} explains how to do it. It is possible that your university is blocking this feature, however.
+Note that after looking at the dataset this way, the command \texttt{view(iq)} appeared in the console. You can look at the dataset with the \textbf{view} command as well
 
-\hypertarget{license-your-gitbook}{%
-\chapter{License your GitBook}\label{license-your-gitbook}}
+Finally, when typing the code to create the data frame, you may have noticed that RStudio uses \textbf{predictive text}. This means that RStudio will suggest functions and objects as you type. You should take advantage of this nice feature!
 
-In the spirit of Open Science, it is good to think about making your course materials Open Source. That means that other people can use them. In principle, if you publish materials online without license information, you hold the copyright to those materials. If you want them to be Open Source, you must include a license. It is not always obvious what license to choose.
+\includegraphics{img/autofill.png}
 
-The Creative Commons licenses are typically suitable for course materials. This GitBook, for example, is licensed under CC-BY 4.0. That means you can use and remix it as you like, but you must credit the original source.
+\hypertarget{importing-data-into-rstudio-cloud}{%
+\section{Importing data into Rstudio cloud}\label{importing-data-into-rstudio-cloud}}
 
-If your project is more focused on software or source code, consider using the \href{https://www.gnu.org/licenses/gpl-3.0.en.html}{GNU GPL v3 license} instead.
+In the Introduction section you learned how to assign data to a \textbf{vector} using the \textbf{combine} function.
 
-You can find \href{https://creativecommons.org/share-your-work/licensing-examples}{more information about the Creative Commons Licenses here}. Specific licenses that might be useful are:
+Another way to assign data to an object is by first entering the data into a spreadsheet (like google sheets or excel) and then import the data into RStudio. This will be our preferred method.
+
+First download the exam2.csv file from d2l.
+
+\hypertarget{upload-the-data-into-rstudio-cloud}{%
+\subsection{Upload the data into Rstudio Cloud}\label{upload-the-data-into-rstudio-cloud}}
+
+Then select the UPLOAD button in the files window.
+
+\includegraphics{img/upload.png}
+
+In the Upload Files window, click the CHOOSE FILE button and then navigate to the exam2.csv file on your computer. Then click the OK button.
+
+\includegraphics{img/choosefile.png}
+
+The data file should now be listed in the files section of RStudio.
+
+\includegraphics{img/filelist.png}
+
+\hypertarget{import-data}{%
+\subsection{Import data}\label{import-data}}
+
+Then you need to import the data into the environment (i.e.~assign the data to an object). This can be done through using point and click options or with code.
+
+\hypertarget{point-and-click}{%
+\subsubsection{Point and click}\label{point-and-click}}
+
+First click on the \textbf{IMPORT DATASET} button in the environment panel.
+
+\includegraphics{img/import.png}
+
+Then select the \textbf{`FROM TEXT (READR)'}
+
+\includegraphics{img/readrbox.png}
+
+The first time you select this -- the following window will appear asking if you would like to install the readr package. Select YES. I will introduce packages in the next section.
+
+\includegraphics{img/installreadrbox.png}
+
+After you select yes, R will begin downloading the package. This can take a few minutes and will look something like this:
+
+\includegraphics{img/installreadr.png}
+
+It is important to be \emph{patient} here and let the package download completely before you move on to the next step.
+
+When the download is complete, your screen should look like this:
+
+\includegraphics{img/importwindow.png}
+
+Note that you can see that the package was successfully installed in the console in the bottom left. The next time you use readr to import data -- you will not have to download the package first.
+
+Next select the BROWSE button in the top left corner of the import data window.
+
+\includegraphics{img/importbrowse.png}
+
+In the choose file window, select `exam2'. And then select OPEN.
+
+The next window should look like this:
+
+\includegraphics{img/importwindow2.png}
+
+From here you should click the IMPORT button.
+
+But first note the \textbf{Code Preview} box. This is the code you could use to import data (instead of clicking through all these windows). Copy this code before I click the import button and then paste it into your script for your records and in case you need to assign the file to an object again (because it is faster with code).
+
+\includegraphics{img/importcomplete.png}
+
+\hypertarget{code}{%
+\subsubsection{Code}\label{code}}
+
+Alternatively you could have typed the code that you copy and pasted (and not gone through all of the point and click windows).
+
+\texttt{Library(readr)}\\
+\texttt{exam2\ \textless{}-\ read\_cvs("exam2.csv")}
 
 \begin{itemize}
 \tightlist
 \item
-  \href{https://creativecommons.org/share-your-work/public-domain/cc0/}{CC0 (``No Rights Reserved'')}, everybody can do what they want with your work.
+  This command takes the form of DatasetName \textless- read\_cvs(``FILENAME.csv'')\\
 \item
-  \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0 (``Attribution'')}, everybody can do what they want with your work, but they must credit you. Note that this license may not be suitable for software or source code!
+  The dataset name can be anything that you have not already used
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the name must be one word (there cannot be spaces in the name)\\
+  \end{itemize}
+\item
+  If you have not installed the readr package, you will have to so first (see the packages chapter for more information)
 \end{itemize}
 
-For compatibility between CC and GNU licenses, see \href{https://creativecommons.org/faq/\#Can_I_apply_a_Creative_Commons_license_to_software.3F}{this FAQ}.
+\hypertarget{view-data}{%
+\subsubsection{View data}\label{view-data}}
+
+Double click on the word exam2 in the environment panel to look at the dataset.
+
+\includegraphics{img/view.png}
+
+Each column is a different variable. Each row is a different participant (in this example a student).\\
+- The first column is an arbitrary student ID number -- so that the students' identity is protected.\\
+- The second column is exam points earned by the students out of 20 (this is real data from a Fall 2019 class).\\
+- The third column is the number of hours the students studied for the exam (this is made up data).\\
+- The fourth column is whether or not students ate cheese the night before the exam (1 = no; 2 = yes\ldots{} also made up data).\\
+- The last column is data on whether or not students drank wine the night before the exam (1 = no; 2 = yes\ldots{} also made up data).
+
+\hypertarget{packages}{%
+\chapter{Packages}\label{packages}}
+
+\textbf{NOTE:} Please open a new script and call it lab 2 (or week 2) for the replication of this chapter and the picturing data chapter assignment.
+
+\textbf{Base R} refers to the functions that automatically come with R. But many people build on top of Base R to make R better. The way they do this is through \textbf{packages}, which contain new R functions. There are thousands of packages available that can do fancy things like quickly compute descriptive statistics and create APA style tables (and much much more).
+
+The first time you use a package, you need to install it. Once a package is installed, you will need to tell R that you want to use it by loading it. You will need to load any packages you want to use each time you open the R program. (I am not exactly sure how this works in the RStudio cloud because it does not seem to shut down when you close out of the RStudio cloud website. See the Restarting R section below for a work around.)
+
+That is, you only have to install a package once. You will have to load a package every time you want to use it.
+
+\hypertarget{installing-packages}{%
+\section{Installing packages}\label{installing-packages}}
+
+The first time you use a package, you need to install it. We actually did this once already while importing data! This time let's learn more about the process.
+
+In RStudio, packages can be installed through point and click (GUI) or with code.
+
+\hypertarget{installing-packages-using-point-and-click-gui}{%
+\subsection{Installing packages using point and click (GUI)}\label{installing-packages-using-point-and-click-gui}}
+
+Let's first install a package called \textbf{Tidyverse}. Tidyverse was created by Hadley Wickham and his team with the aim of making various aspects of data analysis in R easier. It is actually collection of packages that include a lot of functions (e.g., subsetting, transforming, visualizing) that many people think of as essential for data analysis. (See the tidyverse website for additional information: \url{https://www.tidyverse.org}).
+
+To install a package with GUI go to the top bar menu:
+
+TOOLS -\textgreater{} INSTALL PACKAGES
+
+\includegraphics{img/instpacktools.png}
+
+In the install packages window, type the name of the package you would like to install. For example, type \texttt{tidyverse} in the packages box.
+
+Then click INSTALL.
+
+\includegraphics{img/instpackguitidy.png}
+
+Again, installing a package can be a little slow on the RStudio cloud. Please be patient (maybe this is a good time to stretch your legs, refill your beverage, let the dog out, etc.)
+
+Your screen should look like this when it is starting to install:
+
+\includegraphics{img/instload1.png}
+
+It should look like this when it is in the process of installing:
+
+\includegraphics{img/instload2.png}
+
+And then this when the installation is complete:
+
+\includegraphics{img/instload3.png}
+
+Do not proceed until the console says the package has been installed.
+
+\hypertarget{installing-packages-using-code}{%
+\subsection{Installing packages using code}\label{installing-packages-using-code}}
+
+You can also install a package using this code:\\
+\texttt{install.packages()}
+
+To install tidyverse, for example, you would use this code:\\
+\texttt{install.packages("tidyverse")}~\\
+- Note that the word tidyverse is in quotes
+
+But do not run this code -- as you have already installed it with GUI.
+
+Instead, let's install a package called psych using the \texttt{install.packages} command. The \textbf{psych package} is a package for personality, psychometric, and psychological research. It has been developed at Northwestern University (maintained by William Revelle) to include useful functions for personality and psychological research.
+
+To install this package, use following command:\\
+\texttt{install.packages("psych")}
+
+Your screen should look like this when the package is completely installed:\\
+\includegraphics{img/instpsyc.png}
+
+Remember that installing packages is the first step to using them and they only have to be installed once.
+
+Next let's learn how to load packages, so that you can use thier functions.
+
+\hypertarget{loading-packages}{%
+\section{Loading Packages}\label{loading-packages}}
+
+Installing a package is only the first step.
+
+\textbf{In order to use a package, it must be loaded first.}
+
+Packages can only be loaded with code. Packages need to be loaded every time you open the RStudio program. Most people's R scripts begin with the code that load packages.
+
+When you have the Rstudio program installed on your computer this is straight forward (either the program is open or closed). This is less clear with Rstudio cloud because it does not seem to always shut down when you close the web browser site. (Please see the section on restarting Rstudio in the misc section below for a work around.)
+
+The command to load a package is:\\
+\texttt{library()}
+
+For example, load the tidyverse package with this:\\
+\texttt{library(tidyverse)}
+
+After you run this code, your screen should look like this:
+
+\includegraphics{img/loadtidy.png}
+
+The console shows that the Tidyverse package has been loaded (don't worry about the conflicts for now).
+
+Next let's load the psych package using this command:\\
+\texttt{library(psych)}
+
+\includegraphics{img/loadpsyc.png}
+Again, don't worry about the warning about masked functions for now.
+
+\hypertarget{misc}{%
+\section{Misc}\label{misc}}
+
+You can get additional information using the \texttt{help()} function and \texttt{?} help operator in R. They both provide access to documentation pages for all functions and packages.
+
+For example, use the following code to get more information about Tidyverse:\\
+\texttt{?tidyverse}
+
+Or this command to get more information about Psych:
+
+\texttt{help(psych)}
+
+\hypertarget{restarting-r}{%
+\subsection{Restarting R}\label{restarting-r}}
+
+Because it is unclear whether Rstudio completely turns off when you close the website, you could restart the R session to simulate the act of closing and reopening the Rstudio program (like you could if it were installed on your computer).
+
+To do this, in the drop down menu go to:
+
+SESSION -\textgreater{} RESTART R
+
+\includegraphics{img/restart.png}
+
+When you restart the R session, everything in the script, environment, console, and files will remain.
+
+All packages that were loaded will be cleared, so you will have to reload them if you want to use them.
+
+If something is not working like it is suppose to (and you have checked for type-os), try restarting the R session. It could be that the functions of one package conflict or mask the functions of another package.
 
   \bibliography{book.bib,packages.bib}
 
