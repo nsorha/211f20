@@ -1,3 +1,6 @@
+
+
+
 # Set up project on Rstudio Cloud 
 
 We will use Rstudio cloud on this website: https://rstudio.cloud. 
@@ -16,16 +19,16 @@ Expand the R studio cloud options by clicking on the 3 lines in the top left cor
 
 ![](img/Picture1.png)
 
-Then select our course (which will be titled the name of course and the semester). If you cannot see this option – then you have not been added to our shared workspace.  
+Then select our course (which will be titled the name of course). If you cannot see this option – then you have not been added to our shared workspace.  
 
-Once you are in the shared the classes workspace, open a new project. 
+Once you are in the Class's shared workspace, open a new project. The new project button is on the top right. 
 
 Call this project your last name by clicking on the box that says ‘Untitled Project’ and typing your last name.   
 
 ![](img/Projname.png)
 
 
-
+Congrats! You have successfully set up your project on our class RStudio Cloud workplace! You will use this project for all of your R work for the rest of the semester. Next let's learn a bit about the software environment and the R programming language. 
 
 
 

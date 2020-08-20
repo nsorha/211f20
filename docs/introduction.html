@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Sorhagen, Ph.D." />
 
 
-<meta name="date" content="2020-08-11" />
+<meta name="date" content="2020-08-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -72,7 +72,7 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this book</a></li>
 <li class="chapter" data-level="2" data-path="set-up-project-on-rstudio-cloud.html"><a href="set-up-project-on-rstudio-cloud.html"><i class="fa fa-check"></i><b>2</b> Set up project on Rstudio Cloud</a></li>
 <li class="chapter" data-level="3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio-cloud"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio cloud</a><ul>
+<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#console"><i class="fa fa-check"></i><b>3.1.1</b> Console</a></li>
 <li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#script"><i class="fa fa-check"></i><b>3.1.2</b> Script</a></li>
 <li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#environment-and-history"><i class="fa fa-check"></i><b>3.1.3</b> Environment and history</a></li>
@@ -114,28 +114,28 @@
             <section class="normal" id="section-">
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Introduction</h1>
-<p>This chapter introduces the Rstudio cloud environment and describes how to import data into the RStudio cloud.</p>
-<p>R cannot handle typos and is case sensitive (‘Gender’ is not the same as ‘gender’). If your code will not run check for typos and caps. Related to this point, do not be afraid to copy and paste with using R. I often copy and paste code and replace variable or dataset names as needed. (This is one of the few times in education where copy and paste is OK!)</p>
-<div id="layout-of-rstudio-cloud" class="section level2">
-<h2><span class="header-section-number">3.1</span> Layout of Rstudio cloud</h2>
+<p>This chapter introduces the RStudio cloud environment and describes how to import data into the RStudio cloud.</p>
+<p>R cannot handle typos and is case sensitive (‘Gender’ is not the same as ‘gender’). If your code will not run check for typos and caps.</p>
+<p>Related to this point, do not be afraid to copy and paste with using R. I often copy and paste code and replace variable or dataset names as needed. (This is one of the few times in education where copy and paste is OK!)</p>
+<div id="layout-of-rstudio" class="section level2">
+<h2><span class="header-section-number">3.1</span> Layout of Rstudio</h2>
 <p>Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describe in turn next.</p>
 <div id="console" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Console</h3>
-<p>The console panel of R studio is where you can type commands and where you will see the output of commands.</p>
+<p>The console panel of R studio is where you can type commands (or R code) and where you will see the output of commands.</p>
 <p>In its most basic form, you can think of R as a fancy calculator.</p>
-<p>For example:</p>
-<p>In the console type <code>2+2</code> and then press RETURN on your keyboard. The answer ‘4’ will apear on the next line.</p>
+<p>For example: In the console type <code>2+2</code> and then press RETURN on your keyboard. The answer ‘4’ will apear on the next line.</p>
 <p>The <code>&gt;</code> in the last line of the console means that the console is ready for a command (see red circle in the picture above).</p>
 <p><img src="img/twoplus.png" /></p>
 <p>If <code>&gt;</code> is missing from the last line, it means that R is waiting for you to complete a command.</p>
 <p>For example, type <code>1+</code> in the console and then hit enter.</p>
 <p>The plus sign means the command is incomplete.</p>
 <p><img src="img/waiting.png" /></p>
-<p>Push the <strong>ESC</strong> button on your keyboard to get back to the command prompt.</p>
+<p>Push the <strong>ESC</strong> button on your keyboard to get back to the command prompt (&gt;).</p>
 </div>
 <div id="script" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Script</h3>
-<p>One of the benefits of using R is that you can save a record of your work using scripts. Records of your work allow you to easily start and stop an assignment or research project. You can pick up where you left off whether it is 20 minutes later or 2 years later. It also lets you share with others – from professors, to collaborators, to peer reviewers.</p>
+<p>One of the benefits of using R is that you can save a record of your work using scripts. Records of your work allow you to easily start and stop an assignment or research project. You can pick up where you left off whether it is 20 minutes later or 2 years later. These script files also let you share your data analysis with others – from professors, to collaborators, to peer reviewers (ensure that your work is reproducible).</p>
 <p>To create a new script, go to the top bar menu:</p>
 <p><strong>FILE -&gt; NEW FILE -&gt; R SCRIPT</strong></p>
 <p><img src="img/newscript.png" /></p>
@@ -143,7 +143,7 @@
 <p><strong>You should run code from scripts</strong></p>
 <p>Scripts are similar to running command in the console (this is what you did in the last section).</p>
 <p>For example, type <code>5+5</code> in the script panel.</p>
-<p>In order to run command in a script you should click the run button while the cursor is in the code or the code is selected. You can also run the code by pressing the COMMAND and RETURN keys on your keyboard at the same time (the ALT and RETURN key on a pc).</p>
+<p>In order to run command in a script you should click the run button while the cursor is in the code or the code is selected. Instead on clicking on the run button, you can also run the code by pressing the COMMAND and RETURN keys on your keyboard at the same time (the ALT and RETURN key on a pc).</p>
 <p>After the code is run, the results will automatically appear the in console (see red arrow in the picture below).</p>
 <p><img src="img/script.png" /></p>
 <p>In order to use the script again you must <strong>save</strong> it.</p>
@@ -154,19 +154,24 @@
 <p><img src="img/savescript2.png" /></p>
 <p>Your file should now be listed in the files window in the bottom right.</p>
 <p><img src="img/savescript3.png" /></p>
-<p><strong>This script file is a record of your work and is how you will be graded for this lab. Make sure you saved this file and complete the rest of this lab in your ‘lab1’ script.</strong></p>
-<p>Within a script you should include comments to yourself and others using <code>#</code>. Anything with a <code>#</code> in front of it will not run. These comments and explanations are an important part of an R script.</p>
+<p><strong>This script file is a record of your work and is how you will be graded for the ‘reproducing the assigned chapters’ assignment. Make sure you saved this file and complete the rest of this lab in your ‘lab1’ script.</strong></p>
+<p>Within a script you should include comments to yourself and others using a <code>#</code>. Anything with a <code>#</code> in front of it will not run. <strong>These comments and explanations are an important part of an R script.</strong></p>
 <p>For example, type the following in to the script and then run it.</p>
 <p><code>#r is like a calculator</code></p>
 <p><code>2+2</code></p>
 <p><code>#Answer is 4</code></p>
 <p><img src="img/comment.png" /></p>
-<p>Note that the comments are green in the script.</p>
+<p>Note that the comments appear green in the script.</p>
+<p>You can make notes to me this way (if needed). For example:<br />
+<code>#This will not run. Dr S, I need help</code></p>
+<p>I will leave comments to you this way. When I do, I will start my comment with my initials. For example:<br />
+<code>#NS: try loading the tidyverse package first</code></p>
+<p>Scripts should be organized so that someone else can follow what you did.</p>
 </div>
 <div id="environment-and-history" class="section level3">
 <h3><span class="header-section-number">3.1.3</span> Environment and history</h3>
-<p>In the top right corner of RStudio is the environment and history window. The <strong>history tab</strong> shows every line of code that has been run in the current session.</p>
-<p>The <strong>environment tab</strong> is where all active <strong>objects</strong> are listed. An object is something can hold information for later use. The information can be data, values, output, or functions.</p>
+<p>In the top right corner of RStudio is the environment and history window. The <strong>history tab</strong> shows every line of code that has been run in the current session. I do not use this much.</p>
+<p>The <strong>environment tab</strong> is where all active <strong>objects</strong> are listed. An object is something can hold information for later use. The information can be data, values, output, or functions. Normally my panel is set on this.</p>
 <p>Objects are assigned using <code>&lt;-</code>. Values on the right side of <code>&lt;-</code> will be assigned to the object on the left side.</p>
 <p>For example, let’s tell R that the population mean of IQ scores is 100 and the population standard deviation is 15.</p>
 <p>To do this use the following code:</p>
@@ -177,11 +182,11 @@
 <p>The shortcut for making <code>&lt;-</code> is the ALT and – key together. (or OPTION and – on a mac)</p>
 <div id="vectors" class="section level4">
 <h4><span class="header-section-number">3.1.3.1</span> Vectors</h4>
-<p>It is possible to store more than one number in an object. One way to do this is to use a a <strong>vector</strong>. Assign a set of numbers a vector with the <strong>combine</strong> function: <code>c()</code>. Do use this, type all the numbers you want to store within the parentheses in a comma separated list.</p>
-<p>For example, let’s enter IQ scores of students in a small class.</p>
+<p>It is possible to store more than one number in an object. One way to do this is to use a <strong>vector</strong>. Assign a set of numbers a vector with the <strong>combine</strong> function: <code>c()</code>, by typing all of the numbers you want to store within the parentheses in a comma separated list.</p>
+<p>For example, let’s enter the IQ scores of students in a small class.</p>
 <p>To do this use the following code:</p>
 <p><code>classIQ &lt;- c(112, 115, 89, 95, 101)</code></p>
-<p>After you run this code,the classIQ vector should appear in the environment.</p>
+<p>After you run this code, the classIQ vector should appear in the environment.</p>
 <p>Here is a picture of what your screen should look like:</p>
 <p><img src="img/vector.png" /></p>
 <p>Calculations with vectors apply to all data points.</p>
@@ -218,16 +223,19 @@
 <p>A new tab will open with a spreadsheet view of the dataset. When you are done viewing the data, you can close it by click on the ‘x’ next to the name iq.</p>
 <p><img src="img/dataframe2.png" /></p>
 <p>Note that after looking at the dataset this way, the command <code>view(iq)</code> appeared in the console. You can look at the dataset with the <strong>view</strong> command as well</p>
-<p>Finally, when typing the code to create the data frame, you may have noticed that RStudio uses <strong>predictive text</strong>. This means that RStudio will suggest functions and objects as you type. You should take advantage of this nice feature!</p>
+<p>When typing the code to create the data frame, you may have noticed that RStudio uses <strong>predictive text</strong>. This means that RStudio will suggest functions and objects as you type. You should take advantage of this feature!</p>
 <p><img src="img/autofill.png" /></p>
 </div>
 </div>
 </div>
 <div id="importing-data-into-rstudio-cloud" class="section level2">
 <h2><span class="header-section-number">3.2</span> Importing data into Rstudio cloud</h2>
-<p>In the Introduction section you learned how to assign data to a <strong>vector</strong> using the <strong>combine</strong> function.</p>
+<p>In the last section you learned how to assign data to a <strong>vector</strong> using the <strong>combine</strong> function.</p>
 <p>Another way to assign data to an object is by first entering the data into a spreadsheet (like google sheets or excel) and then import the data into RStudio. This will be our preferred method.</p>
-<p>First download the exam2.csv file from d2l.</p>
+<p><strong>First download the exam2.csv file from d2l.</strong></p>
+<p>This file contains data on the exam 2 scores from a previous class of mine. It also has some made up data on students’ studying, eating, and drinking behaviors before the exam.<br />
+Make sure the file remains a .cvs file after you download it. If you open it in excel, excel might change the file to an .xls file.</p>
+<p>When using RStudio in the cloud, you will first need to uplaod the data into your project and then import it into the global environment.</p>
 <div id="upload-the-data-into-rstudio-cloud" class="section level3">
 <h3><span class="header-section-number">3.2.1</span> Upload the data into Rstudio Cloud</h3>
 <p>Then select the UPLOAD button in the files window.</p>
@@ -260,7 +268,7 @@
 <p>The next window should look like this:</p>
 <p><img src="img/importwindow2.png" /></p>
 <p>From here you should click the IMPORT button.</p>
-<p>But first note the <strong>Code Preview</strong> box. This is the code you could use to import data (instead of clicking through all these windows). Copy this code before I click the import button and then paste it into your script for your records and in case you need to assign the file to an object again (because it is faster with code).</p>
+<p>But first note the <strong>Code Preview</strong> box. This is the code you could use to import data (instead of clicking through all these windows). It’s a good idea to copy this code before you click the import button and then paste it into your script for your records and in case you need to assign the file to an object again (because it is faster with code).</p>
 <p><img src="img/importcomplete.png" /></p>
 </div>
 <div id="code" class="section level4">
@@ -342,7 +350,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["gitbook-demo.pdf"],
+"download": ["Tools for working with data 211.pdf"],
 "toc": {
 "collapse": "subsection"
 }

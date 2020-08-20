@@ -1,21 +1,23 @@
+
+
 # Introduction
 
-This chapter introduces the Rstudio cloud environment and describes how to import data into the RStudio cloud. 
+This chapter introduces the RStudio cloud environment and describes how to import data into the RStudio cloud. 
 
-R cannot handle typos and is case sensitive (‘Gender’ is not the same as ‘gender’). If your code will not run check for typos and caps. Related to this point, do not be afraid to copy and paste with using R. I often copy and paste code and replace variable or dataset names as needed. (This is one of the few times in education where copy and paste is OK!)
+R cannot handle typos and is case sensitive (‘Gender’ is not the same as ‘gender’). If your code will not run check for typos and caps.  
 
-## Layout of Rstudio cloud
+Related to this point, do not be afraid to copy and paste with using R. I often copy and paste code and replace variable or dataset names as needed. (This is one of the few times in education where copy and paste is OK!)
+
+## Layout of Rstudio
 
 Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describe in turn next.
 
 ### Console 
-The console panel of R studio is where you can type commands and where you will see the output of commands. 
+The console panel of R studio is where you can type commands (or R code) and where you will see the output of commands. 
 
 In its most basic form, you can think of R as a fancy calculator. 
 
-For example:
-
-In the console type `2+2` and then press RETURN on your keyboard. The answer '4' will apear on the next line. 
+For example: In the console type `2+2` and then press RETURN on your keyboard. The answer '4' will apear on the next line. 
 
 The `>` in the last line of the console means that the console is ready for a command (see red circle in the picture above). 
 
@@ -29,15 +31,15 @@ The plus sign means the command is incomplete.
 
 ![](img/waiting.png)
 
-Push the **ESC** button on your keyboard to get back to the command prompt.
+Push the **ESC** button on your keyboard to get back to the command prompt (>).  
 
 
 
 ### Script
 
-One of the benefits of using R is that you can save a record of your work using scripts. Records of your work allow you to easily start and stop an assignment or research project. You can pick up where you left off whether it is 20 minutes later or 2 years later. It also lets you share with others – from professors, to collaborators, to peer reviewers. 
+One of the benefits of using R is that you can save a record of your work using scripts. Records of your work allow you to easily start and stop an assignment or research project. You can pick up where you left off whether it is 20 minutes later or 2 years later. These script files also let you share your data analysis with others – from professors, to collaborators, to peer reviewers (ensure that your work is reproducible).  
 
-To create a new script, go to the top bar menu:
+To create a new script, go to the top bar menu:  
 
 **FILE -> NEW FILE -> R SCRIPT**
 
@@ -51,7 +53,7 @@ Scripts are similar to running command in the console (this is what you did in t
 
 For example, type `5+5` in the script panel. 
 
-In order to run command in a script you should click the run button while the cursor is in the code or the code is selected. You can also run the code by pressing the COMMAND and RETURN keys on your keyboard at the same time (the ALT and RETURN key on a pc). 
+In order to run command in a script you should click the run button while the cursor is in the code or the code is selected. Instead on clicking on the run button, you can also run the code by pressing the COMMAND and RETURN keys on your keyboard at the same time (the ALT and RETURN key on a pc). 
 
 After the code is run, the results will automatically appear the in console (see red arrow in the picture below).
 
@@ -73,9 +75,9 @@ Your file should now be listed in the files window in the bottom right.
 
 ![](img/savescript3.png) 
 
-**This script file is a record of your work and is how you will be graded for this lab. Make sure you saved this file and complete the rest of this lab in your ‘lab1’ script.** 
+**This script file is a record of your work and is how you will be graded for the 'reproducing the assigned chapters' assignment. Make sure you saved this file and complete the rest of this lab in your ‘lab1’ script.** 
 
-Within a script you should include comments to yourself and others using `#`. Anything with a `#` in front of it will not run. These comments and explanations are an important part of an R script. 
+Within a script you should include comments to yourself and others using a `#`. Anything with a `#` in front of it will not run. **These comments and explanations are an important part of an R script.**  
 
 For example, type the following in to the script and then run it. 
 
@@ -87,12 +89,20 @@ For example, type the following in to the script and then run it.
 
 ![](img/comment.png)
 
-Note that the comments are green in the script.
+Note that the comments appear green in the script.  
+
+You can make notes to me this way (if needed). For example:  
+`#This will not run. Dr S, I need help`  
+
+I will leave comments to you this way. When I do, I will start my comment with my initials. For example:  
+`#NS: try loading the tidyverse package first`   
+
+Scripts should be organized so that someone else can follow what you did.    
 
 ### Environment and history 
-In the top right corner of RStudio is the environment and history window. The **history tab** shows every line of code that has been run in the current session. 
+In the top right corner of RStudio is the environment and history window. The **history tab** shows every line of code that has been run in the current session. I do not use this much.  
 
-The **environment tab** is where all active **objects** are listed. An object is something can hold information for later use. The information can be data, values, output, or functions. 
+The **environment tab** is where all active **objects** are listed. An object is something can hold information for later use. The information can be data, values, output, or functions. Normally my panel is set on this.  
 
 Objects are assigned using `<-`. Values on the right side of  `<-` will be assigned to the object on the left side.
 
@@ -112,15 +122,15 @@ The shortcut for making `<-` is the ALT and – key together. (or OPTION and –
 
 #### Vectors
 
-It is possible to store more than one number in an object. One way to do this is to use a a **vector**. Assign a set of numbers a vector with the **combine** function: `c()`. Do use this, type all the numbers you want to store within the parentheses in a comma separated list. 
+It is possible to store more than one number in an object. One way to do this is to use a  **vector**. Assign a set of numbers a vector with the **combine** function: `c()`, by typing all of the numbers you want to store within the parentheses in a comma separated list. 
 
-For example, let’s enter IQ scores of students in a small class. 
+For example, let’s enter the IQ scores of students in a small class. 
 
 To do this use the following code:
 
 `classIQ <- c(112, 115, 89, 95, 101)`
 
-After you run this code,the classIQ vector should appear in the environment. 
+After you run this code, the classIQ vector should appear in the environment. 
 
 Here is a picture of what your screen should look like:
 
@@ -181,19 +191,26 @@ A new tab will open with a spreadsheet view of the dataset. When you are done vi
 
 Note that after looking at the dataset this way, the command `view(iq)` appeared in the console. You can look at the dataset with the **view** command as well 
 
-Finally, when typing the code to create the data frame, you may have noticed that RStudio uses **predictive text**. This means that RStudio will suggest functions and objects as you type. You should take advantage of this nice feature!
+When typing the code to create the data frame, you may have noticed that RStudio uses **predictive text**. This means that RStudio will suggest functions and objects as you type. You should take advantage of this feature!
 
 ![](img/autofill.png)
 
 ## Importing data into Rstudio cloud
 
-In the Introduction section you learned how to assign data to a **vector** using the **combine** function.
+In the last section you learned how to assign data to a **vector** using the **combine** function.
 
-Another way to assign data to an object is by first entering the data into a spreadsheet (like google sheets or excel) and then import the data into RStudio. This will be our preferred method. 
+Another way to assign data to an object is by first entering the data into a spreadsheet (like google sheets or excel) and then import the data into RStudio. This will be our preferred method.  
 
-First download the exam2.csv file from d2l.
+**First download the exam2.csv file from d2l.**  
 
-### Upload the data into Rstudio Cloud
+This file contains data on the exam 2 scores from a previous class of mine. It also has some made up data on students' studying, eating, and drinking behaviors before the exam.    
+Make sure the file remains a .cvs file after you download it. If you open it in excel, excel might change the file to an .xls file.   
+
+When using RStudio in the cloud, you will first need to uplaod the data into your project and then import it into the global environment.  
+
+
+
+### Upload the data into Rstudio Cloud  
 
 Then select the UPLOAD button in the files window. 
 
@@ -253,7 +270,7 @@ The next window should look like this:
 
 From here you should click the IMPORT button.  
 
-But first note the **Code Preview** box. This is the code you could use to import data (instead of clicking through all these windows). Copy this code before I click the import button and then paste it into your script for your records and in case you need to assign the file to an object again (because it is faster with code).
+But first note the **Code Preview** box. This is the code you could use to import data (instead of clicking through all these windows). It's a good idea to copy this code before you click the import button and then paste it into your script for your records and in case you need to assign the file to an object again (because it is faster with code).  
 
 
 ![](img/importcomplete.png)
