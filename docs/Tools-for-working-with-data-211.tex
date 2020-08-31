@@ -41,6 +41,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -80,7 +120,7 @@
 
 \title{Tools for Working with Data - 211}
 \author{Nicole Sorhagen, Ph.D.}
-\date{2020-08-19}
+\date{2020-08-31}
 
 \begin{document}
 \maketitle
@@ -593,6 +633,232 @@ When you restart the R session, everything in the script, environment, console, 
 All packages that were loaded will be cleared, so you will have to reload them if you want to use them.
 
 If something is not working like it is suppose to (and you have checked for type-os), try restarting the R session. It could be that the functions of one package conflict or mask the functions of another package.
+
+\hypertarget{descriptive-statistics}{%
+\chapter{Descriptive Statistics}\label{descriptive-statistics}}
+
+\textbf{NOTE:} Please open a new script and save it as lab 2 (or week 2) for your reproduction of this chapter.
+
+This section focuses on functions that find descriptive statistics. \textbf{Descriptive statistics} refer to measures of central tendency (mean, median, and mode) and measures of variability (standard deviation, variance, range, etc.).
+
+There are several functions that find descriptive statistics within R. My preferred method uses the Tidyverse and Psych packages, which I describe first. Next I will show you how to find descriptive statistics using base R.
+
+\hypertarget{descriptive-statistics-using-tidyverse-and-psych-packages.}{%
+\section{Descriptive statistics using Tidyverse and Psych packages.}\label{descriptive-statistics-using-tidyverse-and-psych-packages.}}
+
+First load the tidyverse and psych packages (if they are not already loaded)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\KeywordTok{library}\NormalTok{(psych)}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{describe()} function of the Psych package was made to produce the most frequently requested stats in psychology research in an easy to read data frame. I pair this with tidyverse styled code (because of the piping - which I explain next).
+
+Here is the code to get descriptive statistics for the exam2 dataset we made:
+
+\texttt{exam2\ \%\textgreater{}\%}\\
+\texttt{describe()}
+
+\begin{itemize}
+\tightlist
+\item
+  The \texttt{describe()} function applies to all of the variables in the dataset (here exam2)
+\item
+  The \texttt{\%\textgreater{}\%} in this code is called a \textbf{pipe}
+\item
+  Pipes are part of the Tidyverse package
+\item
+  The shortcut to write a pipe (\texttt{\%\textgreater{}\%}) is \texttt{shift\ +\ command\ +\ M\ (shift\ +\ alt\ +\ M\ on\ a\ pc)}
+\item
+  Pipes are a way to write strings of functions more easily
+\item
+  You can think of it as a ``THEN''
+\item
+  So this code would be read as ``use the exam2 dataset'' THEN ``compute descriptive statistics with the describe function''
+\end{itemize}
+
+The twitter handle WeAreRladies uses this example to show the sequential nature of a pipe ( \%\textgreater\% ):\\
+I woke up \%\textgreater\% showered \%\textgreater\% dressed \%\textgreater\% glammed up \%\textgreater\% took breakfast \%\textgreater\% showed up to work
+
+Let's look at the results
+
+\begin{verbatim}
+##            vars  n  mean   sd median trimmed  mad   min   max range  skew
+## id            1 21 11.00 6.20  11.00   11.00 7.41  1.00 21.00 20.00  0.00
+## exam2pts      2 21 15.01 2.31  14.62   14.88 2.65 11.79 19.74  7.95  0.37
+## hrsstudye2    3 21  3.02 2.20   2.00    2.88 2.22  0.00  7.00  7.00  0.41
+## cheese        4 21  1.52 0.51   2.00    1.53 0.00  1.00  2.00  1.00 -0.09
+## wine          5 21  1.48 0.51   1.00    1.47 0.00  1.00  2.00  1.00  0.09
+##            kurtosis   se
+## id            -1.37 1.35
+## exam2pts      -1.13 0.50
+## hrsstudye2    -1.26 0.48
+## cheese        -2.08 0.11
+## wine          -2.08 0.11
+\end{verbatim}
+
+The results show that the average exam points was 15.01 (out of 20), with a standard deviation of 2.31 points. Students studied for the exam for an average of 3.02 hours (SD = 2.20).
+
+As the cheese and wine variables are nominal, the mean and standard deviation are not particularly meaningful. Also, any statistics on the ID numbers are meaningless.
+
+This is a good place to mention that it is vital that you as a researcher understand what the numbers you are looking at are and the assumptions that they carry. R (or any computer program) will not tell you if what you asked for does not make sense or is not appropriate.
+
+Rather than getting meaningless results that you have to ignore, you could add the \texttt{select()} function to the command above to select certain variables within a dataset. Note that you must include more than one variable for the \texttt{select()} function. Use the \texttt{pull()} function if you want to select only one variable.
+
+For example, to select the exam2pts and hrsstudye2 variables use the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{exam2 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(exam2pts, hrsstudye2) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{describe}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##            vars  n  mean   sd median trimmed  mad   min   max range skew
+## exam2pts      1 21 15.01 2.31  14.62   14.88 2.65 11.79 19.74  7.95 0.37
+## hrsstudye2    2 21  3.02 2.20   2.00    2.88 2.22  0.00  7.00  7.00 0.41
+##            kurtosis   se
+## exam2pts      -1.13 0.50
+## hrsstudye2    -1.26 0.48
+\end{verbatim}
+
+You should create frequency tables for nominal data. Do this with the \texttt{count()} function.
+
+For example, create a frequency table for the cheese variable with this code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{exam2 }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{count}\NormalTok{(cheese)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 2 x 2
+##   cheese     n
+##    <dbl> <int>
+## 1      1    10
+## 2      2    11
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  this code is saying to "use the exam 2 dataset and then count the cheese varible.
+\end{itemize}
+
+The results show that 10 students did not eat cheese the night before Exam 2 (see Introduction for codebook -- or what the 1 and 2 mean) and 11 students did eat cheese the night before the exam.
+
+Finally, often we want to know descriptive statistics by group. For example, say you were interested in relation between cheese eating and exam 2 scores. You would want to know the descriptive statistics of the exam 2 scores for the students who did and did not eat cheese.
+
+To do this I use the \texttt{describeBy()} function of the psych package, which reports basic summary statistics by a grouping variable. You have to tell R where to find the grouping variable by first including the dataset, followed by a \texttt{\$} and the variable name. In this example: \texttt{exam2\$cheese} (I can't figure out how to avoid the \texttt{\$} here - I will give extra credit if you can.)
+
+Use the \texttt{pull()} function to select the exam2pts variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{exam2 }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{pull}\NormalTok{(exam2pts) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{describeBy}\NormalTok{(exam2}\OperatorTok{$}\NormalTok{cheese)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Descriptive statistics by group 
+## group: 1
+##    vars  n  mean   sd median trimmed  mad   min   max range skew kurtosis   se
+## X1    1 10 15.04 2.34  14.94   14.86 2.19 11.79 19.74  7.95 0.41    -0.75 0.74
+## ------------------------------------------------------------ 
+## group: 2
+##    vars  n  mean  sd median trimmed  mad   min   max range skew kurtosis   se
+## X1    1 11 14.98 2.4  13.85    14.9 2.48 12.18 18.46  6.28 0.28    -1.78 0.72
+\end{verbatim}
+
+The results show that the average exam 2 score for students who ate cheese was 15.05 (SD = 2.34) and the average exam 2 score for students who did not ate cheese was 14.98 (SD = 2.4). Other statistics that you might find useful are the group's n, median, minimum and maximum scores, range, and standard error (se).
+
+\hypertarget{descriptive-statistics-using-base-r}{%
+\section{Descriptive statistics using base R}\label{descriptive-statistics-using-base-r}}
+
+Descriptive statistics can also be computed using base R.
+
+When a variable is stored directly in an object, you can apply the mean and standard deviation functions to the object.
+
+For example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{mean}\NormalTok{(classIQ)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 102.4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sd}\NormalTok{(classIQ)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 11.0363
+\end{verbatim}
+
+The summary function provides the range and median as well:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{summary}\NormalTok{(classIQ)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    89.0    95.0   101.0   102.4   112.0   115.0
+\end{verbatim}
+
+Remember that if a variable is in a data frame, you have to tell R to first look in the data frame in order to find the variable. You do this with the dollar sign (\texttt{\$}). Place the \texttt{\$} between the name of the data frame and the name of the variable.
+
+For example, to find the average points earned on Exam 2 use the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{mean}\NormalTok{(exam2}\OperatorTok{$}\NormalTok{exam2pts)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 15.00571
+\end{verbatim}
+
+Note that when typing this code RStudio will provide a list of the variables in the exam2 after you type the \texttt{\$}. It is very convenient.
+
+The \texttt{table()} function of base R performs categorical tabulations of data, frequency tables, and cross tabulations.
+
+For the present example, the code is:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{table}\NormalTok{(exam2}\OperatorTok{$}\NormalTok{cheese)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  1  2 
+## 10 11
+\end{verbatim}
+
+Note that the table is laid out differently than the Tidyverse one above. But you can still easily see that 10 students did not eat cheese the night before Exam 2 and 11 students did eat cheese the night before the exam.
+
+\emph{Some people think that the Tidyverse and Psych packages make computing descriptive statistics a bit easier/more direct/better/easier to understand than base R. You should decide which you prefer. (I tend to prefer Tidyverse and Psych). Another packages that compute descriptive statistics is skimr }
 
   \bibliography{book.bib,packages.bib}
 

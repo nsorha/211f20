@@ -2,7 +2,8 @@ book_filename: "Tools for working with data 211"
 rmd_files: ["index.Rmd",
             "setuprstudiocloud.Rmd",
             "Introduction.Rmd",
-            "packages.Rmd"]
+            "packages.Rmd",
+            "Descriptives.Rmd"]
 output_dir: "docs"
 language:
   ui:
