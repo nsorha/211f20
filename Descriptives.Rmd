@@ -1,6 +1,6 @@
 # Descriptive Statistics
 
-**NOTE:** Please open a new script and save it as lab 2 (or week 2) for your reproduction of this chapter.  
+**NOTE:** Please open a new script and save it as lab 3 (or week 3) for your reproduction of this chapter.  
 
 ```{r, include = FALSE}
 
