@@ -3,6 +3,7 @@ rmd_files: ["index.Rmd",
             "setuprstudiocloud.Rmd",
             "Introduction.Rmd",
             "packages.Rmd",
+            "plots.Rmd",
             "Descriptives.Rmd"]
 output_dir: "docs"
 language:

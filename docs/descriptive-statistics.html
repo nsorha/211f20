@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Descriptive Statistics | Tools for Working with Data - 211</title>
+  <title>Chapter 6 Descriptive Statistics | Tools for Working with Data - 211</title>
   <meta name="description" content="This GitBook describes tools 211 students can use to work with data." />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Descriptive Statistics | Tools for Working with Data - 211" />
+  <meta property="og:title" content="Chapter 6 Descriptive Statistics | Tools for Working with Data - 211" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Descriptive Statistics | Tools for Working with Data - 211" />
+  <meta name="twitter:title" content="Chapter 6 Descriptive Statistics | Tools for Working with Data - 211" />
   
   <meta name="twitter:description" content="This GitBook describes tools 211 students can use to work with data." />
   
@@ -24,14 +24,14 @@
 <meta name="author" content="Nicole Sorhagen, Ph.D." />
 
 
-<meta name="date" content="2020-08-31" />
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="packages.html"/>
+<link rel="prev" href="picturing-data.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -156,9 +156,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.1" data-path="packages.html"><a href="packages.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>5</b> Descriptive Statistics</a><ul>
-<li class="chapter" data-level="5.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-tidyverse-and-psych-packages."><i class="fa fa-check"></i><b>5.1</b> Descriptive statistics using Tidyverse and Psych packages.</a></li>
-<li class="chapter" data-level="5.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-base-r"><i class="fa fa-check"></i><b>5.2</b> Descriptive statistics using base R</a></li>
+<li class="chapter" data-level="5" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>5</b> Picturing Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>5.1</b> Histograms</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-base-r"><i class="fa fa-check"></i><b>5.1.1</b> Histograms with base R</a></li>
+<li class="chapter" data-level="5.1.2" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-tidyverse"><i class="fa fa-check"></i><b>5.1.2</b> Histograms with tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>5.2</b> Scatterplots</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="picturing-data.html"><a href="picturing-data.html#two-continuous-variables"><i class="fa fa-check"></i><b>5.2.1</b> Two continuous variables</a></li>
+<li class="chapter" data-level="5.2.2" data-path="picturing-data.html"><a href="picturing-data.html#one-continuous-and-one-categorical-variable"><i class="fa fa-check"></i><b>5.2.2</b> One continuous and one categorical variable</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="picturing-data.html"><a href="picturing-data.html#additional-resources"><i class="fa fa-check"></i><b>5.3</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-tidyverse-and-psych-packages."><i class="fa fa-check"></i><b>6.1</b> Descriptive statistics using Tidyverse and Psych packages.</a></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-base-r"><i class="fa fa-check"></i><b>6.2</b> Descriptive statistics using base R</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -181,15 +192,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="descriptive-statistics" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Descriptive Statistics</h1>
+<h1><span class="header-section-number">Chapter 6</span> Descriptive Statistics</h1>
 <p><strong>NOTE:</strong> Please open a new script and save it as lab 3 (or week 3) for your reproduction of this chapter.</p>
 <p>This section focuses on functions that find descriptive statistics. <strong>Descriptive statistics</strong> refer to measures of central tendency (mean, median, and mode) and measures of variability (standard deviation, variance, range, etc.).</p>
 <p>There are several functions that find descriptive statistics within R. My preferred method uses the Tidyverse and Psych packages, which I describe first. Next I will show you how to find descriptive statistics using base R.</p>
 <div id="descriptive-statistics-using-tidyverse-and-psych-packages." class="section level2">
-<h2><span class="header-section-number">5.1</span> Descriptive statistics using Tidyverse and Psych packages.</h2>
+<h2><span class="header-section-number">6.1</span> Descriptive statistics using Tidyverse and Psych packages.</h2>
 <p>First load the tidyverse and psych packages (if they are not already loaded)</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="descriptive-statistics.html#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="descriptive-statistics.html#cb1-2"></a><span class="kw">library</span>(psych)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="descriptive-statistics.html#cb2-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="descriptive-statistics.html#cb2-2"></a><span class="kw">library</span>(psych)</span></code></pre></div>
 <p>The <code>describe()</code> function of the Psych package was made to produce the most frequently requested stats in psychology research in an easy to read data frame. I pair this with tidyverse styled code (because of the piping - which I explain next).</p>
 <p>Here is the code to get descriptive statistics for the exam2 dataset we made:</p>
 <p><code>exam2 %&gt;%</code><br />
@@ -223,9 +234,9 @@ I woke up %&gt;% showered %&gt;% dressed %&gt;% glammed up %&gt;% took breakfast
 <p>This is a good place to mention that it is vital that you as a researcher understand what the numbers you are looking at are and the assumptions that they carry. R (or any computer program) will not tell you if what you asked for does not make sense or is not appropriate.</p>
 <p>Rather than getting meaningless results that you have to ignore, you could add the <code>select()</code> function to the command above to select certain variables within a dataset. Note that you must include more than one variable for the <code>select()</code> function. Use the <code>pull()</code> function if you want to select only one variable.</p>
 <p>For example, to select the exam2pts and hrsstudye2 variables use the following code:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="descriptive-statistics.html#cb3-1"></a>exam2 <span class="op">%&gt;%</span></span>
-<span id="cb3-2"><a href="descriptive-statistics.html#cb3-2"></a><span class="st">  </span><span class="kw">select</span>(exam2pts, hrsstudye2) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb3-3"><a href="descriptive-statistics.html#cb3-3"></a><span class="st">  </span><span class="kw">describe</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="descriptive-statistics.html#cb4-1"></a>exam2 <span class="op">%&gt;%</span></span>
+<span id="cb4-2"><a href="descriptive-statistics.html#cb4-2"></a><span class="st">  </span><span class="kw">select</span>(exam2pts, hrsstudye2) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb4-3"><a href="descriptive-statistics.html#cb4-3"></a><span class="st">  </span><span class="kw">describe</span>()</span></code></pre></div>
 <pre><code>##            vars  n  mean   sd median trimmed  mad   min   max range skew
 ## exam2pts      1 21 15.01 2.31  14.62   14.88 2.65 11.79 19.74  7.95 0.37
 ## hrsstudye2    2 21  3.02 2.20   2.00    2.88 2.22  0.00  7.00  7.00 0.41
@@ -234,8 +245,8 @@ I woke up %&gt;% showered %&gt;% dressed %&gt;% glammed up %&gt;% took breakfast
 ## hrsstudye2    -1.26 0.48</code></pre>
 <p>You should create frequency tables for nominal data. Do this with the <code>count()</code> function.</p>
 <p>For example, create a frequency table for the cheese variable with this code:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="descriptive-statistics.html#cb5-1"></a>exam2 <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb5-2"><a href="descriptive-statistics.html#cb5-2"></a><span class="st">  </span><span class="kw">count</span>(cheese)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="descriptive-statistics.html#cb6-1"></a>exam2 <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb6-2"><a href="descriptive-statistics.html#cb6-2"></a><span class="st">  </span><span class="kw">count</span>(cheese)</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 2
 ##   cheese     n
 ##    &lt;dbl&gt; &lt;int&gt;
@@ -248,9 +259,9 @@ I woke up %&gt;% showered %&gt;% dressed %&gt;% glammed up %&gt;% took breakfast
 <p>Finally, often we want to know descriptive statistics by group. For example, say you were interested in relation between cheese eating and exam 2 scores. You would want to know the descriptive statistics of the exam 2 scores for the students who did and did not eat cheese.</p>
 <p>To do this I use the <code>describeBy()</code> function of the psych package, which reports basic summary statistics by a grouping variable. You have to tell R where to find the grouping variable by first including the dataset, followed by a <code>$</code> and the variable name. In this example: <code>exam2$cheese</code> (I can’t figure out how to avoid the <code>$</code> here - I will give extra credit if you can.)</p>
 <p>Use the <code>pull()</code> function to select the exam2pts variable.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="descriptive-statistics.html#cb7-1"></a>exam2 <span class="op">%&gt;%</span></span>
-<span id="cb7-2"><a href="descriptive-statistics.html#cb7-2"></a><span class="st">  </span><span class="kw">pull</span>(exam2pts) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb7-3"><a href="descriptive-statistics.html#cb7-3"></a><span class="st">  </span><span class="kw">describeBy</span>(exam2<span class="op">$</span>cheese)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="descriptive-statistics.html#cb8-1"></a>exam2 <span class="op">%&gt;%</span></span>
+<span id="cb8-2"><a href="descriptive-statistics.html#cb8-2"></a><span class="st">  </span><span class="kw">pull</span>(exam2pts) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb8-3"><a href="descriptive-statistics.html#cb8-3"></a><span class="st">  </span><span class="kw">describeBy</span>(exam2<span class="op">$</span>cheese)</span></code></pre></div>
 <pre><code>## 
 ##  Descriptive statistics by group 
 ## group: 1
@@ -263,26 +274,26 @@ I woke up %&gt;% showered %&gt;% dressed %&gt;% glammed up %&gt;% took breakfast
 <p>The results show that the average exam 2 score for students who ate cheese was 15.05 (SD = 2.34) and the average exam 2 score for students who did not ate cheese was 14.98 (SD = 2.4). Other statistics that you might find useful are the group’s n, median, minimum and maximum scores, range, and standard error (se).</p>
 </div>
 <div id="descriptive-statistics-using-base-r" class="section level2">
-<h2><span class="header-section-number">5.2</span> Descriptive statistics using base R</h2>
+<h2><span class="header-section-number">6.2</span> Descriptive statistics using base R</h2>
 <p>Descriptive statistics can also be computed using base R.</p>
 <p>When a variable is stored directly in an object, you can apply the mean and standard deviation functions to the object.</p>
 <p>For example:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="descriptive-statistics.html#cb9-1"></a><span class="kw">mean</span>(classIQ)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="descriptive-statistics.html#cb10-1"></a><span class="kw">mean</span>(classIQ)</span></code></pre></div>
 <pre><code>## [1] 102.4</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="descriptive-statistics.html#cb11-1"></a><span class="kw">sd</span>(classIQ)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="descriptive-statistics.html#cb12-1"></a><span class="kw">sd</span>(classIQ)</span></code></pre></div>
 <pre><code>## [1] 11.0363</code></pre>
 <p>The summary function provides the range and median as well:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="descriptive-statistics.html#cb13-1"></a><span class="kw">summary</span>(classIQ)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="descriptive-statistics.html#cb14-1"></a><span class="kw">summary</span>(classIQ)</span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##    89.0    95.0   101.0   102.4   112.0   115.0</code></pre>
 <p>Remember that if a variable is in a data frame, you have to tell R to first look in the data frame in order to find the variable. You do this with the dollar sign (<code>$</code>). Place the <code>$</code> between the name of the data frame and the name of the variable.</p>
 <p>For example, to find the average points earned on Exam 2 use the following code:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="descriptive-statistics.html#cb15-1"></a><span class="kw">mean</span>(exam2<span class="op">$</span>exam2pts)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="descriptive-statistics.html#cb16-1"></a><span class="kw">mean</span>(exam2<span class="op">$</span>exam2pts)</span></code></pre></div>
 <pre><code>## [1] 15.00571</code></pre>
 <p>Note that when typing this code RStudio will provide a list of the variables in the exam2 after you type the <code>$</code>. It is very convenient.</p>
 <p>The <code>table()</code> function of base R performs categorical tabulations of data, frequency tables, and cross tabulations.</p>
 <p>For the present example, the code is:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="descriptive-statistics.html#cb17-1"></a><span class="kw">table</span>(exam2<span class="op">$</span>cheese)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="descriptive-statistics.html#cb18-1"></a><span class="kw">table</span>(exam2<span class="op">$</span>cheese)</span></code></pre></div>
 <pre><code>## 
 ##  1  2 
 ## 10 11</code></pre>
@@ -296,7 +307,7 @@ I woke up %&gt;% showered %&gt;% dressed %&gt;% glammed up %&gt;% took breakfast
           </div>
         </div>
       </div>
-<a href="packages.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="picturing-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
