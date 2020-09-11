@@ -120,7 +120,7 @@
 
 \title{Tools for Working with Data - 211}
 \author{Nicole Sorhagen, Ph.D.}
-\date{2020-09-01}
+\date{2020-09-11}
 
 \begin{document}
 \maketitle
@@ -1052,6 +1052,415 @@ For the present example, the code is:
 Note that the table is laid out differently than the Tidyverse one above. But you can still easily see that 10 students did not eat cheese the night before Exam 2 and 11 students did eat cheese the night before the exam.
 
 \emph{Some people think that the Tidyverse and Psych packages make computing descriptive statistics a bit easier/more direct/better/easier to understand than base R. You should decide which you prefer. (I tend to prefer Tidyverse and Psych). Another packages that compute descriptive statistics is skimr }
+
+\hypertarget{measurement}{%
+\chapter{Measurement}\label{measurement}}
+
+\textbf{NOTE:} Please open a new script and call it lab 4 (or week 4).
+
+Math anxiety is the feeling of tension or worry in situations that involve math and is a major predictor of math achievement and career choices (Foley et al., 2017; Hembree, 1990).
+
+\href{https://drive.google.com/file/d/1VvSqWL7W4mvA5MtDAF94GclVIemC_a9P/view?usp=sharing}{Ramirez and colleagues (2013)} developed the Child Math Anxiety Questionnaire (CMAQ) to measure math anxiety of young children. The measure (which can be seen below) consists of 8 questions which children responded to on a sliding scale that ranged from 1 to 16 points (the points were invisible to the children). Ramirez and colleagues (2013) calculated each child's CMAQ score by computing an average score of the eight items. Low scores on the CMAQ indicates high levels of math anxiety.
+
+\includegraphics{img/cmaq.png}
+
+Let's pretend that you completed a pilot study testing the construct validity (if it is a good measure of math anxiety) of the CMAQ before Ramirez and her colleagues studied its relation to working memory and math achievement.
+
+You gave the CMAQ to a convenience sample of 40 second graders. In addition to measuring the students' math anxiety with the CMAQ, you also measured the students' math ability, general anxiety, you gave them a different measure of math anxiety, and you had the students wear a heart rate monitor during a math lesson.
+
+\href{https://docs.google.com/spreadsheets/d/1Ty_kgqdsTM8f1h-lJ-HjkpYqXGc7hAAyP_F9vq-tdEI/edit?usp=sharing}{Here is the data.}
+
+The first column is arbitrary ID numbers to identify the participants. The next 8 columns represent your participants responses on the CMAQ items. You will see that column J, titled cmaq, is blank. We will complete this column next in the brief introduction to spreadsheets section.
+
+The next column (genanx) are a measure of general anxiety which was operationalized as the participants scores on the short form of the State - Trait Anxiety Inventory (STAI) which includes 6 statements - rated on a 1 to 4 point scale. The range is 6 to 24 points, with 6 points signifying no anxiety and 24 points signifying the highest level of anxiety.
+
+The sema column is participants scores on the Scale for Early Mathematics Anxiety (SEMA), which is another measure of children's math anxiety (Wu et al., 2012). This measure consists of 20 items rated on a 4 point scale (0 - not nervous at all to 3 - very nervous). Responses are summed. Higher scores on the SEMA indicates high levels of math anxiety.
+
+t2cmaq is the participants' CMAQ scores administered 2 weeks later.
+
+The bmp column is the participants average heart rate (beats per minute) during a 15 minute math lesson.
+
+\hypertarget{a-brief-introduction-to-spreadsheets-and-some-brief-review-of-previous-material}{%
+\section{A brief introduction to spreadsheets (and some brief review of previous material)}\label{a-brief-introduction-to-spreadsheets-and-some-brief-review-of-previous-material}}
+
+Researchers often initially enter data into spreadsheets (excel, google sheet, numbers, etc.). So, I would like to briefly review how to use basic functions in a spread sheet.
+
+Either save a copy of the measurementma data to your own google account, or download the data and open it in excel or numbers (or whatever spreadsheet you prefer).
+
+You may have noticed that there is no data in the cmaq column. To complete this column, we need to calculate the average responses of the CMAQ items for each participant. One way to do this is to use the function options within the spreadsheet. (You also could enter the mean formula using the \texttt{=} sign, which I am not going to show here. Let me know if you would like me to post a short video showing how to do this.)
+
+My screenshots show how to use the spreadsheet function options in google sheets. However, the process is very similar across all spreadsheet programs - you just might have to look in a different place on your screen.
+
+First click in the first cell in the cmaq column (cell J2).
+
+Then click on the sum symbol in the far right of the icon menu, and select the average option.
+
+\includegraphics{img/averagefun.png}
+
+Then you should have the average function in cell J2 with nothing in the parenthesis.
+
+\includegraphics{img/averagefun2.png}
+
+Next you need to tell the spreadsheet which cells you want it to average by listing them in the parenthesis. You can either select the cells you want the spreadsheet to average or you can type the names of the first and last cell separated by a \texttt{:} sign (in this example B2 : I2). Then hit enter on your keyboard and the average of the 8 items will appear (2).
+
+\includegraphics{img/averagefun3.png}
+
+You do not need to enter the equation separately into each cell of this column because spreadsheets will autofill equations for you. To do this, select the cell containing the formula, then select the small square in the bottom right corner of the cell and drag it down to the last row in the dataset. (In some programs you can double-click on the small square and it will autofill to the bottom of the column).
+
+\includegraphics{img/smallbox.png}
+
+\includegraphics{img/pull.png}
+
+When the cmaq column is complete (i.e.~you have calculated the average score for each participant), save the data as a .csv file.
+
+To do this in google sheets, select in the top bar menu:
+
+FILE -\textgreater{} DOWNLOAD -\textgreater{} COMMA-SEPERATED VALUES (.CSV)
+
+\includegraphics{img/savecsv.png}
+Again, the process is very similar in other spreadsheet programs.
+
+Next import the data into your RStudio project and assign the dataset to an object called cmaqpilot. To assign the data to an object, you can use the point and click (GUI) method or you could use the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readr)}
+\NormalTok{cmaqpilot <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"measurementma.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Load the tidyverse and psych packages (if they are not loaded already):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\KeywordTok{library}\NormalTok{(psych)}
+\end{Highlighting}
+\end{Shaded}
+
+And then let's first create of histogram of the CMAQ scores:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(cmaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{cmaq)) }\OperatorTok{+}\StringTok{ }
+\StringTok{  }\KeywordTok{geom_histogram}\NormalTok{(}\DataTypeTok{binwidth=}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tools-for-working-with-data-211_files/figure-latex/unnamed-chunk-18-1.pdf}
+
+The figure shows that all scores are within the range of possible scores, suggesting no errors occurred during data entry or when you calculated the average scores. The shape is slightly bi-modal, suggesting students are more likely to feel high or low levels of math anxiety, than to feel moderate amounts of math anxiety.
+
+\hypertarget{reliability}{%
+\section{Reliability}\label{reliability}}
+
+The first step in establishing construct validity is to test the reliability of the measure. \textbf{Reliability} refers to consistency.
+
+\hypertarget{internal-reliability}{%
+\subsection{Internal reliability}\label{internal-reliability}}
+
+For self-report measures, like the CMAQ, you need to measure internal reliability, which measures the extent to which people give consistent responses on every item of a survey. Researchers typically use Cronbach's alpha to test whether a measurement scale has internal reliability. Cronbach's alpha is essentially the average correlation of the correlations between each item of the scale (for a 3 item scale: the average of the correlations between item 1 and 2, item 1 and item 3, and item 2 and 3). This average is weighted by the average variance and the number of items, so it is not quite that simple - but it is the gist.
+
+Like all correlations, Cronbach's alphas can technically range from -1 to 1. Higher Cronbach's alphas indicate better internal reliability (the correlations between the scale items are higher). Cronbach's alphas of over .70 are considered acceptable in psychology.
+
+I said technically above because negative Cronbach's alphas are almost unheard of. In the math anxiety example, that would mean that children reported feeling anxious for one item while not feeling anxious for another item. If all of the items are measuring the same thing (math anxiety), people should respond to them in a consistent matter.
+
+In order to calculate the Cronbach's alpha in R you have to create a new object with only the items of the measurement scale.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cmaq <-}\StringTok{ }\NormalTok{cmaqpilot }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{select}\NormalTok{(t1q1, t1q2, t1q3, t1q4, t1q5, t1q6, t1q7, t1q8)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  This code tells R to select the variables listed in the select function from the cmaqpilot and save it as cmaq.
+\end{itemize}
+
+Then use the \texttt{alpha()} function, which is part of the psych package, to compute Cronbachs alpha of all if the variables in the cmaq object.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{alpha}\NormalTok{(cmaq)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Reliability analysis   
+## Call: alpha(x = cmaq)
+## 
+##   raw_alpha std.alpha G6(smc) average_r S/N    ase mean  sd median_r
+##       0.98      0.98    0.99      0.89  65 0.0036  8.3 4.1     0.89
+## 
+##  lower alpha upper     95% confidence boundaries
+## 0.98 0.98 0.99 
+## 
+##  Reliability if an item is dropped:
+##      raw_alpha std.alpha G6(smc) average_r S/N alpha se   var.r med.r
+## t1q1      0.98      0.98    0.98      0.88  53   0.0045 0.00122  0.88
+## t1q2      0.98      0.98    0.98      0.88  52   0.0046 0.00098  0.88
+## t1q3      0.98      0.98    0.98      0.89  59   0.0040 0.00099  0.89
+## t1q4      0.98      0.98    0.99      0.89  56   0.0042 0.00158  0.88
+## t1q5      0.98      0.98    0.99      0.89  57   0.0041 0.00126  0.89
+## t1q6      0.98      0.98    0.98      0.89  55   0.0043 0.00156  0.88
+## t1q7      0.98      0.98    0.99      0.90  62   0.0038 0.00117  0.90
+## t1q8      0.98      0.98    0.99      0.90  63   0.0038 0.00123  0.90
+## 
+##  Item statistics 
+##       n raw.r std.r r.cor r.drop mean  sd
+## t1q1 40  0.97  0.97  0.97   0.96  7.7 4.8
+## t1q2 40  0.98  0.98  0.98   0.97  8.5 4.6
+## t1q3 40  0.94  0.94  0.94   0.92  8.4 4.2
+## t1q4 40  0.95  0.95  0.95   0.94  8.7 4.3
+## t1q5 40  0.95  0.95  0.94   0.94  8.2 4.7
+## t1q6 40  0.96  0.96  0.96   0.95  8.0 4.3
+## t1q7 40  0.93  0.93  0.92   0.91  8.4 3.9
+## t1q8 40  0.92  0.93  0.91   0.90  8.3 4.0
+\end{verbatim}
+
+In the output - focus on the raw alpha. In this example the Cronbach's alpha is .98, which is very high - indicating very good internal reliability (Cronbach's alpha with young kids are rarely this high - outing me for making up this data).
+
+When Cronbach's alphas are less than .70, researchers have to revise and reconsider items. The purpose of the rest of the output is to get a sense of what Cronbach's alpha would be without an item. (Here is a good reference for more information about the rest of the alpha() function output if you are interested: \url{https://rpubs.com/hauselin/reliabilityanalysis})
+
+\hypertarget{test-retest-reliability}{%
+\subsection{Test-retest reliability}\label{test-retest-reliability}}
+
+Test-retest reliability refers to consistency of a measure over time. To test this we will use scatterplots and correlation coefficients.
+
+Let's first create a scatterplot of the relation between the cmaq and the t2cmaq variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(cmaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{cmaq, }\DataTypeTok{y=}\NormalTok{t2cmaq)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tools-for-working-with-data-211_files/figure-latex/unnamed-chunk-21-1.pdf}
+
+This scatterplot looks highly positive.
+
+Let's next calculate a correlation coefficient between the cmaq and the t2cmaq variable. We will use the \texttt{corr()} function to calculate the confidence interval, effect size, and NHST (Null Hypothesis Significance Testing). The \texttt{corr.test()} function is part of the Psych package and the organization of the code below uses Tidyverse, so you should have both packages loaded.
+
+Here is the code to compute the correlation coefficient between the cmaq and the t2cmaq variable:
+
+\texttt{cmaqpilot\ \%\textgreater{}\%}\\
+\texttt{select(cmaq,\ t2cmaq)\ \%\textgreater{}\%}~\\
+\texttt{corr.test()\ \%\textgreater{}\%}~\\
+\texttt{print(short=FALSE)}
+
+\begin{itemize}
+\tightlist
+\item
+  Add \texttt{method="spearman"} within the \texttt{corr.test()} parentheses for ranked data (For example: \texttt{corr.test(method\ =\ "spearman")})
+\item
+  The \texttt{short\ =\ FALSE} in the \texttt{print()} parentheses prints the confidence intervals
+\item
+  Use \texttt{?corr.test} for more options
+\end{itemize}
+
+\begin{verbatim}
+## Call:corr.test(x = .)
+## Correlation matrix 
+##        cmaq t2cmaq
+## cmaq   1.00   0.98
+## t2cmaq 0.98   1.00
+## Sample Size 
+## [1] 40
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##        cmaq t2cmaq
+## cmaq      0      0
+## t2cmaq    0      0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##            raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## cmaq-t2cmq      0.96  0.98      0.99     0      0.96      0.99
+\end{verbatim}
+
+The first correlation matrix shows that the correlation between the cmaq and t2cmaq is .98.
+
+The second matrix shows the NHST estimates the likelihood of getting results as extreme or more extreme given the null is true (i.e., given there is really no association between the variables). If this likelihood is sufficiently small (less than 5\%), than we reject the null hypothesis and conclude that the association is more extreme than zero. When the probability value is listed as 0, you should report it as p \textless{} .001.
+
+The last part of the output gives the confidence intervals around the correlation coefficient. The confidence interval provides an interval estimate of a parameter. Here the parameter is the true correlation between the two variables. In the present example, the correlation coefficient (r = 0.98) is a point estimate of the true association between the CMAQ at time 1 and 2. The confidence interval gives us an interval estimate of this association (it is between .96 to .99). Larger confidence intervals indicate more uncertainty about the true size of the association.
+
+The scatterplot and correlation coefficient suggest that the CMAQ has test-retest reliability - they both show that the children responded to the CMAQ items consistently over time.
+
+\hypertarget{interrater-reliability}{%
+\subsection{Interrater reliability}\label{interrater-reliability}}
+
+Interrater reliability refers to the consistency of coding ratings between different raters. Since we are interested in the construct validity of a self-report measure here, interrater reliability is not relevant. But the process of creating scatterplots and calculating the correlation coefficient would be the same, here you would use the two raters' observations.
+
+\hypertarget{validity}{%
+\section{Validity}\label{validity}}
+
+The next step in establishing the construct validity of the CMAQ is to establish that is has validity. \textbf{Validity} refers to accuracy. We will focus on the 3 empirical ways to assess validity here.
+
+\hypertarget{criterion-validity}{%
+\subsection{Criterion validity}\label{criterion-validity}}
+
+Criterion validity refers to whether a measure is related to relevant behavioral outcomes.
+
+In the current example, we will test whether the CMAQ is related to the students' heart rate during a math lesson. Students with high math anxiety experience increased
+heart rate during math related tasks (Plaisance, 2009).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(cmaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{cmaq, }\DataTypeTok{y=}\NormalTok{bpm)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tools-for-working-with-data-211_files/figure-latex/unnamed-chunk-23-1.pdf}
+
+This plot suggests that the CMAQ is strongly (and positively) correlated to students' heart rate, which is evidence for criterion validity of the CMAQ.
+
+You could add the regression line to the scatterplot by adding \texttt{geom\_smooth(method=\textquotesingle{}lm\textquotesingle{})} to your code.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(cmaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{cmaq, }\DataTypeTok{y=}\NormalTok{bpm)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method=}\StringTok{'lm'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tools-for-working-with-data-211_files/figure-latex/unnamed-chunk-24-1.pdf}
+
+Some think that it is easier to see that the data points are close to the regression line. It also allows you to see the slope of the line - steeper lines indicate stronger relations.
+
+Next calculate the correlation coefficient:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cmaqpilot }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(cmaq, bpm) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{corr.test}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{print}\NormalTok{(}\DataTypeTok{short=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call:corr.test(x = .)
+## Correlation matrix 
+##      cmaq  bpm
+## cmaq 1.00 0.95
+## bpm  0.95 1.00
+## Sample Size 
+## [1] 40
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##      cmaq bpm
+## cmaq    0   0
+## bpm     0   0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##          raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## cmaq-bpm       0.9  0.95      0.97     0       0.9      0.97
+\end{verbatim}
+
+CMAQ scores were positively related to students' heart rate (r = .95, p \textless{} .001, CI.95 = .90 to .97).
+
+The scatterplot and correlation show that the CMAQ is highly related to a heart rate - which is a known physical manifestation of math anxiety.
+
+\hypertarget{convergent-and-discriminant-validity}{%
+\subsection{Convergent and Discriminant Validity}\label{convergent-and-discriminant-validity}}
+
+Convergent and discriminant validity are often considered together. Convergent validity is whether a measure is related to similar measures. Discriminant validity is whether a measure is not related to dissimilar measures.
+
+In the current example, we will test whether the CMAQ is related to the SEMA, which is another measure of math anxiety. Remember that higher scores on the SEMA indicates high levels of math anxiety. While low scores on the CMAQ indicate high levels of math anxiety. So a negative relation here would indicate convergent validity.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(cmaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{cmaq, }\DataTypeTok{y=}\NormalTok{sema)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method=}\StringTok{'lm'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tools-for-working-with-data-211_files/figure-latex/unnamed-chunk-26-1.pdf}
+
+The figure shows that the CMAQ is negatively correlated to the SEMA.
+
+Next calculate the correlation coefficient:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cmaqpilot }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(cmaq, sema) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{corr.test}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{print}\NormalTok{(}\DataTypeTok{short=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call:corr.test(x = .)
+## Correlation matrix 
+##      cmaq sema
+## cmaq  1.0 -0.8
+## sema -0.8  1.0
+## Sample Size 
+## [1] 40
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##      cmaq sema
+## cmaq    0    0
+## sema    0    0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##           raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## cmaq-sema     -0.89  -0.8     -0.65     0     -0.89     -0.65
+\end{verbatim}
+
+CMAQ scores were negatively related to students' SEMA scores (r = -.80, p \textless{} .001, CI.95 = -.89 to -.65). That is, children reported equal levels of math anxiety on the CMAQ and SEMA.
+
+In the current example, we will test discriminant validity by testing whether the CMAQ is related to general anxiety. Here a zero relation would indicate convergent validity.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{ggplot}\NormalTok{(cmaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{cmaq, }\DataTypeTok{y=}\NormalTok{genanx)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_point}\NormalTok{() }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method=}\StringTok{'lm'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tools-for-working-with-data-211_files/figure-latex/unnamed-chunk-28-1.pdf}
+
+The figure shows a zero correlation between CMAQ and SEMA.
+
+Next calculate the correlation coefficient:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cmaqpilot }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{select}\NormalTok{(cmaq, genanx) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{corr.test}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{print}\NormalTok{(}\DataTypeTok{short=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call:corr.test(x = .)
+## Correlation matrix 
+##         cmaq genanx
+## cmaq    1.00  -0.12
+## genanx -0.12   1.00
+## Sample Size 
+## [1] 40
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##        cmaq genanx
+## cmaq   0.00   0.47
+## genanx 0.47   0.00
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##            raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## cmaq-gennx     -0.41 -0.12       0.2  0.47     -0.41       0.2
+\end{verbatim}
+
+CMAQ scores were not related to students' general anxiety scores (r = -.12, p = . 47, CI.95 = -.41 to .20). Note that the confidence interval here includes zero, which is consistent with NHST because both are saying that zero is a likely correlation between the variables.
+
+Taken together, the CMAQ seems to have convergent and discriminant validity because it is highly related to another measure of math anxiety and it is not related to general anxiety.
 
   \bibliography{book.bib,packages.bib}
 

@@ -1,5 +1,10 @@
 # Measurement
+
+**NOTE:** Please open a new script and call it lab 4 (or week 4).
+
+
 Math anxiety is the feeling of tension or worry in situations that involve math and is a major predictor of math achievement and career choices (Foley et al., 2017; Hembree, 1990).  
+
 [Ramirez and colleagues (2013)](https://drive.google.com/file/d/1VvSqWL7W4mvA5MtDAF94GclVIemC_a9P/view?usp=sharing) developed the Child Math Anxiety Questionnaire (CMAQ) to measure math anxiety of young children. The measure (which can be seen below) consists of 8 questions which children responded to on a sliding scale that ranged from 1 to 16 points (the points were invisible to the children). Ramirez and colleagues (2013) calculated each child’s CMAQ score by computing an average score of the eight items. Low scores on the CMAQ indicates high levels of math anxiety.  
 
 
@@ -7,9 +12,9 @@ Math anxiety is the feeling of tension or worry in situations that involve math 
 
 Let's pretend that you completed a pilot study testing the construct validity (if it is a good measure of math anxiety) of the CMAQ before Ramirez and her colleagues studied its relation to working memory and math achievement.  
 
-You gave the CMAQ to a convenience sample of 40 second graders. In addition to measuring the students' math anxiety with the CMAQ, you also measured the students' math ability, general anxiety, and you gave them a different measure of math anxiety.   
+You gave the CMAQ to a convenience sample of 40 second graders. In addition to measuring the students' math anxiety with the CMAQ, you also measured the students' math ability, general anxiety, you gave them a different measure of math anxiety, and you had the students wear a heart rate monitor during a math lesson. 
 
-[Here is the data.](https://docs.google.com/spreadsheets/d/1UyfrP8h9nsyBCA-KpJAGUFFAzcHO5-RjBfJdeUULPOg/edit?usp=sharing)
+[Here is the data.](https://docs.google.com/spreadsheets/d/1Ty_kgqdsTM8f1h-lJ-HjkpYqXGc7hAAyP_F9vq-tdEI/edit?usp=sharing)
 
 The first column is arbitrary ID numbers to identify the participants. The next 8 columns represent your participants responses on the CMAQ items. You will see that column J, titled cmaq, is blank. We will complete this column next in the brief introduction to spreadsheets section.   
 
@@ -17,14 +22,13 @@ The next column (genanx) are a measure of general anxiety which was operationali
 
 The sema column is participants scores on the Scale for Early Mathematics Anxiety (SEMA), which is another measure of children's math anxiety (Wu et al., 2012). This measure consists of 20 items rated on a 4 point scale (0 - not nervous at all to 3 - very nervous). Responses are summed. Higher scores on the SEMA indicates high levels of math anxiety.  
 
-The wjap column is the participants w-scores on the applied problem subscale of the Woodcock-Johnson III, which consists of math related word problems. The W-scores are Rasch transformed and centered on 500.  
-
 t2cmaq is the participants' CMAQ scores administered 2 weeks later.   
 
+The bmp column is the participants average heart rate (beats per minute) during a 15 minute math lesson.  
 
 ## A brief introduction to spreadsheets (and some brief review of previous material)
 
-Researchers often initially enter data into spreadsheets (excel, google sheet, numbers, etc.). So, I would like to briefly review how to use basic functions in a spread sheet. *We will learn how to create a new variable using R in the data transformation chapter.*   
+Researchers often initially enter data into spreadsheets (excel, google sheet, numbers, etc.). So, I would like to briefly review how to use basic functions in a spread sheet.     
 
 Either save a copy of the measurementma data to your own google account, or download the data and open it in excel or numbers (or whatever spreadsheet you prefer).
 
@@ -175,58 +179,7 @@ The scatterplot and correlation coefficient suggest that the CMAQ has test-retes
 
 ### Interrater reliability 
 
-Interrater reliability refers to the consistency of coding ratings between different raters. We will have to use a different example to learn how to test interrater reliability because there is no observational measures in the math anxiety example.   
-
-The NICHD Early Child Care Research Network (1999) studied babies interactions with their mothers and child care providers over the first 3 years of life. They measured maternal sensitivity by observing mothers and their children during a semi-structured mother-child dyadic play procedure. The researchers measured maternal sensitivity by rating the amount of stimulation mothers provided, responsiveness to non-distressed,  intrusiveness, and positive regard during the play session.   
-
-Say you were responsible for validating the observational measure of maternal sensitivity before the NICHD Early Child Care Research began collecting their data.   
-
-You recruited 59 mother-child pairs to come to your lab. After you explained the purpose of the study and got consent, you recorded them during the semi-structured play procedure.   
-
-Then you and another researcher each watched the recordings (separately) and rated the mothers on the amount of stimulation mothers provided, their responsiveness when their child was not distressed, their intrusiveness, and their positive regard. You and the other researcher had a common codebook of behaviors to look for and were trained to recognize them.   
-
-The data is in matsen.csv   
-
-Open the data in RStudio.  
-
-```{r message=FALSE, warning=FALSE}
-
-library(readr)
-matsen <- read_csv("matsen.csv")
-
-```
-
-The first column is an arbitrary ID number. If you scroll down, you will see there are 59 mothers in total.  
-
-Next is your observational rating of each mother's sensitivity to her child during the semi-structured play session. The third column is the other researchers' observations.  
-
-Let’s test the reliability of the observational measure of maternal sensitivity.  
-
-Let's first create a scatterplot:  
-
-```{r}
-
-library(tidyverse)
-ggplot(matsen, aes(x=SEN24, y=SEN24R2)) +
-  geom_point()
-
-```  
-
-The scatterplot shows a strong positive relation between the two independent ratings of maternal sensitivity.  
-
-Next quantify the relation by computing a correlation coefficient.  
-
-```{r, message=FALSE, warning=FALSE}
-
-matsen %>%
-  select(SEN24, SEN24R2) %>% 
-  corr.test() %>% 
-  print(short=FALSE)
-
-```
-
-The results show that the correlation between the two raters is .94 with a 95% confidence interval of .90 to .96. This suggest strong agreement between raters.  
-
+Interrater reliability refers to the consistency of coding ratings between different raters. Since we are interested in the construct validity of a self-report measure here, interrater reliability is not relevant. But the process of creating scatterplots and calculating the correlation coefficient would be the same, here you would use the two raters' observations.  
 
 
 ## Validity
@@ -237,19 +190,20 @@ The next step in establishing the construct validity of the CMAQ is to establish
 
 Criterion validity refers to whether a measure is related to relevant behavioral outcomes. 
 
-In the current example, we will test whether the CMAQ is related to scores on the applied problems subscale of the Woodcock-Johnson III (WJ-III).
+In the current example, we will test whether the CMAQ is related to the students' heart rate during a math lesson. Students with high math anxiety experience increased
+heart rate during math related tasks (Plaisance, 2009).
 
 ```{r}
-ggplot(cmaqpilot, aes(x=cmaq, y=wjap)) +
+ggplot(cmaqpilot, aes(x=cmaq, y=bpm)) +
   geom_point() 
 ```
 
-This plot suggests that the CMAQ is strongly (and positively) correlated to scores on the applied problems subscale of the WJ-III, which is evidence for criterion validity of the CMAQ.  
+This plot suggests that the CMAQ is strongly (and positively) correlated to students' heart rate, which is evidence for criterion validity of the CMAQ.  
 
 You could add the regression line to the scatterplot by adding `geom_smooth(method='lm')` to your code.   
 
 ```{r message=FALSE, warning=FALSE}
-ggplot(cmaqpilot, aes(x=cmaq, y=wjap)) +
+ggplot(cmaqpilot, aes(x=cmaq, y=bpm)) +
   geom_point() +
   geom_smooth(method='lm')
 ```
@@ -261,15 +215,15 @@ Next calculate the correlation coefficient:
 ```{r, message=FALSE, warning=FALSE}
 
 cmaqpilot %>%
-  select(cmaq, wjap) %>% 
+  select(cmaq, bpm) %>% 
   corr.test() %>% 
   print(short=FALSE)
 
 ```
 
-CMAQ scores were positively related to students' applied problems WJ-III scores (r = .84, p < .001, CI.95 = .72 to .91).
+CMAQ scores were positively related to students' heart rate (r = .95, p < .001, CI.95 = .90 to .97).
 
-The scatterplot and correlation show that the CMAQ is highly related to a behavioral measure of math ability, the applied problems WJ-III scores. [I guess math ability is not the same as math anxiety - despite evidence that they are strongly related. Perhaps a neuro-based variable would have been better here?]
+The scatterplot and correlation show that the CMAQ is highly related to a heart rate - which is a known physical manifestation of math anxiety.
 
 ### Convergent and Discriminant Validity
 
@@ -328,7 +282,4 @@ CMAQ scores were not related to students' general anxiety scores (r = -.12, p = 
 Taken together, the CMAQ seems to have convergent and discriminant validity because it is highly related to another measure of math anxiety and it is not related to general anxiety.   
 
 
-## Homework
-
-[Here is the anaswer key for R HW 4 (due week 5).](./measurementhw.R)
 

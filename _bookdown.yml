@@ -4,7 +4,8 @@ rmd_files: ["index.Rmd",
             "Introduction.Rmd",
             "packages.Rmd",
             "plots.Rmd",
-            "Descriptives.Rmd"]
+            "Descriptives.Rmd",
+            "measurement.Rmd"]
 output_dir: "docs"
 language:
   ui:

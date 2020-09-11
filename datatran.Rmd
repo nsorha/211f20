@@ -1,6 +1,5 @@
 # Basic Data Transformations
 
-**NOTE: please create a new script for this chapter and the interrater relatiablity seciton called week 4**
 
 For this section we will use a dataset from SPSS for Research Methods by Wilson-Doenges, which comes with our Morling text. [Here](https://docs.google.com/document/d/1V1vHljcqtVYXE-2iHcdcR0FNzjdCmJXc6Je5TuWMPuk/edit?usp=sharing) is the survey that Wilson-Doenges distributed to 45 students.  
 
