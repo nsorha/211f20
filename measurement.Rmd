@@ -77,10 +77,14 @@ cmaqpilot <- read_csv("measurementma.csv")
 
 Load the tidyverse and psych packages (if they are not loaded already):   
 
+**normally we
+
 ```{r message=FALSE, warning=FALSE}
 
 library(tidyverse)
 library(psych)
+
+
 
 ```
 
@@ -118,11 +122,11 @@ cmaq <- cmaqpilot %>%
 ```
  - This code tells R to select the variables listed in the select function from the cmaqpilot and save it as cmaq.  
  
-Then use the `alpha()` function, which is part of the psych package, to compute Cronbachs alpha of all if the variables in the cmaq object.
+Then use the `alpha()` function, which is part of the psych package, to compute Cronbachs alpha of all if the variables in the cmaq object. The `psych::` tells r to use the alpha in the psych package (there is also an alpha in the tidyverse package).
 
 ```{r}
 
-alpha(cmaq)
+psych::alpha(cmaq)
 
 ```
 
