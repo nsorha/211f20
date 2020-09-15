@@ -120,7 +120,7 @@
 
 \title{Tools for Working with Data - 211}
 \author{Nicole Sorhagen, Ph.D.}
-\date{2020-09-11}
+\date{2020-09-15}
 
 \begin{document}
 \maketitle
@@ -1131,6 +1131,8 @@ Next import the data into your RStudio project and assign the dataset to an obje
 
 Load the tidyverse and psych packages (if they are not loaded already):
 
+**normally we
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(tidyverse)}
@@ -1180,18 +1182,18 @@ In order to calculate the Cronbach's alpha in R you have to create a new object 
   This code tells R to select the variables listed in the select function from the cmaqpilot and save it as cmaq.
 \end{itemize}
 
-Then use the \texttt{alpha()} function, which is part of the psych package, to compute Cronbachs alpha of all if the variables in the cmaq object.
+Then use the \texttt{alpha()} function, which is part of the psych package, to compute Cronbachs alpha of all if the variables in the cmaq object. The \texttt{psych::} tells r to use the alpha in the psych package (there is also an alpha in the tidyverse package).
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{alpha}\NormalTok{(cmaq)}
+\NormalTok{psych}\OperatorTok{::}\KeywordTok{alpha}\NormalTok{(cmaq)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
 ## 
 ## Reliability analysis   
-## Call: alpha(x = cmaq)
+## Call: psych::alpha(x = cmaq)
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N    ase mean  sd median_r
 ##       0.98      0.98    0.99      0.89  65 0.0036  8.3 4.1     0.89
