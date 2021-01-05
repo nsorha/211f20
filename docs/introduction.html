@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Sorhagen, Ph.D." />
 
 
-<meta name="date" content="2020-09-15" />
+<meta name="date" content="2021-01-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="set-up-project-on-rstudio-cloud.html"/>
-<link rel="next" href="packages.html"/>
+<link rel="next" href="packages-1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,70 +52,6 @@
 
 
 
-<style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -136,24 +72,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this book</a></li>
 <li class="chapter" data-level="2" data-path="set-up-project-on-rstudio-cloud.html"><a href="set-up-project-on-rstudio-cloud.html"><i class="fa fa-check"></i><b>2</b> Set up project on Rstudio Cloud</a></li>
 <li class="chapter" data-level="3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#console"><i class="fa fa-check"></i><b>3.1.1</b> Console</a></li>
-<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#script"><i class="fa fa-check"></i><b>3.1.2</b> Script</a></li>
-<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#environment-and-history"><i class="fa fa-check"></i><b>3.1.3</b> Environment and history</a></li>
+<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#windows-in-rstudio"><i class="fa fa-check"></i><b>3.1</b> WINDOWS IN RSTUDIO</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#the-source-pane"><i class="fa fa-check"></i><b>3.1.1</b> The Source Pane</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#the-console-pane"><i class="fa fa-check"></i><b>3.1.2</b> The Console Pane</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#the-environment-and-history-pane"><i class="fa fa-check"></i><b>3.1.3</b> The Environment And History Pane</a></li>
+<li class="chapter" data-level="3.1.4" data-path="introduction.html"><a href="introduction.html#the-filesplotspackageshelp-pane"><i class="fa fa-check"></i><b>3.1.4</b> The Files/Plots/Packages/Help Pane</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#importing-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2</b> Importing data into Rstudio cloud</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#upload-the-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2.1</b> Upload the data into Rstudio Cloud</a></li>
-<li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#import-data"><i class="fa fa-check"></i><b>3.2.2</b> Import data</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#navigating-and-commands"><i class="fa fa-check"></i><b>3.2</b> NAVIGATING AND COMMANDS</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#packages"><i class="fa fa-check"></i><b>3.2.1</b> Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="introduction.html"><a href="introduction.html#data-things"><i class="fa fa-check"></i><b>3.3</b> DATA THINGS</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="introduction.html"><a href="introduction.html#manual-entry"><i class="fa fa-check"></i><b>3.3.1</b> Manual Entry</a></li>
+<li class="chapter" data-level="3.3.2" data-path="introduction.html"><a href="introduction.html#importing-data-from-other-sources"><i class="fa fa-check"></i><b>3.3.2</b> Importing Data From Other Sources</a></li>
+<li class="chapter" data-level="3.3.3" data-path="introduction.html"><a href="introduction.html#data-set-up"><i class="fa fa-check"></i><b>3.3.3</b> Data Set Up</a></li>
+<li class="chapter" data-level="3.3.4" data-path="introduction.html"><a href="introduction.html#data-transformation"><i class="fa fa-check"></i><b>3.3.4</b> Data Transformation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
-<li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="packages.html"><a href="packages.html#installing-packages-using-point-and-click-gui"><i class="fa fa-check"></i><b>4.1.1</b> Installing packages using point and click (GUI)</a></li>
-<li class="chapter" data-level="4.1.2" data-path="packages.html"><a href="packages.html#installing-packages-using-code"><i class="fa fa-check"></i><b>4.1.2</b> Installing packages using code</a></li>
+<li class="chapter" data-level="4" data-path="packages-1.html"><a href="packages-1.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
+<li class="chapter" data-level="4.1" data-path="packages-1.html"><a href="packages-1.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="packages-1.html"><a href="packages-1.html#installing-packages-using-point-and-click-gui"><i class="fa fa-check"></i><b>4.1.1</b> Installing packages using point and click (GUI)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="packages-1.html"><a href="packages-1.html#installing-packages-using-code"><i class="fa fa-check"></i><b>4.1.2</b> Installing packages using code</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="packages.html"><a href="packages.html#loading-packages"><i class="fa fa-check"></i><b>4.2</b> Loading Packages</a></li>
-<li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#misc"><i class="fa fa-check"></i><b>4.3</b> Misc</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="packages.html"><a href="packages.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
+<li class="chapter" data-level="4.2" data-path="packages-1.html"><a href="packages-1.html#loading-packages"><i class="fa fa-check"></i><b>4.2</b> Loading Packages</a></li>
+<li class="chapter" data-level="4.3" data-path="packages-1.html"><a href="packages-1.html#misc"><i class="fa fa-check"></i><b>4.3</b> Misc</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="packages-1.html"><a href="packages-1.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>5</b> Picturing Data</a><ul>
@@ -208,188 +150,349 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This chapter introduces the RStudio cloud environment and describes how to import data into the RStudio cloud.</p>
 <p>R cannot handle typos and is case sensitive (‘Gender’ is not the same as ‘gender’). If your code will not run check for typos and caps.</p>
 <p>Related to this point, do not be afraid to copy and paste with using R. I often copy and paste code and replace variable or dataset names as needed. (This is one of the few times in education where copy and paste is OK!)</p>
-<div id="layout-of-rstudio" class="section level2">
-<h2><span class="header-section-number">3.1</span> Layout of Rstudio</h2>
-<p>Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describe in turn next.</p>
-<div id="console" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Console</h3>
-<p>The console panel of R studio is where you can type commands (or R code) and where you will see the output of commands.</p>
-<p>In its most basic form, you can think of R as a fancy calculator.</p>
-<p>For example: In the console type <code>2+2</code> and then press RETURN on your keyboard. The answer ‘4’ will apear on the next line.</p>
-<p>The <code>&gt;</code> in the last line of the console means that the console is ready for a command (see red circle in the picture above).</p>
-<p><img src="img/twoplus.png" /></p>
-<p>If <code>&gt;</code> is missing from the last line, it means that R is waiting for you to complete a command.</p>
-<p>For example, type <code>1+</code> in the console and then hit enter.</p>
-<p>The plus sign means the command is incomplete.</p>
-<p><img src="img/waiting.png" /></p>
-<p>Push the <strong>ESC</strong> button on your keyboard to get back to the command prompt (&gt;).</p>
+<div id="windows-in-rstudio" class="section level2">
+<h2><span class="header-section-number">3.1</span> WINDOWS IN RSTUDIO</h2>
+<p>RStudio has four panes or windows.</p>
+<p><img src="img/rwindow.png" /></p>
+<div id="the-source-pane" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> The Source Pane</h3>
+<p>The source pane has several functions. The most important is that it is where you will write and run R commands. In this book we will use a R script files to do this, which are similar to text files. Another popular file type to write and run R commands in is a R markdown file, which can automatically create reports and manuscripts (see the appendix for more information about R markdown files). The source pane can also display datasets in a spreadsheet like format. The variable names will be listed at the top of each column, followed by the raw data. Multiple files can be opened in the source pane at the same time – there will be a tab for each opened file at the top of the pane.</p>
 </div>
-<div id="script" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Script</h3>
-<p>One of the benefits of using R is that you can save a record of your work using scripts. Records of your work allow you to easily start and stop an assignment or research project. You can pick up where you left off whether it is 20 minutes later or 2 years later. These script files also let you share your data analysis with others – from professors, to collaborators, to peer reviewers (ensure that your work is reproducible).</p>
-<p>To create a new script, go to the top bar menu:</p>
-<p><strong>FILE -&gt; NEW FILE -&gt; R SCRIPT</strong></p>
-<p><img src="img/newscript.png" /></p>
-<p>A new script will open in the top left of the RStudio platform.</p>
-<p><strong>You should run code from scripts</strong></p>
-<p>Scripts are similar to running command in the console (this is what you did in the last section).</p>
-<p>For example, type <code>5+5</code> in the script panel.</p>
-<p>In order to run command in a script you should click the run button while the cursor is in the code or the code is selected. Instead on clicking on the run button, you can also run the code by pressing the COMMAND and RETURN keys on your keyboard at the same time (the ALT and RETURN key on a pc).</p>
-<p>After the code is run, the results will automatically appear the in console (see red arrow in the picture below).</p>
-<p><img src="img/script.png" /></p>
-<p>In order to use the script again you must <strong>save</strong> it.</p>
-<p>From the drop-down menu select:</p>
-<p><strong>FILE -&gt; SAVE AS</strong></p>
-<p><img src="img/savescript.png" /></p>
-<p>Type <strong>lab 1</strong> into the file name box. And then click the SAVE button.</p>
-<p><img src="img/savescript2.png" /></p>
-<p>Your file should now be listed in the files window in the bottom right.</p>
-<p><img src="img/savescript3.png" /></p>
-<p><strong>This script file is a record of your work and is how you will be graded for the ‘reproducing the assigned chapters’ assignment. Make sure you saved this file and complete the rest of this lab in your ‘lab1’ script.</strong></p>
-<p>Within a script you should include comments to yourself and others using a <code>#</code>. Anything with a <code>#</code> in front of it will not run. <strong>These comments and explanations are an important part of an R script.</strong></p>
-<p>For example, type the following in to the script and then run it.</p>
-<p><code>#r is like a calculator</code></p>
+<div id="the-console-pane" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> The Console Pane</h3>
+<p>The console or terminal pane shows a record of the tasks or analyses you have asked RStudio to complete. After you run a command from a R script in the source pane, the execution and output will appear in the console pane.</p>
+<p>The &gt; symbol in the last line of the console means that the console is ready for a command. If the &gt; symbol is ever missing, click in the last line of the console and hit the escape button on your keyboard. A &gt; symbol will then appear.</p>
+<p>While it is possible to type and run R commands in the console, typing commands in scripts in the source pane is better because the information in the console is not saved when RStudio is closed. When you reopen a project, the console will be reset. So, everything you want to save should be in the script.</p>
+</div>
+<div id="the-environment-and-history-pane" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> The Environment And History Pane</h3>
+<p>The environment pane shows what datasets and objects are currently defined in RStudio’s memory. The history tab contains a history of the R commands you’ve executed. This should be fairly redundant with your R scripts.</p>
+</div>
+<div id="the-filesplotspackageshelp-pane" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> The Files/Plots/Packages/Help Pane</h3>
+<p>This pane has several purposes. The file tab offers a way to open files in RStudio. The plots tab is where any plots you create will appear. The packages tab is where you can see what packages are currently loaded. You can also install and load packages from here. (Packages will be discussed in more detail in the next section.) Finally, the help tab displays documents to help you use R functions and packages.</p>
+</div>
+</div>
+<div id="navigating-and-commands" class="section level2">
+<h2><span class="header-section-number">3.2</span> NAVIGATING AND COMMANDS</h2>
+<p><em>Use R scripts to type and run commands</em></p>
+<p>The first step of working in RStudio will always be to open a script.</p>
+<p>You can open an existing script by selecting it from the file tab in the files/plots/packages/help pane. R script files end in .R (the intro.R file, descripstats.R, and datavis.R files in the picture below are R script files. They contain the commands for chapters 1 to 3 of this guide. Or you could open an existing script by selecting FILE -&gt; OPEN FILE in the top bar menu and then navigate to the file location.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-5.png" /><br />
+Another option is to open a new script. Do this by selecting from the top bar menu: FILE -&gt; NEW FILE -&gt; R SCRIPT</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-6.png" /></p>
+<p>Another way to open a new script is by clicking on the green circle with a cross in the middle and then selecting R Script.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-7.png" /></p>
+<p>To save a script, select from the top bar menu: FILE -&gt; SAVE AS.</p>
+<p><em>R is like a fancy calculator</em></p>
+<p>In its most basic form, you can think of R as a fancy calculator. For example, type the following equation into the script:</p>
 <p><code>2+2</code></p>
-<p><code>#Answer is 4</code></p>
-<p><img src="img/comment.png" /></p>
+<p>Then, while the cursor is still in the same line as the equation, click the run button to have R calculate the equation (or run this command).</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-8.png" /></p>
+<p>The command (<code>2+2</code>) and results (<code>4</code>) will appear in the console.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-9.png" /></p>
+<p>You also could highlight the command you want to execute and then click on the run button. Another way to run a command in a script is by using the command (⌘) and enter keys on a mac (or control + enter on a PC).</p>
+<p><em>Functions are what makes the calculator fancy.</em></p>
+<p>In this book we will rarely calculate statistics by entering equations. Instead, we will use functions to tell R to use equations for us. For example, to find the mean of a set a scores (such as 2, 2, and 3) you could use the mean equation:</p>
+<p><code>M = (∑X)/N  = =  (2+2+3)/3</code></p>
+<p>This equation would be entered into R as <code>(2+2+3)/3</code>. After you run this command, the answer (<code>2.333333</code>) would appear in the console. Alternatively, you could use the mean function to tell R that you would like it to calculate the mean of the set of scores. (i.e., <code>mean(scores)</code>).</p>
+<p><em>Functions act on arguments</em></p>
+<p>Functions always have parentheses at the end of their names, and inside the parentheses is where you tell R more about what you want it to do. The information inside the parentheses are called arguments. In the same way that verbs act on nouns, functions act on arguments.</p>
+<p><em>Information is stored in objects</em></p>
+<p>An object in R stores information. Functions are a kind of object that stores equations or actions. Data are stored in objects called vectors and datasets. The results of an analysis can also be saved as an object, as needed.</p>
+<p>Information is assigned to objects with assignment operators. This guide will use the arrow assignment operator (<code>&lt;-</code>). The equal sign can also be used as an assignment operator. Whatever is on the right of the assignment operator is assigned to whatever is on the left of the operator. For example, the command <code>match &lt;- read_csv("matchdata.csv")</code> assigns the data in the file matchdata.csv to an object called match.</p>
+<p>All objects are listed in the environment. The environment can be cleared by clicking on the broom at the top of the environment tab. Or you could use the remove function. For example, <code>rm(match)</code> the object named match will no longer be listed in the environment.</p>
+<p>Use the <code>$</code> symbol to access variables within a dataset object (an object with multiple variables in it). For example, <code>match$age</code> accesses the variable called age in the dataset object called match. Another way to tell R what data object a variable is in is with a pipe, or <code>%&gt;%</code>. Pipes are a way to write strings or series of functions more easily. You can think of it as saying “then”. For example <code>match %&gt;% pull(age)</code> is telling R to first go to the dataset in the match object then pull the variable called age. In order to use pipes (<code>%&gt;%</code>) a package called Tidyverse must be loaded – we will talk more about packages in the next section.</p>
+<p><em>R quirks</em></p>
+<p>Before moving on, we need to talk about a few of R’s quirks. First, R is case sensitive. R will treat <code>mean</code> differently than <code>Mean</code>. Because of this some experts suggest always using lowercase letters when naming things. This is something to keep in mind when you are choosing names for the objects that store your data.</p>
+<p>Second, R cannot handle typos. If you accidentally typed ‘men’ instead of ‘mean’, R will not know that you really meant mean. The predictive text feature of RStudio can help with this. This means that RStudio will suggest functions and objects as you type.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-10.png" /></p>
+<p>Finally, R is ambivalent about spaces. R ignores redundant spaces in equations. For example, if you typed <code>2     +2</code> or <code>2+2</code> you would get the same answer as when you typed <code>2 + 2</code>. But there cannot be spaces in object names (this is another thing to keep in mind when naming objects), and there cannot be spaces between a function and its parentheses.</p>
+<p>When you get an error message after you run a command, check for capitalization errors, typos, and spacing.</p>
+<p><em>Trial and error</em></p>
+<p>In the last sentence I said when you get an error, not if you get an error. This is because errors and having a command not run is inevitable. Errors are just a part of coding. It is even people’s jobs to find the errors in professional coder’s code.</p>
+<p>I often have to play around with a command a bit because it will not run. I like to copy and paste a command and then try something different, so I can see what I already have tried.</p>
+<p>So, don’t sweat the errors! It happens to everyone!</p>
+<p><em>Scripts should be a record of your analysis</em></p>
+<p>While trial and error is expected, it should be clear in a script which commands were eventually used and which were not. This is part of making your scripts useable by others and your future self.</p>
+<p>Another way to make scripts shareable is to include notes using the hashtag (<code>#</code>). R will not treat anything in the same line as a hashtag as a R command.</p>
+<p>In the current script we are working on, we could add organization and explanations to our current script by adding <code># R is like a calculator</code> above the equations we have run so far and <code># Packages</code> to indicate the next section.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-11.png" /></p>
 <p>Note that the comments appear green in the script.</p>
-<p>You can make notes to me this way (if needed). For example:<br />
-<code>#This will not run. Dr S, I need help</code></p>
-<p>I will leave comments to you this way. When I do, I will start my comment with my initials. For example:<br />
-<code>#NS: try loading the tidyverse package first</code></p>
-<p>Scripts should be organized so that someone else can follow what you did.</p>
-</div>
-<div id="environment-and-history" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> Environment and history</h3>
-<p>In the top right corner of RStudio is the environment and history window. The <strong>history tab</strong> shows every line of code that has been run in the current session. I do not use this much.</p>
-<p>The <strong>environment tab</strong> is where all active <strong>objects</strong> are listed. An object is something can hold information for later use. The information can be data, values, output, or functions. Normally my panel is set on this.</p>
-<p>Objects are assigned using <code>&lt;-</code>. Values on the right side of <code>&lt;-</code> will be assigned to the object on the left side.</p>
-<p>For example, let’s tell R that the population mean of IQ scores is 100 and the population standard deviation is 15.</p>
-<p>To do this use the following code:</p>
-<p><code>mu &lt;- 100</code></p>
-<p><code>sigma &lt;- 15</code></p>
-<p>After you run these commands, the objects will now be listed in the environment panel in the top left.</p>
-<p><img src="img/object.png" /></p>
-<p>The shortcut for making <code>&lt;-</code> is the ALT and – key together. (or OPTION and – on a mac)</p>
-<div id="vectors" class="section level4">
-<h4><span class="header-section-number">3.1.3.1</span> Vectors</h4>
-<p>It is possible to store more than one number in an object. One way to do this is to use a <strong>vector</strong>. Assign a set of numbers a vector with the <strong>combine</strong> function: <code>c()</code>, by typing all of the numbers you want to store within the parentheses in a comma separated list.</p>
-<p>For example, let’s enter the IQ scores of students in a small class.</p>
-<p>To do this use the following code:</p>
-<p><code>classIQ &lt;- c(112, 115, 89, 95, 101)</code></p>
-<p>After you run this code, the classIQ vector should appear in the environment.</p>
-<p>Here is a picture of what your screen should look like:</p>
-<p><img src="img/vector.png" /></p>
-<p>Calculations with vectors apply to all data points.</p>
-<p>For example, let’s calculate the z-scores for each of the IQ scores.</p>
-<p>To do this use the following code:</p>
-<p><code>#get z-scores</code></p>
-<p><code>(classIQ-mu)/sigma</code></p>
-<p>The results will appear in the console (See the red box in the picture below)</p>
-<p><img src="img/zscores.png" /></p>
-<p>It is possible to save these answers as a vector using the <code>&lt;-</code> function.</p>
-<p>For example, let’s save those zscores in a vector called zscores.</p>
-<p>To do this use the following code:</p>
-<p><code>zscores &lt;- (classIQ-mu)/sigma</code></p>
-<p>There should now be a vector in the environmnet called zscores.</p>
-<p>Here is a picture so that you can check your progress:</p>
-<p><img src="img/zsaved.png" /></p>
-</div>
-<div id="data-frames" class="section level4">
-<h4><span class="header-section-number">3.1.3.2</span> Data frames</h4>
-<p>Right now the IQ scores and the z-scores are in separate objects. Variables often need to be in a single object in order to do some basic analyses. You can combine the classIQ and the zscores variable using the <strong>data.frame</strong> command.</p>
-<p>To do this use the following code:</p>
-<p><code>iq &lt;- data.frame(classIQ, zscores)</code></p>
+<p>At the very least, you should include enough comments so that someone else (or even yourself in a few months or so) could read your script and get the basic idea of what you did. Beyond that, the content and degree to which comments are included in scripts is a personal choice. For example, sometimes people note the results of an analyses after its command and others do not. Remember that the information in the console is not saved after RStudio is closed. So, including the results in the script can be useful when you reopen a project.</p>
+<div id="packages" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Packages</h3>
+<p><strong>Base R</strong> refers to the functions that automatically come with R. But many people build on top of Base R to make R better. The way they do this is through <strong>packages</strong>, which contain new R functions. There are thousands of packages that could be added on to base R.</p>
+<p>Packages are kind of like apps on your smartphone or computer in several ways. First, there are often several packages that can equally do the same thing. Just like there are several apps that would tell you the weather, there are several packages that would compute descriptive statistics. Moreover, some packages are more well-known and popular than others, just as some apps are really popular and others are not. Like the more popular apps, the well-known packages tend to be well supported, meaning that they are updated, maintained, etc. In this guide I try to focus on the more popular packages.</p>
+<p><strong>Installing packages</strong></p>
+<p>Another way that packages are like smartphone apps is that they both have to be installed first before they can be used.</p>
+<p>In RStudio, packages can be installed through point and click or with a command.</p>
+<p>Let’s first use the point and click method to install a package called tidyverse. Tidyverse was created by Hadley Wickham and his team with the aim of making various aspects of data analysis in R easier. It is actually a collection of packages, and they include a lot of functions that many people think of as essential for data analysis.</p>
+<p>To install a package using the point and click method, select from the top bar menu:</p>
+<p>TOOLS -&gt; INSTALL PACKAGES</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-12.png" /></p>
+<p>In the install packages window, type the name of the package you would like to install. For example, type “tidyverse” in the packages box. Then click INSTALL.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-13.png" /><br />
+Your screen should look like this when the installation is complete:</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-14.png" /></p>
+<p>Do not proceed until the console says the package has been installed.</p>
+<p>Another package we will be using a lot is the psych package. The <strong>psych</strong> package is a package for personality, psychometric, and psychological research. It has been developed at Northwestern University (maintained by William Revelle) to include useful functions for personality and psychological research.</p>
+<p>Let’s install this package with the install packages function. The basic setup of this function is:</p>
+<p><code>install.packages(“PackageName”)</code></p>
 <ul>
-<li>This command takes the form of DatasetName &lt;- data.frame(Variable1, Variable2, etc)<br />
+<li>Replace <code>PackageName</code> with the name of the package that you want to install.<br />
 </li>
-<li>The dataset name can be anything you want that you have not already used
-<ul>
-<li>the name must be one word (there cannot be spaces in the name)</li>
-</ul></li>
+<li>Remember the quotation marks here!</li>
 </ul>
-<p>This object will be listed under data instead of values in the environment panel.</p>
-<p><img src="img/dataframe.png" /></p>
-<p>Double-click on the word ‘iq’ in the environment panel to look at the dataset that you just created (it is circled in red in the picture above).</p>
-<p>A new tab will open with a spreadsheet view of the dataset. When you are done viewing the data, you can close it by click on the ‘x’ next to the name iq.</p>
-<p><img src="img/dataframe2.png" /></p>
-<p>Note that after looking at the dataset this way, the command <code>view(iq)</code> appeared in the console. You can look at the dataset with the <strong>view</strong> command as well</p>
-<p>When typing the code to create the data frame, you may have noticed that RStudio uses <strong>predictive text</strong>. This means that RStudio will suggest functions and objects as you type. You should take advantage of this feature!</p>
-<p><img src="img/autofill.png" /></p>
-</div>
-</div>
-</div>
-<div id="importing-data-into-rstudio-cloud" class="section level2">
-<h2><span class="header-section-number">3.2</span> Importing data into Rstudio cloud</h2>
-<p>In the last section you learned how to assign data to a <strong>vector</strong> using the <strong>combine</strong> function.</p>
-<p>Another way to assign data to an object is by first entering the data into a spreadsheet (like google sheets or excel) and then import the data into RStudio. This will be our preferred method.</p>
-<p><strong>First download the exam2.csv file from d2l.</strong></p>
-<p>This file contains data on the exam 2 scores from a previous class of mine. It also has some made up data on students’ studying, eating, and drinking behaviors before the exam.<br />
-Make sure the file remains a .cvs file after you download it. If you open it in excel, excel might change the file to an .xls file.</p>
-<p>When using RStudio in the cloud, you will first need to uplaod the data into your project and then import it into the global environment.</p>
-<div id="upload-the-data-into-rstudio-cloud" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Upload the data into Rstudio Cloud</h3>
-<p>Then select the UPLOAD button in the files window.</p>
-<p><img src="img/upload.png" /></p>
-<p>In the Upload Files window, click the CHOOSE FILE button and then navigate to the exam2.csv file on your computer. Then click the OK button.</p>
-<p><img src="img/choosefile.png" /></p>
-<p>The data file should now be listed in the files section of RStudio.</p>
-<p><img src="img/filelist.png" /></p>
-</div>
-<div id="import-data" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Import data</h3>
-<p>Then you need to import the data into the environment (i.e. assign the data to an object). This can be done through using point and click options or with code.</p>
-<div id="point-and-click" class="section level4">
-<h4><span class="header-section-number">3.2.2.1</span> Point and click</h4>
-<p>First click on the <strong>IMPORT DATASET</strong> button in the environment panel.</p>
-<p><img src="img/import.png" /></p>
-<p>Then select the <strong>‘FROM TEXT (READR)’</strong></p>
-<p><img src="img/readrbox.png" /></p>
-<p>The first time you select this – the following window will appear asking if you would like to install the readr package. Select YES. I will introduce packages in the next section.</p>
-<p><img src="img/installreadrbox.png" /></p>
-<p>After you select yes, R will begin downloading the package. This can take a few minutes and will look something like this:</p>
-<p><img src="img/installreadr.png" /></p>
-<p>It is important to be <em>patient</em> here and let the package download completely before you move on to the next step.</p>
-<p>When the download is complete, your screen should look like this:</p>
-<p><img src="img/importwindow.png" /></p>
-<p>Note that you can see that the package was successfully installed in the console in the bottom left. The next time you use readr to import data – you will not have to download the package first.</p>
-<p>Next select the BROWSE button in the top left corner of the import data window.</p>
-<p><img src="img/importbrowse.png" /></p>
-<p>In the choose file window, select ‘exam2’. And then select OPEN.</p>
-<p>The next window should look like this:</p>
-<p><img src="img/importwindow2.png" /></p>
-<p>From here you should click the IMPORT button.</p>
-<p>But first note the <strong>Code Preview</strong> box. This is the code you could use to import data (instead of clicking through all these windows). It’s a good idea to copy this code before you click the import button and then paste it into your script for your records and in case you need to assign the file to an object again (because it is faster with code).</p>
-<p><img src="img/importcomplete.png" /></p>
-</div>
-<div id="code" class="section level4">
-<h4><span class="header-section-number">3.2.2.2</span> Code</h4>
-<p>Alternatively you could have typed the code that you copy and pasted (and not gone through all of the point and click windows).</p>
-<p><code>Library(readr)</code><br />
-<code>exam2 &lt;- read_cvs("exam2.csv")</code></p>
+<p>For example, install the psych package with the following command:</p>
+<p><code>install.packages("psych")</code></p>
+<p>After you type (or copy and paste) this command into a script. Highlight it (or click in the same line as in the command) and then click on the run button (or use the run hot keys).</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-15.png" /></p>
+<p>Again, do not proceed until the console says the package has been installed.</p>
+<p><strong>Loading packages</strong></p>
+<p>In order to use a package, it must be loaded – just like in order to use an app on your smartphone, it must be opened. Another analogy is moving information from long term memory to working memory. You will need to load the packages you want to use each time you open RStudio.</p>
+<p>In RStudio, packages can be loaded with point and click or with a command.</p>
+<p>Let’s load tidyverse with the point and click method. To do this, first select the packages tab in the files/plots/packages/help pane.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-16.png" /></p>
+<p>Then type “tidyverse” in the search bar (or scroll through the list). Then check the box next to tidyverse. The loading process will appear in the console immediately.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-17.png" /></p>
+<p>The output in the console lists the 8 packages that make up Tidyverse (ggplot2, tibble, tidyr, readr, purr, dplyr, stringr, and forcats).</p>
+<p>Next let’s load the psych package with the library command. The basic set-up of this function is:<br />
+<code>library(PackageName)</code></p>
 <ul>
-<li>This command takes the form of DatasetName &lt;- read_cvs(“FILENAME.csv”)<br />
-</li>
-<li>The dataset name can be anything that you have not already used
+<li>Replace <code>PackageName</code> with the name of the package.</li>
+</ul>
+<p>For example, load the psych package with this command:<br />
+<code>library(psych)</code></p>
+<p>After you run this code in the script, the loading process will appear in the console.</p>
+<p><img src="img/NAVIGATING%20AND%20COMMANDS%20R1-18.png" /></p>
+<p>Note that if you had already loaded Tidyverse, there will be a warning message telling you that the alpha function is masked from the ggplot2 package. This means that the psych package and the ggplot2 package both have a function called alpha. This is not a big deal. There is a way to tell R which alpha function you want to use.</p>
+<p>In summary, the first time you use a package, you need to install it. Once a package is installed, you will need to tell R that you want to use it by loading it. You only have to install a package in a project once. You will have to load a package every time you open RStudio and want to use it.</p>
+</div>
+</div>
+<div id="data-things" class="section level2">
+<h2><span class="header-section-number">3.3</span> DATA THINGS</h2>
+<p>Now that you have a sense of how to navigate and use commands in the RStudio program, let’s talk about data – how to enter it, how to open it, how to set it up correctly, and how to transform it.</p>
+<div id="manual-entry" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Manual Entry</h3>
+<p>Data can be added directly into RStudio. While it is more common to collect data in a spreadsheet or another programs and then open it in RStudio for data analysis, it is still important to review how to enter data directly into RStudio. This section will review how to go about doing this with an example about class tardiness. Let’s pretend that someone counted the number of times a week that five students were late for a class that meets on Mondays, Wednesdays, and Fridays. Here is their data:</p>
+<p><img src="img/data.png" /></p>
+<p>Let’s use the concatenate, or combine, function to assign the data to an object. The basic setup of this function looks like this:</p>
+<p><code>VariableName &lt;- c(X1, X2, X3, etc.)</code></p>
 <ul>
-<li>the name must be one word (there cannot be spaces in the name)<br />
+<li>The <code>VariableName &lt;-</code> part of this command saves the data to an object. Replace <code>VariableName</code> with the name of the variable. Variable names should not have spaces or special characters in them. Naming variables is another part of making analyses shareable with others. Variable names should be informative but short (under 15 characters).<br />
 </li>
-</ul></li>
-<li>If you have not installed the readr package, you will have to so first (see the packages chapter for more information)</li>
+<li>The c is the combine (or concatenate) function<br />
+</li>
+<li>In the parenthesis, list the data in a comma separated list.</li>
+</ul>
+<p>For example, here is the command to create the Student ID column:</p>
+<p><code>id &lt;- c(1, 2, 3, 4, 5)</code></p>
+<ul>
+<li>This command is telling R to save an object called studentid that is made up of this list of numbers <code>(1, 2, 3, 4, 5)</code></li>
+</ul>
+<p>After you run this command, an object called ‘id’ will be listed in the environment pane.</p>
+<p><img src="img/DATA%20THINGS%20R1-1.png" /><br />
+Next let’s assign the data for the number of times the students were late in the first week. Let’s call this variable latew1 (for late week 1, or the number of times students were late the first week of the study). Here is the command:</p>
+<p><code>latew1 &lt;- c(2, 0, 1, 2, 0)</code></p>
+<ul>
+<li>This command is telling R to save an object called latew1 that is made up of this list of numbers <code>(2, 0, 1, 2, 0)</code></li>
+</ul>
+<p>After you run this command, an object called <code>latew1</code> will be listed in the environment pane.</p>
+<p><img src="img/DATA%20THINGS%201R-2.png" /></p>
+<p>Then enter the week 2 and 3 data with the following commands:</p>
+<p><code>latew2 &lt;- c(3, 0, 1, 2, 0)</code></p>
+<ul>
+<li>This command is telling R to save an object called latew2 that is made up of this list of numbers (3, 0, 1, 2, 0).</li>
+</ul>
+<p><code>latew3 &lt;- c(2, 1, 0, 3, 0)</code></p>
+<ul>
+<li>This command is telling R to save an object called latew3 that is made up of this list of numbers (2, 1, 0, 3, 0).</li>
+</ul>
+<p><img src="img/DATA%20THINGS%201R-3.png" /></p>
+<p>These variables can be combined into one dataset object with the data.frame function. The basic setup of this function is:</p>
+<p><code>DatasetName &lt;- data.frame(Variable1, Variable2, etc)</code></p>
+<ul>
+<li>Replace DatasetName with what you want to call you data object. Like the variable names, dataset names should be informative but short (under 15 characters).</li>
+</ul>
+<p>In the current example the command would look like this:</p>
+<p><code>tardy &lt;- data.frame(id, latew1, latew2, latew3)</code></p>
+<ul>
+<li>This command is saying to assign the data in the id, latew1, latew2, latew3 objects to a dataset object named tardy</li>
+</ul>
+<p>After you run this command, there will be a new object in the environment called tardy. Note that the tardy object is listed under data and the individual variables are listed under values.</p>
+<p><img src="img/DATA%20THINGS%201R-4.png" /></p>
+</div>
+<div id="importing-data-from-other-sources" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Importing Data From Other Sources</h3>
+<p>Often data is collected in a spreadsheet (like excel or google sheets) or through a survey manager (like Qualtrics or SurveyMonkey) and then is opened into RStudio. Before you can open a data file in RStudio, you need to know the format of the data file. See Table 1.1 for some common file extensions for data.</p>
+<p>Let’s open the data in the match.csv file (this is the data we will use in the data transformation section of this chapter, as well as in chapters 2 and 3). This data file contains data on 688 people currently on Match.com who were asked to complete a survey about themselves and their relationships. This survey included questions about whether or not they judge other people based on things like their appearance, possessions, etc., as well as demographic information such as highest level of education and age. (We will use this file to explore how judgmental people are on dating sites.)</p>
+<ul>
+<li>The first column contains arbitrary ID numbers to identify the participants<br />
+</li>
+<li>The next column contains the participants’ ages</li>
+<li>The third column contains the participants’ highest level of education</li>
+<li>The following 12 columns contain the data from the judgement questions (0 = no; 1 = yes)</li>
+<li>The remaining variables are not relevant to the current chapter, so they are not defined here.</li>
+</ul>
+<p><em>note that this data is a subsample of a real data collected through the Kinsey Institute and match.com</em></p>
+<p>You can open data in RStudio using a point and click method or using a command.</p>
+<p>The point and click method of importing data in RStudio is simple and convenient. This method is accessed by clicking on the import dataset button in the environment and history pane.</p>
+<p><img src="img/DATA%20THINGS%201R-5.png" /></p>
+<p>Select one of the “from text” options if the data is formatted in a .csv or .txt file. (I tend to use the readr option here – but either works fine). Select the “from excel” option if the data is in a .xls or .xlsx format. Select the “from SPSS” option if the data is in a .sav format. Select the “from SAS” option if the data is in a .sasb7dat format. Select the “from Stata” option if the data is in a .dta format.</p>
+<p>Since the data is in a .csv file, let’s select the readr option.</p>
+<p><img src="img/DATA%20THINGS%201R-6.png" /></p>
+<p>The following window will open:</p>
+<p><img src="img/DATA%20THINGS%201R-7.png" /></p>
+<p>Click on the BROWSE button. Then navigate to your file.</p>
+<p><img src="img/DATA%20THINGS%201R-8.png" /></p>
+<p>Inspect the data preview. You should not need to change anything from the default import options.</p>
+<p>Before you click import, I suggest you copy the text in the code preview box. After you click import, paste it into your current script. This way you can easily reassign the datafile to an object if needed by running that command.</p>
+<p>After you click import, your screen will look like this:</p>
+<p><img src="img/DATA%20THINGS%201R-9.png" /></p>
+<p>The spreadsheet view of the match dataset will automatically open in the source pane. The variable names are listed at the top of each column, followed by the raw data. Scroll to the right to see all of the data. The object containing the match data will be listed in the environment. We can see that this dataset has 688 observations and 37 variables.</p>
+<p>You can close the spreadsheet of the match dataset in the source pane by clicking on the x in the tab. If you would like to see the data again, click on the dataset’s object name (in this example match) in the environment tab and the spreadsheet will reopen in the source pane.</p>
+<p>You can also open csv data with <code>read_csv</code> function. The read_csv function is part of the readr package, which is part of tidyverse. So if tidyverse is loaded, you do not need to load readr. But if it is not, you can load it with this:</p>
+<p><code>library(readr)</code></p>
+<p>The basic set up of the read_csv function is:</p>
+<p><code>DataObject &lt;- read_csv("FileName.csv")</code></p>
+<ul>
+<li>This command is telling R to assign the data in a csv file named FileName to an object called DataObject.<br />
+</li>
+<li>Replace DataObject with your preferred name for the object containing the data<br />
+</li>
+<li>Replace FileName with the name of the file your data is in</li>
+</ul>
+<p>For example, to assign the match data to an object called match, the command would look like this:<br />
+<code>match &lt;- read_csv("matchdata.csv")</code></p>
+<ul>
+<li>This command is telling R to assign the data in the matchdata.csv file to an object called match.<br />
+</li>
+<li>Note that this is the same thing as what you copied and pasted during the point and click method.</li>
 </ul>
 </div>
-<div id="view-data" class="section level4">
-<h4><span class="header-section-number">3.2.2.3</span> View data</h4>
-<p>Double click on the word exam2 in the environment panel to look at the dataset.</p>
-<p><img src="img/view.png" /></p>
-<p>Each column is a different variable. Each row is a different participant (in this example a student).<br />
-- The first column is an arbitrary student ID number – so that the students’ identity is protected.<br />
-- The second column is exam points earned by the students out of 20 (this is real data from a Fall 2019 class).<br />
-- The third column is the number of hours the students studied for the exam (this is made up data).<br />
-- The fourth column is whether or not students ate cheese the night before the exam (1 = no; 2 = yes… also made up data).<br />
-- The last column is data on whether or not students drank wine the night before the exam (1 = no; 2 = yes… also made up data).</p>
+<div id="data-set-up" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Data Set Up</h3>
+<p>There are several types of data, or scales of measurement, for variables in RStudio. The big ones for us will be: double, which are numbers with decimals, positive/negative, fractions; integer, which are positive whole numbers; character, which are numbers and words, but as text; and factor which are categorical variables, with specific labels.</p>
+<p>The glimpse function, which is part of the tidyverse package, gives a nice summary of a dataset including the variable types for all the variables. In order to use this function, the tidyverse package should be loaded (see the loading packages section above).</p>
+<p>The basic layout of the glimpse function is:</p>
+<p><code>glimpse(DataObject)</code></p>
+<ul>
+<li>Replace DataObject with the name of the data object</li>
+</ul>
+<p>For example, to look at the data types of the variables in the match dataset use this command:</p>
+<p><code>glimpse(match)</code></p>
+<p>After this command is run, the output in the console looks like this:</p>
+<p><img src="img/DATA%20THINGS%20R1-10.png" /></p>
+<p>The first column lists the names of all of the variables in the dataset. Next, in gray, are the variable types. The dbl stands for double, which is numbers with decimals, positive/negative, fractions. The chr stands for character, or text, data. After the data type, the remainder of the row lists the raw data of the variable.</p>
+<p>The data type of a variable can be changed with the <code>as.*</code> function. The * is a placeholder for the different types of data. For example, <code>as.factor(VariableName)</code>, <code>as.character(VariableName)</code>, and <code>as.integer(VariableName)</code>.</p>
+</div>
+<div id="data-transformation" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Data Transformation</h3>
+<p>Often times there is a need to change data in some way, such as combining variables together to create a summary score. These changes to data are called data transformations. This section covers how to use a RStudio to preform two common types of data transformations: computing a new variable and recoding values.</p>
+<p>Let’s pretend you were interested in how judgmental people are on dating sites. We can use the match data from the Importing Data section to do this. Remember that the participants completed items about whether or not they judge other people based on certain things. Here are the judgment items:</p>
+<p><img src="img/match.png" />
+Let’s create a total judgment score by summing all of the separate judgment items.</p>
+<p>To do this we will use the mutate function. The mutate function is part of the tidyverse package, so you should load tidyverse if you have not done so already (see the loading packages section above).</p>
+<p>The basic setup of this function is:</p>
+<p><code>mutate(NewVariableName = New variable equation)</code></p>
+<ul>
+<li>Replace the NewVariableName with the variable name you want. There cannot be spaces or symbols in a variable name. And remember that R is case sensitive, so be mindful of your use of upper and lower case letters. Then list the equation after the equal sign.</li>
+</ul>
+<p>In addition, you need to tell R which data object to work with. Adding this information makes the command look like this:</p>
+<p><code>DataObject %&gt;%</code><br />
+<code>mutate(NewVariableName = New variable equation)</code></p>
+<ul>
+<li>The <code>%&gt;%</code> is called a pipe. Pipes are a way to write strings or series of functions more easily. You can think of it as saying “then”.<br />
+</li>
+<li>In this example you can read the command as saying “use the data in the object called DataObject then mutate the variables in that dataset by creating a new variable called NewVariableName which is defined by this equation.<br />
+</li>
+<li>Pipes are part of the tidyverse package.</li>
+</ul>
+<p>Finally, you need to tell R to save the new variable. Do this with the assignment operator (<code>&lt;-</code>).</p>
+<p>If you want the new variable to be added to a dataset in an existing object, then tell R to reassign the object as itself like this:</p>
+<p><code>DataObject &lt;- DataObject %&gt;%</code><br />
+<code>mutate(NewVariableName = New variable equation)</code></p>
+<p>Or you could tell R to save the variables in the existing dataset plus the new variable by assigning the work to a new object:</p>
+<p><code>NewDataObject &lt;- DataObject %&gt;%</code><br />
+<code>mutate(NewVariableName = New variable equation)</code></p>
+<ul>
+<li>This will save all of the variables in the object named DataObject, plus the variable named NewVariableName into a new object called NewDataObject. After this command is run, NewDataObject will be listed in the environment.</li>
+</ul>
+<p>For our current example, let’s add the total judgment score variable to the match dataset. Here is the command to do so:</p>
+<p><code>match &lt;- match %&gt;%</code><br />
+<code>mutate(judgmt = jdgoutfit + jdgjob + jdgborn + jdglive + jdgcar + jdguni + jdgdiet + jdgdrink + jdgteeth + jdgposts + jdggramr + jdgsparet)</code></p>
+<ul>
+<li>The <code>match &lt;-</code> part of the command tells R to resave the new variable in the object called match.<br />
+</li>
+<li>The <code>match %&gt;% mutate</code> part tells R to use the data in the object called match then mutate…<br />
+</li>
+<li>Inside the parenthesis is the new variable, which I called judgmt and its equation, which is the sum of the 12 judgment items.</li>
+</ul>
+<p>After this command is run, there will be 38 variables in the dataset object called match (remember that originally there were 37).</p>
+<p><img src="img/DATA%20THINGS%20R1-11.png" /></p>
+<p>If you want, you can see the new variable by opening the dataset (click on the object listed in the environment) and then scroll to the right. The new variable will be in the last column.</p>
+<p><img src="img/DATA%20THINGS%20R1-12.png" /></p>
+<p>Next let’s review how to recode a variable.</p>
+<p>Still using the match data, let’s pretend you wanted to recode the number of second dates that participants reported having in the last year (This variable is called scnddates). We can see in the codebook that the response options range from 0 to “over 20”. Let’s recode this variable into categories. Let’s say that we want to know the number of people that had 0 second dates, and then 1 or 2 second dates, 3 or 4 second dates, and then 5 to 9, 10 to 14, 15 to 19, and 20+.</p>
+<p>We can do this with the <code>cut</code> function, which is a pretty cool function of the tidyverse package. Here is the basic command:</p>
+<p><code>DataObject &lt;- DataObject %&gt;%</code><br />
+<code>mutate(VariableCat = cut(x = Variable,</code><br />
+<code>breaks = c(-Inf, N, Inf),</code><br />
+<code>labels = c("-Infinity", "N” "Infinity")))</code></p>
+<ul>
+<li>Replace DataObject with the name of the object containing the data that you are working with.<br />
+</li>
+<li>Replace VariableCat with whatever you want the new variable to be called. I like to use the original variable name followed by “Cat” (for categorical).<br />
+</li>
+<li>Replace Variable with the name of the variable you are recoding.<br />
+</li>
+<li>Replace the entries in the breaks parenthesis with where you would like to cut the original variable. First list the lowest value of the first category – I like to use -Inf (where Inf stands for infinity). Then list the highest value of each category separated by commas (i.e., the second number listed is the highest value of the first category, the third number is the highest value of the second category, and so on). I like to end with Inf, you could also end with the highest value of the last category.<br />
+</li>
+<li>Replace entries in the in labels parenthesis with the corresponding labels that you listed in the breaks.</li>
+</ul>
+<p>In the match example this command would look like:</p>
+<p><code>match &lt;- match %&gt;%</code><br />
+<code>mutate(scnddatesCat = cut(x = scnddates,</code><br />
+<code>breaks = c(-Inf, 0, 2, 4, 10, 15, Inf),</code><br />
+<code>labels = c("0", "1 or 2", "3 or 4", "5 to 9", "10 to 15", "over 15")))</code></p>
+<p>After this command is run from the script, your screen will look like this:</p>
+<p><img src="img/DATA%20THINGS%20R1-13.png" /></p>
+<p>There are now 39 variables in the dataset object called match.</p>
+<p>Finally, a common type of data transformation in psychology is recoding responses made on a Likert scale. It is common in psychology to have some items of a survey negatively worded and others positively worded. When this happens, we need all of the items to go in the same direction in order to analyze the data. We do this by reverse coding the items going in one direction – so that a high score on all of the items reflect the same thing.</p>
+<p>To reverse code in RStudio, we will use the mutate and recode functions of tidyverse. The basic form of this command is:</p>
+<p><code>DataObject &lt;- DataObject %&gt;%</code><br />
+<code>mutate(ItemR =recode(Item,</code>OldValue1<code>= NewValue1,</code>OldValue2<code>= NewValue2, Etc.)</code></p>
+<ul>
+<li>Replace DataObject with the name of the data object<br />
+</li>
+<li>Replace ItemR with whatever you want the new variable to be called. I like to use the original variable name followed by “R” (for reverse).<br />
+</li>
+<li>Replace Item with the name of the item that needs to be reverse coded.<br />
+</li>
+<li>Next is a list of the old and new variables. On the left is the old variable and it must be in back ticks (`) when it is a number. String (AKA text) variables should be in quotes ("). On the right is the new value.</li>
+</ul>
+<p>For example, if responses to the items of a measure were on a 5-point Likert scale and item 2 needed to be reverse coded, the command would look like this:</p>
+<p><code>data &lt;- data %&gt;%</code><br />
+<code>mutate(item2r =recode(item2,</code>1<code>= 5,</code>2<code>= 4,</code>3<code>= 3,</code>4<code>= 2,</code>5<code>= 1))</code></p>
+<ul>
+<li>The data object is called data<br />
+</li>
+<li>item2r will be the name of the new variable.<br />
+</li>
+<li>item2 is the item that is being recoded.<br />
+</li>
+<li>All of the 1’s in the data will be recoded as 5’s<br />
+</li>
+<li>All of the 2’s in the data will be recoded as 4’s<br />
+</li>
+<li>All of the 3’s will remain 3’s<br />
+</li>
+<li>All of the 4’s in the data will be recoded as 2’s<br />
+</li>
+<li>All of the 5’s in the data will be recoded as 1’s</li>
+</ul>
 
-</div>
 </div>
 </div>
 </div>
@@ -399,7 +502,7 @@ Make sure the file remains a .cvs file after you download it. If you open it in 
         </div>
       </div>
 <a href="set-up-project-on-rstudio-cloud.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="packages-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
