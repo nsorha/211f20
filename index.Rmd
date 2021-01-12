@@ -1,5 +1,5 @@
 --- 
-title: "Tools for Working with Data - 211"
+title: "Tools for Working with Data"
 author: "Nicole Sorhagen, Ph.D."
 date: "`r Sys.Date()`"
 description: This GitBook describes tools 211 students can use to work with data.

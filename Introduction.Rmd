@@ -46,14 +46,14 @@ The first step of working in RStudio will always be to open a script.
 
 You can open an existing script by selecting it from the file tab in the files/plots/packages/help pane. R script files end in .R (the intro.R file, descripstats.R, and datavis.R files in the picture below are R script files. They contain the commands for chapters 1 to 3 of this guide. Or you could open an existing script by selecting FILE -> OPEN FILE in the top bar menu and then navigate to the file location.  
 
-![](img/NAVIGATING AND COMMANDS R1-5.png)  
+![](img/NAVIGATING AND COMMANDS R15.png)  
 Another option is to open a new script. Do this by selecting from the top bar menu: FILE -> NEW FILE -> R SCRIPT   
 
-![](img/NAVIGATING AND COMMANDS R1-6.png)   
+![](img/NAVIGATING AND COMMANDS R16.png)   
 
 Another way to open a new script is by clicking on the green circle with a cross in the middle and then selecting R Script.   
   
-![](img/NAVIGATING AND COMMANDS R1-7.png)    
+![](img/NAVIGATING AND COMMANDS R17.png)    
   
 To save a script, select from the top bar menu: FILE -> SAVE AS.   
   
@@ -66,11 +66,11 @@ In its most basic form, you can think of R as a fancy calculator. For example, t
   
 Then, while the cursor is still in the same line as the equation, click the run button to have R calculate the equation (or run this command).   
   
-![](img/NAVIGATING AND COMMANDS R1-8.png)  
+![](img/NAVIGATING AND COMMANDS R18.png)  
 
 The command (`2+2`) and results (`4`) will appear in the console.  
 
-![](img/NAVIGATING AND COMMANDS R1-9.png)   
+![](img/NAVIGATING AND COMMANDS R19.png)   
 
 You also could highlight the command you want to execute and then click on the run button. Another way to run a command in a script is by using the command (⌘) and enter keys on a mac (or control + enter on a PC).   
 
@@ -102,7 +102,7 @@ Before moving on, we need to talk about a few of R’s quirks. First, R is case 
 
 Second, R cannot handle typos. If you accidentally typed ‘men’ instead of ‘mean’, R will not know that you really meant mean. The predictive text feature of RStudio can help with this. This means that RStudio will suggest functions and objects as you type.   
 
-![](img/NAVIGATING AND COMMANDS R1-10.png)    
+![](img/NAVIGATING AND COMMANDS R110.png)    
 
 Finally, R is ambivalent about spaces. R ignores redundant spaces in equations. For example, if you typed `2     +2` or `2+2` you would get the same answer as when you typed `2 + 2`. But there cannot be spaces in object names (this is another thing to keep in mind when naming objects), and there cannot be spaces between a function and its parentheses.  
 
@@ -124,7 +124,7 @@ Another way to make scripts shareable is to include notes using the hashtag (`#`
 
 In the current script we are working on, we could add organization and explanations to our current script by adding `# R is like a calculator` above the equations we have run so far and `# Packages` to indicate the next section.   
 
-![](img/NAVIGATING AND COMMANDS R1-11.png)   
+![](img/NAVIGATING AND COMMANDS R111.png)   
 
 Note that the comments appear green in the script.  
 
@@ -148,14 +148,14 @@ To install a package using the point and click method, select from the top bar m
 
 TOOLS -> INSTALL PACKAGES
 
-![](img/NAVIGATING AND COMMANDS R1-12.png)   
+![](img/NAVIGATING AND COMMANDS R112.png)   
 
 In the install packages window, type the name of the package you would like to install. For example, type “tidyverse” in the packages box. Then click INSTALL.   
 
-![](img/NAVIGATING AND COMMANDS R1-13.png)   
+![](img/NAVIGATING AND COMMANDS R113.png)   
 Your screen should look like this when the installation is complete:   
 
-![](img/NAVIGATING AND COMMANDS R1-14.png)   
+![](img/NAVIGATING AND COMMANDS R114.png)   
 
 Do not proceed until the console says the package has been installed.  
 
@@ -174,7 +174,7 @@ For example, install the psych package with the following command:
 
 After you type (or copy and paste) this command into a script. Highlight it (or click in the same line as in the command) and then click on the run button (or use the run hot keys).   
 
-![](img/NAVIGATING AND COMMANDS R1-15.png)   
+![](img/NAVIGATING AND COMMANDS R115.png)   
 
 Again, do not proceed until the console says the package has been installed.  
 
@@ -186,11 +186,11 @@ In RStudio, packages can be loaded with point and click or with a command.
 
 Let’s load tidyverse with the point and click method. To do this, first select the packages tab in the files/plots/packages/help pane.   
 
-![](img/NAVIGATING AND COMMANDS R1-16.png)   
+![](img/NAVIGATING AND COMMANDS R116.png)   
 
 Then type “tidyverse” in the search bar (or scroll through the list). Then check the box next to tidyverse. The loading process will appear in the console immediately.  
 
-![](img/NAVIGATING AND COMMANDS R1-17.png)  
+![](img/NAVIGATING AND COMMANDS R117.png)  
 
 The output in the console lists the 8 packages that make up Tidyverse (ggplot2, tibble, tidyr, readr, purr, dplyr, stringr, and forcats).   
 
@@ -204,7 +204,7 @@ For example, load the psych package with this command:
 
 After you run this code in the script, the loading process will appear in the console.  
 
-![](img/NAVIGATING AND COMMANDS R1-18.png)  
+![](img/NAVIGATING AND COMMANDS R118.png)  
 
 Note that if you had already loaded Tidyverse, there will be a warning message telling you that the alpha function is masked from the ggplot2 package. This means that the psych package and the ggplot2 package both have a function called alpha. This is not a big deal. There is a way to tell R which alpha function you want to use.   
 
@@ -238,7 +238,7 @@ For example, here is the command to create the Student ID column:
 After you run this command, an object called ‘id’ will be listed in the environment pane.   
 
 
-![](img/DATA THINGS R1-1.png)  
+![](img/DATA THINGS R11.png)  
 Next let’s assign the data for the number of times the students were late in the first week. Let’s call this variable latew1 (for late week 1, or the number of times students were late the first week of the study). Here is the command:  
  
 `latew1 <- c(2, 0, 1, 2, 0)`  
@@ -247,7 +247,7 @@ Next let’s assign the data for the number of times the students were late in t
 
 After you run this command, an object called `latew1` will be listed in the environment pane.   
 
-![](img/DATA THINGS 1R-2.png)   
+![](img/DATA THINGS 1R2.png)   
 
 Then enter the week 2 and 3 data with the following commands:  
 
@@ -259,7 +259,7 @@ Then enter the week 2 and 3 data with the following commands:
 
 *	This command is telling R to save an object called latew3 that is made up of this list of numbers (2, 1, 0, 3, 0).   
 
-![](img/DATA THINGS 1R-3.png)   
+![](img/DATA THINGS 1R3.png)   
 
 These variables can be combined into one dataset object with the data.frame function. The basic setup of this function is:  
 
@@ -275,7 +275,7 @@ In the current example the command would look like this:
 
 After you run this command, there will be a new object in the environment called tardy. Note that the tardy object is listed under data and the individual variables are listed under values.    
 
-![](img/DATA THINGS 1R-4.png)  
+![](img/DATA THINGS 1R4.png)  
 
 ### Importing Data From Other Sources 
 Often data is collected in a spreadsheet (like excel or google sheets) or through a survey manager (like Qualtrics or SurveyMonkey) and then is opened into RStudio. Before you can open a data file in RStudio, you need to know the format of the data file. See Table 1.1 for some common file extensions for data.  
@@ -294,21 +294,21 @@ You can open data in RStudio using a point and click method or using a command.
 
 The point and click method of importing data in RStudio is simple and convenient. This method is accessed by clicking on the import dataset button in the environment and history pane.   
 
-![](img/DATA THINGS 1R-5.png)    
+![](img/DATA THINGS 1R5.png)    
 
 Select one of the “from text” options if the data is formatted in a .csv or .txt file. (I tend to use the readr option here – but either works fine). Select the “from excel” option if the data is in a .xls or .xlsx format. Select the “from SPSS” option if the data is in a .sav format. Select the “from SAS” option if the data is in a .sasb7dat format. Select the “from Stata” option if the data is in a .dta format.  
 
 Since the data is in a .csv file, let’s select the readr option.  
 
-![](img/DATA THINGS 1R-6.png)  
+![](img/DATA THINGS 1R6.png)  
 
 The following window will open:  
 
-![](img/DATA THINGS 1R-7.png)    
+![](img/DATA THINGS 1R7.png)    
 
 Click on the BROWSE button. Then navigate to your file.  
  
-![](img/DATA THINGS 1R-8.png)  
+![](img/DATA THINGS 1R8.png)  
 
 Inspect the data preview. You should not need to change anything from the default import options.  
 
@@ -316,7 +316,7 @@ Before you click import, I suggest you copy the text in the code preview box. Af
 
 After you click import, your screen will look like this:   
 
-![](img/DATA THINGS 1R-9.png)    
+![](img/DATA THINGS 1R9.png)    
 
 The spreadsheet view of the match dataset will automatically open in the source pane. The variable names are listed at the top of each column, followed by the raw data. Scroll to the right to see all of the data. The object containing the match data will be listed in the environment.  We can see that this dataset has 688 observations and 37 variables.    
 
@@ -358,7 +358,7 @@ For example, to look at the data types of the variables in the match dataset use
 
 After this command is run, the output in the console looks like this:  
 
-![](img/DATA THINGS R1-10.png)   
+![](img/DATA THINGS R110.png)   
 
 The first column lists the names of all of the variables in the dataset. Next, in gray, are the variable types. The dbl stands for double, which is numbers with decimals, positive/negative, fractions. The chr stands for character, or text, data.  After the data type, the remainder of the row lists the raw data of the variable.  
 
@@ -415,11 +415,11 @@ For our current example, let’s add the total judgment score variable to the ma
   
 After this command is run, there will be 38 variables in the dataset object called match (remember that originally there were 37).  
 
-![](img/DATA THINGS R1-11.png)   
+![](img/DATA THINGS R111.png)   
   
 If you want, you can see the new variable by opening the dataset (click on the object listed in the environment) and then scroll to the right. The new variable will be in the last column.   
 
-![](img/DATA THINGS R1-12.png)   
+![](img/DATA THINGS R112.png)   
 
 Next let’s review how to recode a variable.  
 
@@ -447,7 +447,7 @@ In the match example this command would look like:
 
 After this command is run from the script, your screen will look like this:
 
-![](img/DATA THINGS R1-13.png) 
+![](img/DATA THINGS R113.png) 
 
 There are now 39 variables in the dataset object called match.  
 
