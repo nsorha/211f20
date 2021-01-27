@@ -275,7 +275,25 @@ In the current example the command would look like this:
 
 After you run this command, there will be a new object in the environment called tardy. Note that the tardy object is listed under data and the individual variables are listed under values.    
 
-![](img/DATA THINGS 1R4.png)  
+![](img/DATA THINGS 1R4.png)    
+
+
+
+  
+
+### Upload data into RStudio Cloud  
+
+When using RStudio in the cloud, you will first need to upload the data into your project on the website. To do this select the UPLOAD button in the files window. 
+
+![](img/upload.png)
+
+In the Upload Files window, click the CHOOSE FILE button and then navigate to the file on your computer. Then click the OK button. 
+
+![](img/choosefile.png)
+
+The data file should now be listed in the files section of RStudio. 
+
+![](img/filelist.png)
 
 ### Importing Data From Other Sources 
 Often data is collected in a spreadsheet (like excel or google sheets) or through a survey manager (like Qualtrics or SurveyMonkey) and then is opened into RStudio. Before you can open a data file in RStudio, you need to know the format of the data file. See Table 1.1 for some common file extensions for data.  
@@ -289,6 +307,7 @@ Let’s open the data in the match.csv file (this is the data we will use in the
 *	The remaining variables are not relevant to the current chapter, so they are not defined here. 
 
 *note that this data is a subsample of a real data collected through the Kinsey Institute and match.com*
+
 
 You can open data in RStudio using a point and click method or using a command.   
 
