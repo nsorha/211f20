@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Descriptive Statistics | Tools for Working with Data - 211</title>
+  <title>Chapter 5 Descriptive Statistics | Tools for Working with Data</title>
   <meta name="description" content="This GitBook describes tools 211 students can use to work with data." />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Descriptive Statistics | Tools for Working with Data - 211" />
+  <meta property="og:title" content="Chapter 5 Descriptive Statistics | Tools for Working with Data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Descriptive Statistics | Tools for Working with Data - 211" />
+  <meta name="twitter:title" content="Chapter 5 Descriptive Statistics | Tools for Working with Data" />
   
   <meta name="twitter:description" content="This GitBook describes tools 211 students can use to work with data." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Sorhagen, Ph.D." />
 
 
-<meta name="date" content="2020-09-15" />
+<meta name="date" content="2021-01-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="picturing-data.html"/>
-<link rel="next" href="measurement.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,6 +50,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
@@ -136,52 +137,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this book</a></li>
 <li class="chapter" data-level="2" data-path="set-up-project-on-rstudio-cloud.html"><a href="set-up-project-on-rstudio-cloud.html"><i class="fa fa-check"></i><b>2</b> Set up project on Rstudio Cloud</a></li>
 <li class="chapter" data-level="3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#console"><i class="fa fa-check"></i><b>3.1.1</b> Console</a></li>
-<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#script"><i class="fa fa-check"></i><b>3.1.2</b> Script</a></li>
-<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#environment-and-history"><i class="fa fa-check"></i><b>3.1.3</b> Environment and history</a></li>
+<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#windows-in-rstudio"><i class="fa fa-check"></i><b>3.1</b> WINDOWS IN RSTUDIO</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#the-source-pane"><i class="fa fa-check"></i><b>3.1.1</b> The Source Pane</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#the-console-pane"><i class="fa fa-check"></i><b>3.1.2</b> The Console Pane</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#the-environment-and-history-pane"><i class="fa fa-check"></i><b>3.1.3</b> The Environment And History Pane</a></li>
+<li class="chapter" data-level="3.1.4" data-path="introduction.html"><a href="introduction.html#the-filesplotspackageshelp-pane"><i class="fa fa-check"></i><b>3.1.4</b> The Files/Plots/Packages/Help Pane</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#importing-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2</b> Importing data into Rstudio cloud</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#upload-the-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2.1</b> Upload the data into Rstudio Cloud</a></li>
-<li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#import-data"><i class="fa fa-check"></i><b>3.2.2</b> Import data</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#navigating-and-commands"><i class="fa fa-check"></i><b>3.2</b> NAVIGATING AND COMMANDS</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#packages"><i class="fa fa-check"></i><b>3.2.1</b> Packages</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
-<li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="packages.html"><a href="packages.html#installing-packages-using-point-and-click-gui"><i class="fa fa-check"></i><b>4.1.1</b> Installing packages using point and click (GUI)</a></li>
-<li class="chapter" data-level="4.1.2" data-path="packages.html"><a href="packages.html#installing-packages-using-code"><i class="fa fa-check"></i><b>4.1.2</b> Installing packages using code</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="packages.html"><a href="packages.html#loading-packages"><i class="fa fa-check"></i><b>4.2</b> Loading Packages</a></li>
-<li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#misc"><i class="fa fa-check"></i><b>4.3</b> Misc</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="packages.html"><a href="packages.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
+<li class="chapter" data-level="3.3" data-path="introduction.html"><a href="introduction.html#data-things"><i class="fa fa-check"></i><b>3.3</b> DATA THINGS</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="introduction.html"><a href="introduction.html#manual-entry"><i class="fa fa-check"></i><b>3.3.1</b> Manual Entry</a></li>
+<li class="chapter" data-level="3.3.2" data-path="introduction.html"><a href="introduction.html#upload-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.3.2</b> Upload data into RStudio Cloud</a></li>
+<li class="chapter" data-level="3.3.3" data-path="introduction.html"><a href="introduction.html#importing-data-from-other-sources"><i class="fa fa-check"></i><b>3.3.3</b> Importing Data From Other Sources</a></li>
+<li class="chapter" data-level="3.3.4" data-path="introduction.html"><a href="introduction.html#data-set-up"><i class="fa fa-check"></i><b>3.3.4</b> Data Set Up</a></li>
+<li class="chapter" data-level="3.3.5" data-path="introduction.html"><a href="introduction.html#data-transformation"><i class="fa fa-check"></i><b>3.3.5</b> Data Transformation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>5</b> Picturing Data</a><ul>
-<li class="chapter" data-level="5.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>5.1</b> Histograms</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-base-r"><i class="fa fa-check"></i><b>5.1.1</b> Histograms with base R</a></li>
-<li class="chapter" data-level="5.1.2" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-tidyverse"><i class="fa fa-check"></i><b>5.1.2</b> Histograms with tidyverse</a></li>
+<li class="chapter" data-level="4" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>4</b> Picturing Data</a><ul>
+<li class="chapter" data-level="4.1" data-path="picturing-data.html"><a href="picturing-data.html#research-question"><i class="fa fa-check"></i><b>4.1</b> RESEARCH QUESTION</a></li>
+<li class="chapter" data-level="4.2" data-path="picturing-data.html"><a href="picturing-data.html#method"><i class="fa fa-check"></i><b>4.2</b> METHOD</a></li>
+<li class="chapter" data-level="4.3" data-path="picturing-data.html"><a href="picturing-data.html#data-analysis-overview"><i class="fa fa-check"></i><b>4.3</b> DATA ANALYSIS OVERVIEW</a></li>
+<li class="chapter" data-level="4.4" data-path="picturing-data.html"><a href="picturing-data.html#open-data"><i class="fa fa-check"></i><b>4.4</b> OPEN DATA</a></li>
+<li class="chapter" data-level="4.5" data-path="picturing-data.html"><a href="picturing-data.html#frequency-distribution"><i class="fa fa-check"></i><b>4.5</b> FREQUENCY DISTRIBUTION</a></li>
+<li class="chapter" data-level="4.6" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>4.6</b> HISTOGRAMS</a></li>
+<li class="chapter" data-level="4.7" data-path="picturing-data.html"><a href="picturing-data.html#boxplots"><i class="fa fa-check"></i><b>4.7</b> BOXPLOTS</a></li>
+<li class="chapter" data-level="4.8" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>4.8</b> SCATTERPLOTS</a></li>
+<li class="chapter" data-level="4.9" data-path="picturing-data.html"><a href="picturing-data.html#bar-graph"><i class="fa fa-check"></i><b>4.9</b> BAR GRAPH</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>5.2</b> Scatterplots</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="picturing-data.html"><a href="picturing-data.html#two-continuous-variables"><i class="fa fa-check"></i><b>5.2.1</b> Two continuous variables</a></li>
-<li class="chapter" data-level="5.2.2" data-path="picturing-data.html"><a href="picturing-data.html#one-continuous-and-one-categorical-variable"><i class="fa fa-check"></i><b>5.2.2</b> One continuous and one categorical variable</a></li>
+<li class="chapter" data-level="5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>5</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="5.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#research-question-1"><i class="fa fa-check"></i><b>5.1</b> RESEARCH QUESTION</a></li>
+<li class="chapter" data-level="5.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#method-1"><i class="fa fa-check"></i><b>5.2</b> METHOD</a></li>
+<li class="chapter" data-level="5.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-analysis-overview-1"><i class="fa fa-check"></i><b>5.3</b> DATA ANALYSIS OVERVIEW</a></li>
+<li class="chapter" data-level="5.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#open-data-1"><i class="fa fa-check"></i><b>5.4</b> OPEN DATA</a></li>
+<li class="chapter" data-level="5.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-1"><i class="fa fa-check"></i><b>5.5</b> DESCRIPTIVE STATISTICS</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#psych-and-tidyverse"><i class="fa fa-check"></i><b>5.5.1</b> Psych and Tidyverse</a></li>
+<li class="chapter" data-level="5.5.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#base-r"><i class="fa fa-check"></i><b>5.5.2</b> Base R</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="picturing-data.html"><a href="picturing-data.html#additional-resources"><i class="fa fa-check"></i><b>5.3</b> Additional resources</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
-<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-tidyverse-and-psych-packages."><i class="fa fa-check"></i><b>6.1</b> Descriptive statistics using Tidyverse and Psych packages.</a></li>
-<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-base-r"><i class="fa fa-check"></i><b>6.2</b> Descriptive statistics using base R</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="measurement.html"><a href="measurement.html"><i class="fa fa-check"></i><b>7</b> Measurement</a><ul>
-<li class="chapter" data-level="7.1" data-path="measurement.html"><a href="measurement.html#a-brief-introduction-to-spreadsheets-and-some-brief-review-of-previous-material"><i class="fa fa-check"></i><b>7.1</b> A brief introduction to spreadsheets (and some brief review of previous material)</a></li>
-<li class="chapter" data-level="7.2" data-path="measurement.html"><a href="measurement.html#reliability"><i class="fa fa-check"></i><b>7.2</b> Reliability</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="measurement.html"><a href="measurement.html#internal-reliability"><i class="fa fa-check"></i><b>7.2.1</b> Internal reliability</a></li>
-<li class="chapter" data-level="7.2.2" data-path="measurement.html"><a href="measurement.html#test-retest-reliability"><i class="fa fa-check"></i><b>7.2.2</b> Test-retest reliability</a></li>
-<li class="chapter" data-level="7.2.3" data-path="measurement.html"><a href="measurement.html#interrater-reliability"><i class="fa fa-check"></i><b>7.2.3</b> Interrater reliability</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="measurement.html"><a href="measurement.html#validity"><i class="fa fa-check"></i><b>7.3</b> Validity</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="measurement.html"><a href="measurement.html#criterion-validity"><i class="fa fa-check"></i><b>7.3.1</b> Criterion validity</a></li>
-<li class="chapter" data-level="7.3.2" data-path="measurement.html"><a href="measurement.html#convergent-and-discriminant-validity"><i class="fa fa-check"></i><b>7.3.2</b> Convergent and Discriminant Validity</a></li>
-</ul></li>
+<li class="chapter" data-level="5.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-by-group"><i class="fa fa-check"></i><b>5.6</b> DESCRIPTIVE STATISTICS BY GROUP</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -195,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Working with Data - 211</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Working with Data</a>
           </h1>
         </div>
 
@@ -204,113 +197,146 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="descriptive-statistics" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Descriptive Statistics</h1>
-<p><strong>NOTE:</strong> Please open a new script and save it as lab 3 (or week 3) for your reproduction of this chapter.</p>
-<p>This section focuses on functions that find descriptive statistics. <strong>Descriptive statistics</strong> refer to measures of central tendency (mean, median, and mode) and measures of variability (standard deviation, variance, range, etc.).</p>
-<p>There are several functions that find descriptive statistics within R. My preferred method uses the Tidyverse and Psych packages, which I describe first. Next I will show you how to find descriptive statistics using base R.</p>
-<div id="descriptive-statistics-using-tidyverse-and-psych-packages." class="section level2">
-<h2><span class="header-section-number">6.1</span> Descriptive statistics using Tidyverse and Psych packages.</h2>
-<p>First load the tidyverse and psych packages (if they are not already loaded)</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="descriptive-statistics.html#cb2-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb2-2"><a href="descriptive-statistics.html#cb2-2"></a><span class="kw">library</span>(psych)</span></code></pre></div>
-<p>The <code>describe()</code> function of the Psych package was made to produce the most frequently requested stats in psychology research in an easy to read data frame. I pair this with tidyverse styled code (because of the piping - which I explain next).</p>
-<p>Here is the code to get descriptive statistics for the exam2 dataset we made:</p>
-<p><code>exam2 %&gt;%</code><br />
+<h1><span class="header-section-number">Chapter 5</span> Descriptive Statistics</h1>
+<p>After you look at your data, the next step in the data analysis process is to compute descriptive statistics. In this chapter you will learn how to use RStudio to compute measures of central tendency and variability.</p>
+<div id="research-question-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> RESEARCH QUESTION</h2>
+<p>Let’s continue with the match.com example from chapters 1 and 2. In this example we are pretending to be interested in the judgement of people on dating apps – its frequency and its relation to age and education.</p>
+<p>In the last chapter we looked at tables and graphs that told us a bit about the people in our sample in regard to their education, age, and how often they self-report judging others. In this chapter we will add numbers to this understanding with descriptive statistics.</p>
+</div>
+<div id="method-1" class="section level2">
+<h2><span class="header-section-number">5.2</span> METHOD</h2>
+<p>Pretend that you worked with Dr. Amanda Gesselman and her colleagues at the Kinsey Institute to create self-report survey items about how often participants judge others. These items were added to a longer semi-proprietary survey about the attitudes and behaviors of single people in the US. This survey was sent to certain people with accounts on match.com. The people were selected so that the demographics match the most recent US census, with oversampling for gay, lesbian, and bisexual participants. Thousands of people completed the survey. We will use a random sample of 688 people from the total sample here.</p>
+</div>
+<div id="data-analysis-overview-1" class="section level2">
+<h2><span class="header-section-number">5.3</span> DATA ANALYSIS OVERVIEW</h2>
+<p>The data is in file matadatacmplt.csv. This is the same dataset that we used in the introduction chapter - except that the total judgment variable is included matadatacmplt and not in the matchdata.csv file.</p>
+<ul>
+<li>The first column contains arbitrary ID numbers to identify the participants<br />
+</li>
+<li>The next column contains the participants’ ages<br />
+</li>
+<li>The third column contains the participants’ highest level of education<br />
+</li>
+<li>The following 12 columns contain the data from the judgement questions (0 = no; 1 = yes)<br />
+</li>
+<li>The judgmt column contains the total number of times the participants reported judging others on the 12 items. (this is the variable you made in the data transformation section of the introduction chapter)<br />
+</li>
+<li>The remaining variables are not relevant to the current chapter, so they are not defined here.</li>
+</ul>
+<p>After the data is opened and you have looked at the data with tables and graphs, the next step is to compute descriptive statistics. Descriptive statistics refer to measures of central tendency and variability. Measures of central tendency describe the middle of a distribution of scores. These statistics include the mean, median, and mode. Measures of variability describe the spread or dispersion of the distribution. The standard deviation, variance, and range are common measures of variability. Descriptive statistics are often calculated for the whole sample and also separately for different levels of a categorical variable.</p>
+</div>
+<div id="open-data-1" class="section level2">
+<h2><span class="header-section-number">5.4</span> OPEN DATA</h2>
+<p>First assign the dataset to an object called match (or whatever you prefer). You can do this with the point and click method by selecting from the environment menu:</p>
+<p>IMPORT DATASET -&gt; FROM TEXT (READR)</p>
+<p><img src="img/3R.1.png" /></p>
+<p>Click the BROWSE button and then navigate to your file’s location on your computer. Then click OPEN and then IMPORT.</p>
+<p>Or you could use the following code:</p>
+<p><code>library(readr)</code><br />
+<code>match &lt;- read_csv("matchdatacmplt.csv")</code></p>
+<ul>
+<li>This command is telling R to assign the data in the matchdatacomplt.csv file to an object called match.</li>
+</ul>
+<p>Your screen should look like this after the data is imported:</p>
+<p><img src="img/3R.2.png" /></p>
+</div>
+<div id="descriptive-statistics-1" class="section level2">
+<h2><span class="header-section-number">5.5</span> DESCRIPTIVE STATISTICS</h2>
+<p>This section reviews two ways to compute descriptive statistics in RStudio. First, we will compute descriptive statistics using the psych and tidyverse packages. Then we will review how to use base R to compute them.</p>
+<div id="psych-and-tidyverse" class="section level3">
+<h3><span class="header-section-number">5.5.1</span> Psych and Tidyverse</h3>
+<p>Let’s first load tidyverse, so that we can use pipes (<code>%&gt;%</code>) in our commands:</p>
+<p><code>library(tidyverse)</code><br />
+(or you could use the point and click method described in chapter 1)</p>
+<p>Then load the psych package:</p>
+<p><code>library(psych)</code><br />
+(or you could use the point and click method described in chapter 1)</p>
+<p>Let’s compute descriptive statistics for the judgmental and age variables with the describe function of the psych package. This function was made to compute common descriptive statistics in psychology research. Here is the command:</p>
+<p><code>DataObject %&gt;%</code><br />
 <code>describe()</code></p>
 <ul>
-<li>The <code>describe()</code> function applies to all of the variables in the dataset (here exam2)</li>
-<li>The <code>%&gt;%</code> in this code is called a <strong>pipe</strong></li>
-<li>Pipes are part of the Tidyverse package</li>
-<li>The shortcut to write a pipe (<code>%&gt;%</code>) is <code>shift + command + M (shift + alt + M on a pc)</code></li>
-<li>Pipes are a way to write strings of functions more easily</li>
-<li>You can think of it as a “THEN”</li>
-<li>So this code would be read as “use the exam2 dataset” THEN “compute descriptive statistics with the describe function”</li>
+<li>Replace DataObject with the name of the object that is storing the data</li>
 </ul>
-<p>The twitter handle WeAreRladies uses this example to show the sequential nature of a pipe ( %&gt;% ):<br />
-I woke up %&gt;% showered %&gt;% dressed %&gt;% glammed up %&gt;% took breakfast %&gt;% showed up to work</p>
-<p>Let’s look at the results</p>
-<pre><code>##            vars  n  mean   sd median trimmed  mad   min   max range  skew
-## id            1 21 11.00 6.20  11.00   11.00 7.41  1.00 21.00 20.00  0.00
-## exam2pts      2 21 15.01 2.31  14.62   14.88 2.65 11.79 19.74  7.95  0.37
-## hrsstudye2    3 21  3.02 2.20   2.00    2.88 2.22  0.00  7.00  7.00  0.41
-## cheese        4 21  1.52 0.51   2.00    1.53 0.00  1.00  2.00  1.00 -0.09
-## wine          5 21  1.48 0.51   1.00    1.47 0.00  1.00  2.00  1.00  0.09
-##            kurtosis   se
-## id            -1.37 1.35
-## exam2pts      -1.13 0.50
-## hrsstudye2    -1.26 0.48
-## cheese        -2.08 0.11
-## wine          -2.08 0.11</code></pre>
-<p>The results show that the average exam points was 15.01 (out of 20), with a standard deviation of 2.31 points. Students studied for the exam for an average of 3.02 hours (SD = 2.20).</p>
-<p>As the cheese and wine variables are nominal, the mean and standard deviation are not particularly meaningful. Also, any statistics on the ID numbers are meaningless.</p>
-<p>This is a good place to mention that it is vital that you as a researcher understand what the numbers you are looking at are and the assumptions that they carry. R (or any computer program) will not tell you if what you asked for does not make sense or is not appropriate.</p>
-<p>Rather than getting meaningless results that you have to ignore, you could add the <code>select()</code> function to the command above to select certain variables within a dataset. Note that you must include more than one variable for the <code>select()</code> function. Use the <code>pull()</code> function if you want to select only one variable.</p>
-<p>For example, to select the exam2pts and hrsstudye2 variables use the following code:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="descriptive-statistics.html#cb4-1"></a>exam2 <span class="op">%&gt;%</span></span>
-<span id="cb4-2"><a href="descriptive-statistics.html#cb4-2"></a><span class="st">  </span><span class="kw">select</span>(exam2pts, hrsstudye2) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb4-3"><a href="descriptive-statistics.html#cb4-3"></a><span class="st">  </span><span class="kw">describe</span>()</span></code></pre></div>
-<pre><code>##            vars  n  mean   sd median trimmed  mad   min   max range skew
-## exam2pts      1 21 15.01 2.31  14.62   14.88 2.65 11.79 19.74  7.95 0.37
-## hrsstudye2    2 21  3.02 2.20   2.00    2.88 2.22  0.00  7.00  7.00 0.41
-##            kurtosis   se
-## exam2pts      -1.13 0.50
-## hrsstudye2    -1.26 0.48</code></pre>
-<p>You should create frequency tables for nominal data. Do this with the <code>count()</code> function.</p>
-<p>For example, create a frequency table for the cheese variable with this code:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="descriptive-statistics.html#cb6-1"></a>exam2 <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb6-2"><a href="descriptive-statistics.html#cb6-2"></a><span class="st">  </span><span class="kw">count</span>(cheese)</span></code></pre></div>
-<pre><code>## # A tibble: 2 x 2
-##   cheese     n
-##    &lt;dbl&gt; &lt;int&gt;
-## 1      1    10
-## 2      2    11</code></pre>
+<p>In the current example the command looks like this:</p>
+<p><code>match %&gt;%</code><br />
+<code>describe()</code></p>
 <ul>
-<li>this code is saying to "use the exam 2 dataset and then count the cheese varible.</li>
+<li>This command is saying to first go to the dataset named match and then describe it<br />
+After this command is run, your screen should look like this:</li>
 </ul>
-<p>The results show that 10 students did not eat cheese the night before Exam 2 (see Introduction for codebook – or what the 1 and 2 mean) and 11 students did eat cheese the night before the exam.</p>
-<p>Finally, often we want to know descriptive statistics by group. For example, say you were interested in relation between cheese eating and exam 2 scores. You would want to know the descriptive statistics of the exam 2 scores for the students who did and did not eat cheese.</p>
-<p>To do this I use the <code>describeBy()</code> function of the psych package, which reports basic summary statistics by a grouping variable. You have to tell R where to find the grouping variable by first including the dataset, followed by a <code>$</code> and the variable name. In this example: <code>exam2$cheese</code> (I can’t figure out how to avoid the <code>$</code> here - I will give extra credit if you can.)</p>
-<p>Use the <code>pull()</code> function to select the exam2pts variable.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="descriptive-statistics.html#cb8-1"></a>exam2 <span class="op">%&gt;%</span></span>
-<span id="cb8-2"><a href="descriptive-statistics.html#cb8-2"></a><span class="st">  </span><span class="kw">pull</span>(exam2pts) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb8-3"><a href="descriptive-statistics.html#cb8-3"></a><span class="st">  </span><span class="kw">describeBy</span>(exam2<span class="op">$</span>cheese)</span></code></pre></div>
+<p><img src="img/3R.3.png" /></p>
+<p>The first column lists the variable names. The vars columns numbers the variables. The next column reports the number of valid data points for each variable. The next is the mean. The sd in the following column stands for standard deviation. After the standard deviation is the median. In the next few columns trim stands for the trimmed mean; mad stands for median absolute deviation; min stands for minimum; max stands for maximum. The se in the last column stands for standard error.</p>
+<p>You can see that every variable in the match data set is listed in the first column. However, the statistics for some of the variables are meaningless, like the statistics listed in the id row for example (the mean of an arbitrary ID number doesn’t mean anything). Also, descriptive statistics cannot be calculated for categorical variables (which can result in warnings).</p>
+<p>The select command can be added in order to calculate descriptive statistics for only certain variables (use the pull function to select one variable). For example, this is the command to select only the age and judgment variables:</p>
+<p><code>match %&gt;%</code><br />
+<code>select(age, judgmt) %&gt;%</code><br />
+<code>describe()</code></p>
+<ul>
+<li>This command is telling R to use the data in the match dataset then select the age and judgment variables then describe those variables.</li>
+</ul>
+<p>After you run that command, the follow will appear in the console:</p>
+<p><img src="img/3R.4.png" /></p>
+<p>The mean age is 36.18 and the median is 33.5. The mean being greater than the median suggests a positive skew to the data because the older aged people in the tail of the distribution pull the mean age (36.18) to be greater than the 50% mark (33.5). The most frequent age is 24. The standard deviation is 12.45 years, which tells us most people are between 23 to 45 (36 +/- 12). The ages range from 18 to 60 years old.</p>
+<p>The mean judgmental score is 3.54, the median is 3, and the mode is 0 – suggesting that most people in the sample do not judge people very often (or they don’t admit to it at least). The standard deviation is 3.11, so most people in our sample said they judge other people based on between 0 to 6 things. The range was 0 to 12.</p>
+</div>
+<div id="base-r" class="section level3">
+<h3><span class="header-section-number">5.5.2</span> Base R</h3>
+<p>You could also use base R to compute descriptive statistics. There are functions to compute individual statistics. For example, the mean function calculates the mean of a variable. It looks like this:</p>
+<p><code>mean(DataObject$VariableName)</code></p>
+<ul>
+<li>Replace DataObject with the name of the object that is storing the data.<br />
+</li>
+<li>Replace VariableName with the name of the variable.</li>
+</ul>
+<p>In the current example, this command would calculate the mean age of everyone in the sample:</p>
+<p><code>mean(match$age)</code></p>
+<p>The following will appear in the console after that is run from your script:</p>
+<p><img src="img/3R.5.png" /></p>
+<p>Table 3.1 lists R commands for other common statistics. Replace DataObject with the name of the object that is storing the data and replace VariableName with the name of the variable.</p>
+<p><img src="img/table3.1.png" /></p>
+<p>Add na.rm = TRUE after in the parenthesis if there is missing data in the variable (i.e. <code>mean(DataObject$VariableName, na.rm = TRUE)</code>)</p>
+<p>The summary function (<code>summary(DataObject$VariableName)</code>) calculate minimum, 25% point, median, mean, 75% point, and maximum point at the same time. For example, use the following for code to use the summary function of the judgment variable:</p>
+<p><code>summary(match$judgmt)</code></p>
+<p>After this is run from the script, the following will appear in the console:</p>
+<p><img src="img/3R.6.png" /></p>
+</div>
+</div>
+<div id="descriptive-statistics-by-group" class="section level2">
+<h2><span class="header-section-number">5.6</span> DESCRIPTIVE STATISTICS BY GROUP</h2>
+<p>Next let’s compute the judgment descriptive statistics separately for each level of the education variable. To do this let’s use the describeBy function of the psych package, which reports basic summary statistics by a grouping variable. Here is the command:</p>
+<p><code>DataObject %&gt;%</code>
+<code>pull(Variable1Name) %&gt;%</code>
+<code>describeBy(DataObject$Variable2Name)</code></p>
+<ul>
+<li>Replace DataObject with the name of the object that is storing the data.</li>
+<li>Replace Variable1Name with the name of the variable that you want to describe. Use the select function instead of the pull function with more than one variable.<br />
+</li>
+<li>Replace Variable2Name with the name of the grouping variable</li>
+</ul>
+<p>In the current example the command and results looks like:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="descriptive-statistics.html#cb10-1"></a>match <span class="op">%&gt;%</span></span>
+<span id="cb10-2"><a href="descriptive-statistics.html#cb10-2"></a><span class="st">  </span><span class="kw">pull</span>(judgmt) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-3"><a href="descriptive-statistics.html#cb10-3"></a><span class="st">  </span><span class="kw">describeBy</span>(match<span class="op">$</span>edu)</span></code></pre></div>
 <pre><code>## 
 ##  Descriptive statistics by group 
-## group: 1
-##    vars  n  mean   sd median trimmed  mad   min   max range skew kurtosis   se
-## X1    1 10 15.04 2.34  14.94   14.86 2.19 11.79 19.74  7.95 0.41    -0.75 0.74
+## group: bachelors degree
+##    vars   n mean   sd median trimmed  mad min max range skew kurtosis  se
+## X1    1 245 3.94 3.15      3    3.62 2.97   0  12    12 0.75     0.01 0.2
 ## ------------------------------------------------------------ 
-## group: 2
-##    vars  n  mean  sd median trimmed  mad   min   max range skew kurtosis   se
-## X1    1 11 14.98 2.4  13.85    14.9 2.48 12.18 18.46  6.28 0.28    -1.78 0.72</code></pre>
-<p>The results show that the average exam 2 score for students who ate cheese was 15.05 (SD = 2.34) and the average exam 2 score for students who did not ate cheese was 14.98 (SD = 2.4). Other statistics that you might find useful are the group’s n, median, minimum and maximum scores, range, and standard error (se).</p>
-</div>
-<div id="descriptive-statistics-using-base-r" class="section level2">
-<h2><span class="header-section-number">6.2</span> Descriptive statistics using base R</h2>
-<p>Descriptive statistics can also be computed using base R.</p>
-<p>When a variable is stored directly in an object, you can apply the mean and standard deviation functions to the object.</p>
-<p>For example:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="descriptive-statistics.html#cb10-1"></a><span class="kw">mean</span>(classIQ)</span></code></pre></div>
-<pre><code>## [1] 102.4</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="descriptive-statistics.html#cb12-1"></a><span class="kw">sd</span>(classIQ)</span></code></pre></div>
-<pre><code>## [1] 11.0363</code></pre>
-<p>The summary function provides the range and median as well:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="descriptive-statistics.html#cb14-1"></a><span class="kw">summary</span>(classIQ)</span></code></pre></div>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##    89.0    95.0   101.0   102.4   112.0   115.0</code></pre>
-<p>Remember that if a variable is in a data frame, you have to tell R to first look in the data frame in order to find the variable. You do this with the dollar sign (<code>$</code>). Place the <code>$</code> between the name of the data frame and the name of the variable.</p>
-<p>For example, to find the average points earned on Exam 2 use the following code:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="descriptive-statistics.html#cb16-1"></a><span class="kw">mean</span>(exam2<span class="op">$</span>exam2pts)</span></code></pre></div>
-<pre><code>## [1] 15.00571</code></pre>
-<p>Note that when typing this code RStudio will provide a list of the variables in the exam2 after you type the <code>$</code>. It is very convenient.</p>
-<p>The <code>table()</code> function of base R performs categorical tabulations of data, frequency tables, and cross tabulations.</p>
-<p>For the present example, the code is:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="descriptive-statistics.html#cb18-1"></a><span class="kw">table</span>(exam2<span class="op">$</span>cheese)</span></code></pre></div>
-<pre><code>## 
-##  1  2 
-## 10 11</code></pre>
-<p>Note that the table is laid out differently than the Tidyverse one above. But you can still easily see that 10 students did not eat cheese the night before Exam 2 and 11 students did eat cheese the night before the exam.</p>
-<p><em>Some people think that the Tidyverse and Psych packages make computing descriptive statistics a bit easier/more direct/better/easier to understand than base R. You should decide which you prefer. (I tend to prefer Tidyverse and Psych). Another packages that compute descriptive statistics is skimr </em></p>
+## group: graduate or professional degree
+##    vars   n mean   sd median trimmed  mad min max range skew kurtosis   se
+## X1    1 112 4.29 3.29      4    3.94 2.97   0  12    12 0.79    -0.13 0.31
+## ------------------------------------------------------------ 
+## group: high school degree or less
+##    vars  n mean   sd median trimmed  mad min max range skew kurtosis   se
+## X1    1 86 2.27 2.55      2    1.86 2.97   0  12    12 1.37     1.85 0.28
+## ------------------------------------------------------------ 
+## group: two year degree or some college
+##    vars   n mean sd median trimmed  mad min max range skew kurtosis   se
+## X1    1 244 3.25  3      3    2.83 2.97   0  12    12 1.08      0.7 0.19</code></pre>
+<p>In this table we can see that the mean and median judgmental scores increase with educational attainment (high school or less: mean = 2.27, median = 2; two-year degree or some college: mean = 3.25, median = 3; bachelor’s degree: mean = 3.94, median = 3; graduate or professional degree: mean = 4.29, median = 4). The most common judgmental score was zero for the participants with bachelor’s degrees or less. The mode of the participants with graduate or professional degree was 3.</p>
+<p>Based on the standard deviations, there were slightly more variability in the scores at the higher level of education (high school or less = 2.55; two-year degree or some college = 3; bachelor’s degree = 3.15; graduate or professional = 3.29). However, the range was the same for all levels of education.</p>
 
 </div>
 </div>
@@ -319,8 +345,8 @@ I woke up %&gt;% showered %&gt;% dressed %&gt;% glammed up %&gt;% took breakfast
           </div>
         </div>
       </div>
-<a href="picturing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="measurement.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="picturing-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

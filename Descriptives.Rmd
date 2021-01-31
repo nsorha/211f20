@@ -1,149 +1,171 @@
 # Descriptive Statistics
 
-**NOTE:** Please open a new script and save it as lab 3 (or week 3) for your reproduction of this chapter.  
-
 ```{r, include = FALSE}
-
-library(readr)
-
-exam2 <- read_csv("exam2.csv")
-
-
-```
-
-This section focuses on functions that find descriptive statistics. **Descriptive statistics** refer to measures of central tendency (mean, median, and mode) and measures of variability (standard deviation, variance, range, etc.).  
-
-There are several functions that find descriptive statistics within R. My preferred method uses the Tidyverse and Psych packages, which I describe first. Next I will show you how to find descriptive statistics using base R.  
-
-## Descriptive statistics using Tidyverse and Psych packages.
-First load the tidyverse and psych packages (if they are not already loaded)
-
-```{r message=FALSE, warning=FALSE}
 
 library(tidyverse)
 library(psych)
 
-```
-
-The `describe()` function of the Psych package was made to produce the most frequently requested stats in psychology research in an easy to read data frame. I pair this with tidyverse styled code (because of the piping - which I explain next). 
-
-Here is the code to get descriptive statistics for the exam2 dataset we made:   
-
-`exam2 %>%`   
-  `describe()`   
-
--	The `describe()` function applies to all of the variables in the dataset (here exam2)
-- The `%>%` in this code is called a **pipe**
--	Pipes are part of the Tidyverse package
--	The shortcut to write a pipe (`%>%`) is `shift + command + M (shift + alt + M on a pc)`
--	Pipes are a way to write strings of functions more easily
--	You can think of it as a "THEN"
--	So this code would be read as “use the exam2 dataset” THEN “compute descriptive statistics with the describe function”
-
-The twitter handle WeAreRladies uses this example to show the sequential nature of a pipe ( %>% ):   
-I woke up %>%  showered %>% dressed %>% glammed up %>% took breakfast %>% showed up to work    
-
-Let's look at the results
-
-```{r, echo = FALSE}
-exam2 %>%
-  describe()
-```
-
-The results show that the average exam points was 15.01 (out of 20), with a standard deviation of 2.31 points. Students studied for the exam for an average of 3.02 hours (SD = 2.20).  
-
-As the cheese and wine variables are nominal, the mean and standard deviation are not particularly meaningful. Also, any statistics on the ID numbers are meaningless.  
-
-This is a good place to mention that it is vital that you as a researcher understand what the numbers you are looking at are and the assumptions that they carry. R (or any computer program) will not tell you if what you asked for does not make sense or is not appropriate.  
-
-Rather than getting meaningless results that you have to ignore, you could add the `select()` function to the command above to select certain variables within a dataset. Note that you must include more than one variable for the `select()` function. Use the `pull()` function if you want to select only one variable.  
-
-For example, to select the exam2pts and hrsstudye2 variables use the following code:  
-
-```{r}
-exam2 %>%
-  select(exam2pts, hrsstudye2) %>% 
-  describe()
-```
-
-You should create frequency tables for nominal data. Do this with the `count()` function.  
-
-For example, create a frequency table for the cheese variable with this code:  
-
-```{r}
-exam2 %>% 
-  count(cheese)
-```
-- this code is saying to "use the exam 2 dataset and then count the cheese varible.  
-
-The results show that 10 students did not eat cheese the night before Exam 2 (see Introduction for codebook – or what the 1 and 2 mean) and 11 students did eat cheese the night before the exam.   
-   
-Finally, often we want to know descriptive statistics by group. For example, say you were interested in relation between cheese eating and exam 2 scores. You would want to know the descriptive statistics of the exam 2 scores for the students who did and did not eat cheese.   
-
-To do this I use the `describeBy()` function of the psych package, which reports basic summary statistics by a grouping variable. You have to tell R where to find the grouping variable by first including the dataset, followed by a `$` and the variable name. In this example: `exam2$cheese` (I can't figure out how to avoid the `$` here - I will give extra credit if you can.)    
-
-Use the `pull()` function to select the exam2pts variable.   
+match <- read_csv("matchdatacmplt.csv")
 
 
-```{r}
-exam2 %>%
-  pull(exam2pts) %>% 
-  describeBy(exam2$cheese)
-```
-
-The results show that the average exam 2 score for students who ate cheese was 15.05 (SD = 2.34) and the average exam 2 score for students who did not ate cheese was 14.98 (SD = 2.4). Other statistics that you might find useful are the group's n, median, minimum and maximum scores, range, and standard error (se).   
-
-
-## Descriptive statistics using base R
-
-Descriptive statistics can also be computed using base R.  
-
-When a variable is stored directly in an object, you can apply the mean and standard deviation functions to the object. 
-
-For example: 
-```{r, include = FALSE}
-classIQ <- c(112, 115, 89, 95, 101)
-```
-
-```{r}
-mean(classIQ)
-sd(classIQ)
-```
-
-
-The summary function provides the range and median as well: 
-
-```{r}
-summary(classIQ)
-```
-
-Remember that if a variable is in a data frame, you have to tell R to first look in the data frame in order to find the variable. You do this with the dollar sign (`$`). Place the `$` between the name of the data frame and the name of the variable. 
-
-For example, to find the average points earned on Exam 2 use the following code:
-
-```{r}
-
-mean(exam2$exam2pts)
 
 ```
 
-Note that when typing this code RStudio will provide a list of the variables in the exam2 after you type the `$`. It is very convenient.   
+After you look at your data, the next step in the data analysis process is to compute descriptive statistics. In this chapter you will learn how to use RStudio to compute measures of central tendency and variability.   
 
-The `table()` function of base R performs categorical tabulations of data, frequency tables, and cross tabulations.  
+## RESEARCH QUESTION
 
-For the present example, the code is:  
-
-```{r}
-
-table(exam2$cheese)
-
-```
-
-Note that the table is laid out differently than the Tidyverse one above. But you can still easily see that 10 students did not eat cheese the night before Exam 2 and 11 students did eat cheese the night before the exam.    
+Let’s continue with the match.com example from chapters 1 and 2. In this example we are pretending to be interested in the judgement of people on dating apps – its frequency and its relation to age and education.   
   
-*Some people think that the Tidyverse and Psych packages make computing descriptive statistics a bit easier/more direct/better/easier to understand than base R. You should decide which you prefer. (I tend to prefer Tidyverse and Psych). Another packages that compute descriptive statistics is skimr *
+In the last chapter we looked at tables and graphs that told us a bit about the people in our sample in regard to their education, age, and how often they self-report judging others. In this chapter we will add numbers to this understanding with descriptive statistics.  
+
+## METHOD 
+
+Pretend that you worked with Dr. Amanda Gesselman and her colleagues at the Kinsey Institute to create self-report survey items about how often participants judge others. These items were added to a longer semi-proprietary survey about the attitudes and behaviors of single people in the US. This survey was sent to certain people with accounts on match.com. The people were selected so that the demographics match the most recent US census, with oversampling for gay, lesbian, and bisexual participants. Thousands of people completed the survey. We will use a random sample of 688 people from the total sample here.    
+
+## DATA ANALYSIS OVERVIEW
+
+The data is in file matadatacmplt.csv. This is the same dataset that we used in the introduction chapter - except that the total judgment variable is included matadatacmplt and not in the matchdata.csv file.  
+
+*	The first column contains arbitrary ID numbers to identify the participants    
+*	The next column contains the participants’ ages  
+*	The third column contains the participants’ highest level of education  
+* The following 12 columns contain the data from the judgement questions (0 = no; 1 = yes)  
+*	The judgmt column contains the total number of times the participants reported judging others on the 12 items. (this is the variable you made in the data transformation section of the introduction chapter)  
+*	The remaining variables are not relevant to the current chapter, so they are not defined here.  
+
+After the data is opened and you have looked at the data with tables and graphs, the next step is to compute descriptive statistics. Descriptive statistics refer to measures of central tendency and variability. Measures of central tendency describe the middle of a distribution of scores. These statistics include the mean, median, and mode. Measures of variability describe the spread or dispersion of the distribution. The standard deviation, variance, and range are common measures of variability. Descriptive statistics are often calculated for the whole sample and also separately for different levels of a categorical variable.    
+
+## OPEN DATA
+
+First assign the dataset to an object called match (or whatever you prefer). You can do this with the point and click method by selecting from the environment menu:  
+  
+IMPORT DATASET -> FROM TEXT (READR)  
+  
+![](img/3R.1.png)
 
 
+Click the BROWSE button and then navigate to your file’s location on your computer. Then click OPEN and then IMPORT.  
+  
+Or you could use the following code:      
+  
+`library(readr)`  
+`match <- read_csv("matchdatacmplt.csv")`  
+
+*	This command is telling R to assign the data in the matchdatacomplt.csv file to an object called match. 
+
+Your screen should look like this after the data is imported:
+
+![](img/3R.2.png)
+
+
+## DESCRIPTIVE STATISTICS 
+
+This section reviews two ways to compute descriptive statistics in RStudio. First, we will compute descriptive statistics using the psych and tidyverse packages. Then we will review how to use base R to compute them.  
+
+### Psych and Tidyverse 
+Let’s first load tidyverse, so that we can use pipes (`%>%`) in our commands:  
+
+`library(tidyverse)`  
+(or you could use the point and click method described in chapter 1)  
+
+Then load the psych package:  
+  
+`library(psych)`  
+(or you could use the point and click method described in chapter 1)  
+  
+Let’s compute descriptive statistics for the judgmental and age variables with the describe function of the psych package. This function was made to compute common descriptive statistics in psychology research. Here is the command:  
+
+`DataObject %>%`  
+  `describe()`  
+  
+* Replace DataObject with the name of the object that is storing the data  
+   
+In the current example the command looks like this:   
+   
+`match %>%`  
+  `describe()`   
+  
+*	This command is saying to first go to the dataset named match and then describe it  
+After this command is run, your screen should look like this:  
+
+![](img/3R.3.png) 
+
+The first column lists the variable names. The vars columns numbers the variables. The next column reports the number of valid data points for each variable. The next is the mean. The sd in the following column stands for standard deviation. After the standard deviation is the median. In the next few columns trim stands for the trimmed mean; mad stands for median absolute deviation; min stands for minimum; max stands for maximum. The se in the last column stands for standard error.   
+
+You can see that every variable in the match data set is listed in the first column. However, the statistics for some of the variables are meaningless, like the statistics listed in the id row for example (the mean of an arbitrary ID number doesn’t mean anything). Also, descriptive statistics cannot be calculated for categorical variables (which can result in warnings).    
+
+The select command can be added in order to calculate descriptive statistics for only certain variables (use the pull function to select one variable). For example, this is the command to select only the age and judgment variables:  
+
+`match %>%`  
+  `select(age, judgmt) %>% `  
+  `describe()`  
+  
+* This command is telling R to use the data in the match dataset then select the age and judgment variables then describe those variables.  
+
+After you run that command, the follow will appear in the console:  
+
+![](img/3R.4.png)  
+
+
+The mean age is 36.18 and the median is 33.5. The mean being greater than the median suggests a positive skew to the data because the older aged people in the tail of the distribution pull the mean age (36.18) to be greater than the 50% mark (33.5). The most frequent age is 24. The standard deviation is 12.45 years, which tells us most people are between 23 to 45 (36 +/- 12). The ages range from 18 to 60 years old.   
+  
+The mean judgmental score is 3.54, the median is 3, and the mode is 0 – suggesting that most people in the sample do not judge people very often (or they don’t admit to it at least). The standard deviation is 3.11, so most people in our sample said they judge other people based on between 0 to 6 things. The range was 0 to 12.   
+
+### Base R
+You could also use base R to compute descriptive statistics. There are functions to compute individual statistics. For example, the mean function calculates the mean of a variable. It looks like this:   
+  
+`mean(DataObject$VariableName)`  
+
+*	Replace DataObject with the name of the object that is storing the data.  
+*	Replace VariableName with the name of the variable.   
+  
+In the current example, this command would calculate the mean age of everyone in the sample:  
+  
+`mean(match$age)`  
+  
+The following will appear in the console after that is run from your script:  
+
+![](img/3R.5.png)  
+
+Table 3.1 lists R commands for other common statistics. Replace DataObject with the name of the object that is storing the data and replace VariableName with the name of the variable.  
+
+![](img/table3.1.png)  
+
+Add na.rm = TRUE after in the parenthesis if there is missing data in the variable (i.e. `mean(DataObject$VariableName, na.rm = TRUE) `)  
+  
+The summary function (`summary(DataObject$VariableName)`) calculate minimum, 25% point, median, mean, 75% point, and maximum point at the same time. For example, use the following for code to use the summary function of the judgment variable:  
+  
+`summary(match$judgmt)`  
+  
+After this is run from the script, the following will appear in the console:  
+
+![](img/3R.6.png)  
+
+## DESCRIPTIVE STATISTICS BY GROUP 
+  
+Next let’s compute the judgment descriptive statistics separately for each level of the education variable. To do this let’s use the describeBy function of the psych package, which reports basic summary statistics by a grouping variable. Here is the command:  
+
+`DataObject %>%`
+  `pull(Variable1Name) %>% `
+  `describeBy(DataObject$Variable2Name)`
+  
+*	Replace DataObject with the name of the object that is storing the data.
+*	Replace Variable1Name with the name of the variable that you want to describe. Use the select function instead of the pull function with more than one variable.  
+*	Replace Variable2Name with the name of the grouping variable 
+  
+In the current example the command and results looks like:  
+  
+```{r message=FALSE, warning=FALSE}
+match %>%
+  pull(judgmt) %>% 
+  describeBy(match$edu)
+
+```
+
+In this table we can see that the mean and median judgmental scores increase with educational attainment (high school or less: mean = 2.27, median = 2; two-year degree or some college: mean = 3.25, median = 3; bachelor’s degree: mean = 3.94, median = 3; graduate or professional degree: mean = 4.29, median = 4). The most common judgmental score was zero for the participants with bachelor’s degrees or less. The mode of the participants with graduate or professional degree was 3.   
+
+Based on the standard deviations, there were slightly more variability in the scores at the higher level of education (high school or less = 2.55; two-year degree or some college = 3; bachelor’s degree = 3.15; graduate or professional = 3.29). However, the range was the same for all levels of education.   
 
 
 

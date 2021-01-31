@@ -120,7 +120,7 @@
 
 \title{Tools for Working with Data}
 \author{Nicole Sorhagen, Ph.D.}
-\date{2021-01-27}
+\date{2021-01-31}
 
 \begin{document}
 \maketitle
@@ -1235,6 +1235,229 @@ Finally, if you would like to present this graph professionally, the additional 
 \includegraphics{Tools-for-working-with-data-211_files/figure-latex/unnamed-chunk-11-1.pdf}
 
 This graph shows that the mean judgmental score increases with educational attainment.
+
+\hypertarget{descriptive-statistics}{%
+\chapter{Descriptive Statistics}\label{descriptive-statistics}}
+
+After you look at your data, the next step in the data analysis process is to compute descriptive statistics. In this chapter you will learn how to use RStudio to compute measures of central tendency and variability.
+
+\hypertarget{research-question-1}{%
+\section{RESEARCH QUESTION}\label{research-question-1}}
+
+Let's continue with the match.com example from chapters 1 and 2. In this example we are pretending to be interested in the judgement of people on dating apps -- its frequency and its relation to age and education.
+
+In the last chapter we looked at tables and graphs that told us a bit about the people in our sample in regard to their education, age, and how often they self-report judging others. In this chapter we will add numbers to this understanding with descriptive statistics.
+
+\hypertarget{method-1}{%
+\section{METHOD}\label{method-1}}
+
+Pretend that you worked with Dr.~Amanda Gesselman and her colleagues at the Kinsey Institute to create self-report survey items about how often participants judge others. These items were added to a longer semi-proprietary survey about the attitudes and behaviors of single people in the US. This survey was sent to certain people with accounts on match.com. The people were selected so that the demographics match the most recent US census, with oversampling for gay, lesbian, and bisexual participants. Thousands of people completed the survey. We will use a random sample of 688 people from the total sample here.
+
+\hypertarget{data-analysis-overview-1}{%
+\section{DATA ANALYSIS OVERVIEW}\label{data-analysis-overview-1}}
+
+The data is in file matadatacmplt.csv. This is the same dataset that we used in the introduction chapter - except that the total judgment variable is included matadatacmplt and not in the matchdata.csv file.
+
+\begin{itemize}
+\tightlist
+\item
+  The first column contains arbitrary ID numbers to identify the participants\\
+\item
+  The next column contains the participants' ages\\
+\item
+  The third column contains the participants' highest level of education\\
+\item
+  The following 12 columns contain the data from the judgement questions (0 = no; 1 = yes)\\
+\item
+  The judgmt column contains the total number of times the participants reported judging others on the 12 items. (this is the variable you made in the data transformation section of the introduction chapter)\\
+\item
+  The remaining variables are not relevant to the current chapter, so they are not defined here.
+\end{itemize}
+
+After the data is opened and you have looked at the data with tables and graphs, the next step is to compute descriptive statistics. Descriptive statistics refer to measures of central tendency and variability. Measures of central tendency describe the middle of a distribution of scores. These statistics include the mean, median, and mode. Measures of variability describe the spread or dispersion of the distribution. The standard deviation, variance, and range are common measures of variability. Descriptive statistics are often calculated for the whole sample and also separately for different levels of a categorical variable.
+
+\hypertarget{open-data-1}{%
+\section{OPEN DATA}\label{open-data-1}}
+
+First assign the dataset to an object called match (or whatever you prefer). You can do this with the point and click method by selecting from the environment menu:
+
+IMPORT DATASET -\textgreater{} FROM TEXT (READR)
+
+\includegraphics{img/3R.1.png}
+
+Click the BROWSE button and then navigate to your file's location on your computer. Then click OPEN and then IMPORT.
+
+Or you could use the following code:
+
+\texttt{library(readr)}\\
+\texttt{match\ \textless{}-\ read\_csv("matchdatacmplt.csv")}
+
+\begin{itemize}
+\tightlist
+\item
+  This command is telling R to assign the data in the matchdatacomplt.csv file to an object called match.
+\end{itemize}
+
+Your screen should look like this after the data is imported:
+
+\includegraphics{img/3R.2.png}
+
+\hypertarget{descriptive-statistics-1}{%
+\section{DESCRIPTIVE STATISTICS}\label{descriptive-statistics-1}}
+
+This section reviews two ways to compute descriptive statistics in RStudio. First, we will compute descriptive statistics using the psych and tidyverse packages. Then we will review how to use base R to compute them.
+
+\hypertarget{psych-and-tidyverse}{%
+\subsection{Psych and Tidyverse}\label{psych-and-tidyverse}}
+
+Let's first load tidyverse, so that we can use pipes (\texttt{\%\textgreater{}\%}) in our commands:
+
+\texttt{library(tidyverse)}\\
+(or you could use the point and click method described in chapter 1)
+
+Then load the psych package:
+
+\texttt{library(psych)}\\
+(or you could use the point and click method described in chapter 1)
+
+Let's compute descriptive statistics for the judgmental and age variables with the describe function of the psych package. This function was made to compute common descriptive statistics in psychology research. Here is the command:
+
+\texttt{DataObject\ \%\textgreater{}\%}\\
+\texttt{describe()}
+
+\begin{itemize}
+\tightlist
+\item
+  Replace DataObject with the name of the object that is storing the data
+\end{itemize}
+
+In the current example the command looks like this:
+
+\texttt{match\ \%\textgreater{}\%}\\
+\texttt{describe()}
+
+\begin{itemize}
+\tightlist
+\item
+  This command is saying to first go to the dataset named match and then describe it\\
+  After this command is run, your screen should look like this:
+\end{itemize}
+
+\includegraphics{img/3R.3.png}
+
+The first column lists the variable names. The vars columns numbers the variables. The next column reports the number of valid data points for each variable. The next is the mean. The sd in the following column stands for standard deviation. After the standard deviation is the median. In the next few columns trim stands for the trimmed mean; mad stands for median absolute deviation; min stands for minimum; max stands for maximum. The se in the last column stands for standard error.
+
+You can see that every variable in the match data set is listed in the first column. However, the statistics for some of the variables are meaningless, like the statistics listed in the id row for example (the mean of an arbitrary ID number doesn't mean anything). Also, descriptive statistics cannot be calculated for categorical variables (which can result in warnings).
+
+The select command can be added in order to calculate descriptive statistics for only certain variables (use the pull function to select one variable). For example, this is the command to select only the age and judgment variables:
+
+\texttt{match\ \%\textgreater{}\%}\\
+\texttt{select(age,\ judgmt)\ \%\textgreater{}\%}~\\
+\texttt{describe()}
+
+\begin{itemize}
+\tightlist
+\item
+  This command is telling R to use the data in the match dataset then select the age and judgment variables then describe those variables.
+\end{itemize}
+
+After you run that command, the follow will appear in the console:
+
+\includegraphics{img/3R.4.png}
+
+The mean age is 36.18 and the median is 33.5. The mean being greater than the median suggests a positive skew to the data because the older aged people in the tail of the distribution pull the mean age (36.18) to be greater than the 50\% mark (33.5). The most frequent age is 24. The standard deviation is 12.45 years, which tells us most people are between 23 to 45 (36 +/- 12). The ages range from 18 to 60 years old.
+
+The mean judgmental score is 3.54, the median is 3, and the mode is 0 -- suggesting that most people in the sample do not judge people very often (or they don't admit to it at least). The standard deviation is 3.11, so most people in our sample said they judge other people based on between 0 to 6 things. The range was 0 to 12.
+
+\hypertarget{base-r}{%
+\subsection{Base R}\label{base-r}}
+
+You could also use base R to compute descriptive statistics. There are functions to compute individual statistics. For example, the mean function calculates the mean of a variable. It looks like this:
+
+\texttt{mean(DataObject\$VariableName)}
+
+\begin{itemize}
+\tightlist
+\item
+  Replace DataObject with the name of the object that is storing the data.\\
+\item
+  Replace VariableName with the name of the variable.
+\end{itemize}
+
+In the current example, this command would calculate the mean age of everyone in the sample:
+
+\texttt{mean(match\$age)}
+
+The following will appear in the console after that is run from your script:
+
+\includegraphics{img/3R.5.png}
+
+Table 3.1 lists R commands for other common statistics. Replace DataObject with the name of the object that is storing the data and replace VariableName with the name of the variable.
+
+\includegraphics{img/table3.1.png}
+
+Add na.rm = TRUE after in the parenthesis if there is missing data in the variable (i.e.~\texttt{mean(DataObject\$VariableName,\ na.rm\ =\ TRUE)})
+
+The summary function (\texttt{summary(DataObject\$VariableName)}) calculate minimum, 25\% point, median, mean, 75\% point, and maximum point at the same time. For example, use the following for code to use the summary function of the judgment variable:
+
+\texttt{summary(match\$judgmt)}
+
+After this is run from the script, the following will appear in the console:
+
+\includegraphics{img/3R.6.png}
+
+\hypertarget{descriptive-statistics-by-group}{%
+\section{DESCRIPTIVE STATISTICS BY GROUP}\label{descriptive-statistics-by-group}}
+
+Next let's compute the judgment descriptive statistics separately for each level of the education variable. To do this let's use the describeBy function of the psych package, which reports basic summary statistics by a grouping variable. Here is the command:
+
+\texttt{DataObject\ \%\textgreater{}\%}
+\texttt{pull(Variable1Name)\ \%\textgreater{}\%}
+\texttt{describeBy(DataObject\$Variable2Name)}
+
+\begin{itemize}
+\tightlist
+\item
+  Replace DataObject with the name of the object that is storing the data.
+\item
+  Replace Variable1Name with the name of the variable that you want to describe. Use the select function instead of the pull function with more than one variable.\\
+\item
+  Replace Variable2Name with the name of the grouping variable
+\end{itemize}
+
+In the current example the command and results looks like:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{match }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{pull}\NormalTok{(judgmt) }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{describeBy}\NormalTok{(match}\OperatorTok{$}\NormalTok{edu)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Descriptive statistics by group 
+## group: bachelors degree
+##    vars   n mean   sd median trimmed  mad min max range skew kurtosis  se
+## X1    1 245 3.94 3.15      3    3.62 2.97   0  12    12 0.75     0.01 0.2
+## ------------------------------------------------------------ 
+## group: graduate or professional degree
+##    vars   n mean   sd median trimmed  mad min max range skew kurtosis   se
+## X1    1 112 4.29 3.29      4    3.94 2.97   0  12    12 0.79    -0.13 0.31
+## ------------------------------------------------------------ 
+## group: high school degree or less
+##    vars  n mean   sd median trimmed  mad min max range skew kurtosis   se
+## X1    1 86 2.27 2.55      2    1.86 2.97   0  12    12 1.37     1.85 0.28
+## ------------------------------------------------------------ 
+## group: two year degree or some college
+##    vars   n mean sd median trimmed  mad min max range skew kurtosis   se
+## X1    1 244 3.25  3      3    2.83 2.97   0  12    12 1.08      0.7 0.19
+\end{verbatim}
+
+In this table we can see that the mean and median judgmental scores increase with educational attainment (high school or less: mean = 2.27, median = 2; two-year degree or some college: mean = 3.25, median = 3; bachelor's degree: mean = 3.94, median = 3; graduate or professional degree: mean = 4.29, median = 4). The most common judgmental score was zero for the participants with bachelor's degrees or less. The mode of the participants with graduate or professional degree was 3.
+
+Based on the standard deviations, there were slightly more variability in the scores at the higher level of education (high school or less = 2.55; two-year degree or some college = 3; bachelor's degree = 3.15; graduate or professional = 3.29). However, the range was the same for all levels of education.
 
   \bibliography{book.bib,packages.bib}
 
