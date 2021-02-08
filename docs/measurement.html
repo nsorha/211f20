@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Measurement | Tools for Working with Data - 211</title>
+  <title>Chapter 6 Measurement | Tools for Working with Data</title>
   <meta name="description" content="This GitBook describes tools 211 students can use to work with data." />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Measurement | Tools for Working with Data - 211" />
+  <meta property="og:title" content="Chapter 6 Measurement | Tools for Working with Data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Measurement | Tools for Working with Data - 211" />
+  <meta name="twitter:title" content="Chapter 6 Measurement | Tools for Working with Data" />
   
   <meta name="twitter:description" content="This GitBook describes tools 211 students can use to work with data." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Sorhagen, Ph.D." />
 
 
-<meta name="date" content="2020-09-15" />
+<meta name="date" content="2021-02-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
@@ -136,52 +137,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this book</a></li>
 <li class="chapter" data-level="2" data-path="set-up-project-on-rstudio-cloud.html"><a href="set-up-project-on-rstudio-cloud.html"><i class="fa fa-check"></i><b>2</b> Set up project on Rstudio Cloud</a></li>
 <li class="chapter" data-level="3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
-<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#console"><i class="fa fa-check"></i><b>3.1.1</b> Console</a></li>
-<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#script"><i class="fa fa-check"></i><b>3.1.2</b> Script</a></li>
-<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#environment-and-history"><i class="fa fa-check"></i><b>3.1.3</b> Environment and history</a></li>
+<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#make-a-project-in-rstudio-cloud"><i class="fa fa-check"></i><b>3.1</b> Make a project in RStudio cloud</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#windows-in-rstudio"><i class="fa fa-check"></i><b>3.2</b> WINDOWS IN RSTUDIO</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#the-source-pane"><i class="fa fa-check"></i><b>3.2.1</b> The Source Pane</a></li>
+<li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#the-console-pane"><i class="fa fa-check"></i><b>3.2.2</b> The Console Pane</a></li>
+<li class="chapter" data-level="3.2.3" data-path="introduction.html"><a href="introduction.html#the-environment-and-history-pane"><i class="fa fa-check"></i><b>3.2.3</b> The Environment And History Pane</a></li>
+<li class="chapter" data-level="3.2.4" data-path="introduction.html"><a href="introduction.html#the-filesplotspackageshelp-pane"><i class="fa fa-check"></i><b>3.2.4</b> The Files/Plots/Packages/Help Pane</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#importing-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2</b> Importing data into Rstudio cloud</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#upload-the-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2.1</b> Upload the data into Rstudio Cloud</a></li>
-<li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#import-data"><i class="fa fa-check"></i><b>3.2.2</b> Import data</a></li>
+<li class="chapter" data-level="3.3" data-path="introduction.html"><a href="introduction.html#navigating-and-commands"><i class="fa fa-check"></i><b>3.3</b> NAVIGATING AND COMMANDS</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="introduction.html"><a href="introduction.html#packages"><i class="fa fa-check"></i><b>3.3.1</b> Packages</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
-<li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="packages.html"><a href="packages.html#installing-packages-using-point-and-click-gui"><i class="fa fa-check"></i><b>4.1.1</b> Installing packages using point and click (GUI)</a></li>
-<li class="chapter" data-level="4.1.2" data-path="packages.html"><a href="packages.html#installing-packages-using-code"><i class="fa fa-check"></i><b>4.1.2</b> Installing packages using code</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="packages.html"><a href="packages.html#loading-packages"><i class="fa fa-check"></i><b>4.2</b> Loading Packages</a></li>
-<li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#misc"><i class="fa fa-check"></i><b>4.3</b> Misc</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="packages.html"><a href="packages.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
+<li class="chapter" data-level="3.4" data-path="introduction.html"><a href="introduction.html#data-things"><i class="fa fa-check"></i><b>3.4</b> DATA THINGS</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="introduction.html"><a href="introduction.html#manual-entry"><i class="fa fa-check"></i><b>3.4.1</b> Manual Entry</a></li>
+<li class="chapter" data-level="3.4.2" data-path="introduction.html"><a href="introduction.html#upload-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.4.2</b> Upload data into RStudio Cloud</a></li>
+<li class="chapter" data-level="3.4.3" data-path="introduction.html"><a href="introduction.html#importing-data-from-other-sources"><i class="fa fa-check"></i><b>3.4.3</b> Importing Data From Other Sources</a></li>
+<li class="chapter" data-level="3.4.4" data-path="introduction.html"><a href="introduction.html#data-set-up"><i class="fa fa-check"></i><b>3.4.4</b> Data Set Up</a></li>
+<li class="chapter" data-level="3.4.5" data-path="introduction.html"><a href="introduction.html#data-transformation"><i class="fa fa-check"></i><b>3.4.5</b> Data Transformation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>5</b> Picturing Data</a><ul>
-<li class="chapter" data-level="5.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>5.1</b> Histograms</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-base-r"><i class="fa fa-check"></i><b>5.1.1</b> Histograms with base R</a></li>
-<li class="chapter" data-level="5.1.2" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-tidyverse"><i class="fa fa-check"></i><b>5.1.2</b> Histograms with tidyverse</a></li>
+<li class="chapter" data-level="4" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>4</b> Picturing Data</a><ul>
+<li class="chapter" data-level="4.1" data-path="picturing-data.html"><a href="picturing-data.html#research-question"><i class="fa fa-check"></i><b>4.1</b> RESEARCH QUESTION</a></li>
+<li class="chapter" data-level="4.2" data-path="picturing-data.html"><a href="picturing-data.html#method"><i class="fa fa-check"></i><b>4.2</b> METHOD</a></li>
+<li class="chapter" data-level="4.3" data-path="picturing-data.html"><a href="picturing-data.html#data-analysis-overview"><i class="fa fa-check"></i><b>4.3</b> DATA ANALYSIS OVERVIEW</a></li>
+<li class="chapter" data-level="4.4" data-path="picturing-data.html"><a href="picturing-data.html#open-data"><i class="fa fa-check"></i><b>4.4</b> OPEN DATA</a></li>
+<li class="chapter" data-level="4.5" data-path="picturing-data.html"><a href="picturing-data.html#frequency-distribution"><i class="fa fa-check"></i><b>4.5</b> FREQUENCY DISTRIBUTION</a></li>
+<li class="chapter" data-level="4.6" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>4.6</b> HISTOGRAMS</a></li>
+<li class="chapter" data-level="4.7" data-path="picturing-data.html"><a href="picturing-data.html#boxplots"><i class="fa fa-check"></i><b>4.7</b> BOXPLOTS</a></li>
+<li class="chapter" data-level="4.8" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>4.8</b> SCATTERPLOTS</a></li>
+<li class="chapter" data-level="4.9" data-path="picturing-data.html"><a href="picturing-data.html#bar-graph"><i class="fa fa-check"></i><b>4.9</b> BAR GRAPH</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>5.2</b> Scatterplots</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="picturing-data.html"><a href="picturing-data.html#two-continuous-variables"><i class="fa fa-check"></i><b>5.2.1</b> Two continuous variables</a></li>
-<li class="chapter" data-level="5.2.2" data-path="picturing-data.html"><a href="picturing-data.html#one-continuous-and-one-categorical-variable"><i class="fa fa-check"></i><b>5.2.2</b> One continuous and one categorical variable</a></li>
+<li class="chapter" data-level="5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>5</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="5.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#research-question-1"><i class="fa fa-check"></i><b>5.1</b> RESEARCH QUESTION</a></li>
+<li class="chapter" data-level="5.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#method-1"><i class="fa fa-check"></i><b>5.2</b> METHOD</a></li>
+<li class="chapter" data-level="5.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-analysis-overview-1"><i class="fa fa-check"></i><b>5.3</b> DATA ANALYSIS OVERVIEW</a></li>
+<li class="chapter" data-level="5.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#open-data-1"><i class="fa fa-check"></i><b>5.4</b> OPEN DATA</a></li>
+<li class="chapter" data-level="5.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-1"><i class="fa fa-check"></i><b>5.5</b> DESCRIPTIVE STATISTICS</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#psych-and-tidyverse"><i class="fa fa-check"></i><b>5.5.1</b> Psych and Tidyverse</a></li>
+<li class="chapter" data-level="5.5.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#base-r"><i class="fa fa-check"></i><b>5.5.2</b> Base R</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="picturing-data.html"><a href="picturing-data.html#additional-resources"><i class="fa fa-check"></i><b>5.3</b> Additional resources</a></li>
+<li class="chapter" data-level="5.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-by-group"><i class="fa fa-check"></i><b>5.6</b> DESCRIPTIVE STATISTICS BY GROUP</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
-<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-tidyverse-and-psych-packages."><i class="fa fa-check"></i><b>6.1</b> Descriptive statistics using Tidyverse and Psych packages.</a></li>
-<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-base-r"><i class="fa fa-check"></i><b>6.2</b> Descriptive statistics using base R</a></li>
+<li class="chapter" data-level="6" data-path="measurement.html"><a href="measurement.html"><i class="fa fa-check"></i><b>6</b> Measurement</a><ul>
+<li class="chapter" data-level="6.1" data-path="measurement.html"><a href="measurement.html#research-question-2"><i class="fa fa-check"></i><b>6.1</b> RESEARCH QUESTION</a></li>
+<li class="chapter" data-level="6.2" data-path="measurement.html"><a href="measurement.html#method-2"><i class="fa fa-check"></i><b>6.2</b> METHOD</a></li>
+<li class="chapter" data-level="6.3" data-path="measurement.html"><a href="measurement.html#data-analysis-overview-2"><i class="fa fa-check"></i><b>6.3</b> DATA ANALYSIS OVERVIEW</a></li>
+<li class="chapter" data-level="6.4" data-path="measurement.html"><a href="measurement.html#open-data-2"><i class="fa fa-check"></i><b>6.4</b> OPEN DATA</a></li>
+<li class="chapter" data-level="6.5" data-path="measurement.html"><a href="measurement.html#internal-reliability"><i class="fa fa-check"></i><b>6.5</b> INTERNAL RELIABILITY</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="measurement.html"><a href="measurement.html#cronbachs-alpha"><i class="fa fa-check"></i><b>6.5.1</b> Cronbach’s Alpha</a></li>
+<li class="chapter" data-level="6.5.2" data-path="measurement.html"><a href="measurement.html#mcdonalds-omega"><i class="fa fa-check"></i><b>6.5.2</b> Mcdonald’s Omega</a></li>
+<li class="chapter" data-level="6.5.3" data-path="measurement.html"><a href="measurement.html#test-retest-reliability"><i class="fa fa-check"></i><b>6.5.3</b> TEST-RETEST RELIABILITY</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="measurement.html"><a href="measurement.html"><i class="fa fa-check"></i><b>7</b> Measurement</a><ul>
-<li class="chapter" data-level="7.1" data-path="measurement.html"><a href="measurement.html#a-brief-introduction-to-spreadsheets-and-some-brief-review-of-previous-material"><i class="fa fa-check"></i><b>7.1</b> A brief introduction to spreadsheets (and some brief review of previous material)</a></li>
-<li class="chapter" data-level="7.2" data-path="measurement.html"><a href="measurement.html#reliability"><i class="fa fa-check"></i><b>7.2</b> Reliability</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="measurement.html"><a href="measurement.html#internal-reliability"><i class="fa fa-check"></i><b>7.2.1</b> Internal reliability</a></li>
-<li class="chapter" data-level="7.2.2" data-path="measurement.html"><a href="measurement.html#test-retest-reliability"><i class="fa fa-check"></i><b>7.2.2</b> Test-retest reliability</a></li>
-<li class="chapter" data-level="7.2.3" data-path="measurement.html"><a href="measurement.html#interrater-reliability"><i class="fa fa-check"></i><b>7.2.3</b> Interrater reliability</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="measurement.html"><a href="measurement.html#validity"><i class="fa fa-check"></i><b>7.3</b> Validity</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="measurement.html"><a href="measurement.html#criterion-validity"><i class="fa fa-check"></i><b>7.3.1</b> Criterion validity</a></li>
-<li class="chapter" data-level="7.3.2" data-path="measurement.html"><a href="measurement.html#convergent-and-discriminant-validity"><i class="fa fa-check"></i><b>7.3.2</b> Convergent and Discriminant Validity</a></li>
-</ul></li>
+<li class="chapter" data-level="6.6" data-path="measurement.html"><a href="measurement.html#criterion-convergent-and-discriminant-validity"><i class="fa fa-check"></i><b>6.6</b> CRITERION, CONVERGENT, AND DISCRIMINANT VALIDITY</a></li>
+<li class="chapter" data-level="6.7" data-path="measurement.html"><a href="measurement.html#apa-style-write-up"><i class="fa fa-check"></i><b>6.7</b> APA-STYLE WRITE-UP</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -195,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Working with Data - 211</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Working with Data</a>
           </h1>
         </div>
 
@@ -204,248 +211,203 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="measurement" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Measurement</h1>
-<p><strong>NOTE:</strong> Please open a new script and call it lab 4 (or week 4).</p>
-<p>Math anxiety is the feeling of tension or worry in situations that involve math and is a major predictor of math achievement and career choices (Foley et al., 2017; Hembree, 1990).</p>
-<p><a href="https://drive.google.com/file/d/1VvSqWL7W4mvA5MtDAF94GclVIemC_a9P/view?usp=sharing">Ramirez and colleagues (2013)</a> developed the Child Math Anxiety Questionnaire (CMAQ) to measure math anxiety of young children. The measure (which can be seen below) consists of 8 questions which children responded to on a sliding scale that ranged from 1 to 16 points (the points were invisible to the children). Ramirez and colleagues (2013) calculated each child’s CMAQ score by computing an average score of the eight items. Low scores on the CMAQ indicates high levels of math anxiety.</p>
-<p><img src="img/cmaq.png" /></p>
-<p>Let’s pretend that you completed a pilot study testing the construct validity (if it is a good measure of math anxiety) of the CMAQ before Ramirez and her colleagues studied its relation to working memory and math achievement.</p>
-<p>You gave the CMAQ to a convenience sample of 40 second graders. In addition to measuring the students’ math anxiety with the CMAQ, you also measured the students’ math ability, general anxiety, you gave them a different measure of math anxiety, and you had the students wear a heart rate monitor during a math lesson.</p>
-<p><a href="https://docs.google.com/spreadsheets/d/1Ty_kgqdsTM8f1h-lJ-HjkpYqXGc7hAAyP_F9vq-tdEI/edit?usp=sharing">Here is the data.</a></p>
-<p>The first column is arbitrary ID numbers to identify the participants. The next 8 columns represent your participants responses on the CMAQ items. You will see that column J, titled cmaq, is blank. We will complete this column next in the brief introduction to spreadsheets section.</p>
-<p>The next column (genanx) are a measure of general anxiety which was operationalized as the participants scores on the short form of the State - Trait Anxiety Inventory (STAI) which includes 6 statements - rated on a 1 to 4 point scale. The range is 6 to 24 points, with 6 points signifying no anxiety and 24 points signifying the highest level of anxiety.</p>
-<p>The sema column is participants scores on the Scale for Early Mathematics Anxiety (SEMA), which is another measure of children’s math anxiety (Wu et al., 2012). This measure consists of 20 items rated on a 4 point scale (0 - not nervous at all to 3 - very nervous). Responses are summed. Higher scores on the SEMA indicates high levels of math anxiety.</p>
-<p>t2cmaq is the participants’ CMAQ scores administered 2 weeks later.</p>
-<p>The bmp column is the participants average heart rate (beats per minute) during a 15 minute math lesson.</p>
-<div id="a-brief-introduction-to-spreadsheets-and-some-brief-review-of-previous-material" class="section level2">
-<h2><span class="header-section-number">7.1</span> A brief introduction to spreadsheets (and some brief review of previous material)</h2>
-<p>Researchers often initially enter data into spreadsheets (excel, google sheet, numbers, etc.). So, I would like to briefly review how to use basic functions in a spread sheet.</p>
-<p>Either save a copy of the measurementma data to your own google account, or download the data and open it in excel or numbers (or whatever spreadsheet you prefer).</p>
-<p>You may have noticed that there is no data in the cmaq column. To complete this column, we need to calculate the average responses of the CMAQ items for each participant. One way to do this is to use the function options within the spreadsheet. (You also could enter the mean formula using the <code>=</code> sign, which I am not going to show here. Let me know if you would like me to post a short video showing how to do this.)</p>
-<p>My screenshots show how to use the spreadsheet function options in google sheets. However, the process is very similar across all spreadsheet programs - you just might have to look in a different place on your screen.</p>
-<p>First click in the first cell in the cmaq column (cell J2).</p>
-<p>Then click on the sum symbol in the far right of the icon menu, and select the average option.</p>
-<p><img src="img/averagefun.png" /></p>
-<p>Then you should have the average function in cell J2 with nothing in the parenthesis.</p>
-<p><img src="img/averagefun2.png" /></p>
-<p>Next you need to tell the spreadsheet which cells you want it to average by listing them in the parenthesis. You can either select the cells you want the spreadsheet to average or you can type the names of the first and last cell separated by a <code>:</code> sign (in this example B2 : I2). Then hit enter on your keyboard and the average of the 8 items will appear (2).</p>
-<p><img src="img/averagefun3.png" /></p>
-<p>You do not need to enter the equation separately into each cell of this column because spreadsheets will autofill equations for you. To do this, select the cell containing the formula, then select the small square in the bottom right corner of the cell and drag it down to the last row in the dataset. (In some programs you can double-click on the small square and it will autofill to the bottom of the column).</p>
-<p><img src="img/smallbox.png" /></p>
-<p><img src="img/pull.png" /></p>
-<p>When the cmaq column is complete (i.e. you have calculated the average score for each participant), save the data as a .csv file.</p>
-<p>To do this in google sheets, select in the top bar menu:</p>
-<p>FILE -&gt; DOWNLOAD -&gt; COMMA-SEPERATED VALUES (.CSV)</p>
-<p><img src="img/savecsv.png" />
-Again, the process is very similar in other spreadsheet programs.</p>
-<p>Next import the data into your RStudio project and assign the dataset to an object called cmaqpilot. To assign the data to an object, you can use the point and click (GUI) method or you could use the following code:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="measurement.html#cb20-1"></a><span class="kw">library</span>(readr)</span>
-<span id="cb20-2"><a href="measurement.html#cb20-2"></a>cmaqpilot &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;measurementma.csv&quot;</span>)</span></code></pre></div>
-<p>Load the tidyverse and psych packages (if they are not loaded already):</p>
-<p>**normally we</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="measurement.html#cb21-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb21-2"><a href="measurement.html#cb21-2"></a><span class="kw">library</span>(psych)</span></code></pre></div>
-<p>And then let’s first create of histogram of the CMAQ scores:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="measurement.html#cb22-1"></a><span class="kw">ggplot</span>(cmaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>cmaq)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb22-2"><a href="measurement.html#cb22-2"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth=</span><span class="dv">1</span>)</span></code></pre></div>
-<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
-<p>The figure shows that all scores are within the range of possible scores, suggesting no errors occurred during data entry or when you calculated the average scores. The shape is slightly bi-modal, suggesting students are more likely to feel high or low levels of math anxiety, than to feel moderate amounts of math anxiety.</p>
+<h1><span class="header-section-number">Chapter 6</span> Measurement</h1>
+<p>In this chapter we will learn how to use RStudio to assess the construct validity of a measure. We will use scatterplots and correlation coefficient, or r, to evaluate a measure’s reliability and validity.</p>
+<div id="research-question-2" class="section level2">
+<h2><span class="header-section-number">6.1</span> RESEARCH QUESTION</h2>
+<p>Spatial anxiety refers to anxiety about performing spatial tasks like navigation or mentally rotating objects (Lawton, 1994; Ramirez, Gunderson, Levine, &amp; Beilock, 2013). Jing Tian, Su Dam, and Liz Gunderson were interested in how spatial anxiety relates to gender differences in the ability to make number line estimations. They asked approximately 200 elementary school students to complete the Child Spatial Anxiety Questionnaire (CSAQ), which is a measure of spatial anxiety for children. The measure (which can be seen below) consists of 8 items that ask children how nervous they would feel during situations involving spatial tasks. Children responded using five smiley faces displaying emotions ranging from “not nervous at all” to “very, very nervous”.</p>
+<p><img src="img/4.A.png" /></p>
 </div>
-<div id="reliability" class="section level2">
-<h2><span class="header-section-number">7.2</span> Reliability</h2>
-<p>The first step in establishing construct validity is to test the reliability of the measure. <strong>Reliability</strong> refers to consistency.</p>
-<div id="internal-reliability" class="section level3">
-<h3><span class="header-section-number">7.2.1</span> Internal reliability</h3>
-<p>For self-report measures, like the CMAQ, you need to measure internal reliability, which measures the extent to which people give consistent responses on every item of a survey. Researchers typically use Cronbach’s alpha to test whether a measurement scale has internal reliability. Cronbach’s alpha is essentially the average correlation of the correlations between each item of the scale (for a 3 item scale: the average of the correlations between item 1 and 2, item 1 and item 3, and item 2 and 3). This average is weighted by the average variance and the number of items, so it is not quite that simple - but it is the gist.</p>
-<p>Like all correlations, Cronbach’s alphas can technically range from -1 to 1. Higher Cronbach’s alphas indicate better internal reliability (the correlations between the scale items are higher). Cronbach’s alphas of over .70 are considered acceptable in psychology.</p>
-<p>I said technically above because negative Cronbach’s alphas are almost unheard of. In the math anxiety example, that would mean that children reported feeling anxious for one item while not feeling anxious for another item. If all of the items are measuring the same thing (math anxiety), people should respond to them in a consistent matter.</p>
-<p>In order to calculate the Cronbach’s alpha in R you have to create a new object with only the items of the measurement scale.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="measurement.html#cb23-1"></a>cmaq &lt;-<span class="st"> </span>cmaqpilot <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb23-2"><a href="measurement.html#cb23-2"></a><span class="st">  </span><span class="kw">select</span>(t1q1, t1q2, t1q3, t1q4, t1q5, t1q6, t1q7, t1q8)</span></code></pre></div>
+<div id="method-2" class="section level2">
+<h2><span class="header-section-number">6.2</span> METHOD</h2>
+<p>Let’s pretend that you completed a study to test the construct validity of the CSAQ. That is, you wanted to know if the CSAQ is a good measure of children’s spatial anxiety. To do this you contacted the same 200 elementary school students one week after Jing Tian, Su Dam, and Liz Gunderson collected their data, and you collected additional data that will allow you to test whether the CSAQ is reliable (consistent) and valid (accurate).</p>
+<p>There are three types of reliability. No additional data collection is needed to test the internal reliability of the CSAQ, or the consistency of responses within the survey. Test-retest reliability refers to the consistency of a measure over time. In order to assess whether the CSAQ is consistently measuring children’s spatial anxiety over time, you gave the children the CSAQ again. Interrater reliability refers to the consistency of observations. As you are interested in establishing the construct validity of a self-report measure, this is not relevant here.</p>
+<p>There are three empirical ways to assess validity. Criterion validity refers to whether a measure is related to relevant behavioral outcomes. To test the criterion validity of the CSAQ you measured a behavioral indicator of spatial anxiety by recording the children’s heart rate during a 15 minute geography lesson. Convergent validity refers to whether a measure is related to similar measures. To test this, you gave the children a different measure of spatial anxiety. You adapted Lawton’s (1994) Spatial Anxiety Scale to be appropriate for children. Discriminant validity refers to whether a measure is not related to dissimilar measures. You gave the children a measure of general anxiety, the short form of the State - Trait Anxiety Inventory, in order to establish that the CSAQ discriminates between general anxiety and anxiety about spatial abilities.</p>
+</div>
+<div id="data-analysis-overview-2" class="section level2">
+<h2><span class="header-section-number">6.3</span> DATA ANALYSIS OVERVIEW</h2>
+<p>The data can be found in the file csaqp.csv. Each row is a different participant in the study.</p>
+<p><img src="img/4.B.png" /></p>
 <ul>
-<li>This code tells R to select the variables listed in the select function from the cmaqpilot and save it as cmaq.</li>
+<li>The first column contains arbitrary ID numbers to identify the participants.<br />
+</li>
+<li>The next 8 columns contain the children’s responses to each item of the CSAQ. (note this is real data).<br />
+</li>
+<li>The csaq column contains the children’s time 1 CSAQ scores. Jing Tian, Su Dam, and Liz Gunderson calculated each child’s CSAQ score by computing an average score of the eight items. Scores could range from 1 to 5, with higher scores indicating higher levels of spatial anxiety. (note this is real data.)<br />
+</li>
+<li>The csaqt2 column is the children’s CSAQ scores when they took the measure the second time one week later.<br />
+</li>
+<li>The fourth column is the students’ heart rate, the average beats per minute (BPM), during the 15 minute geography lesson.<br />
+</li>
+<li>The next column is the children’s scores on the child version of the Spatial Anxiety Scale (CSAS). This scale consists of 5 items that are rated on a 5-point scale. The sum scores can range between 5 to 20. High scores indicate high levels of spatial anxiety<br />
+</li>
+<li>The last column is the children’s scores on the short form of the State - Trait Anxiety Inventory (Marteau &amp; Bekker, 1992). These scores are the sum of 6 statements that are rated on a 4-point scale, with higher scores signifying more general anxiety.</li>
 </ul>
-<p>Then use the <code>alpha()</code> function, which is part of the psych package, to compute Cronbachs alpha of all if the variables in the cmaq object. The <code>psych::</code> tells r to use the alpha in the psych package (there is also an alpha in the tidyverse package).</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="measurement.html#cb24-1"></a>psych<span class="op">::</span><span class="kw">alpha</span>(cmaq)</span></code></pre></div>
-<pre><code>## 
-## Reliability analysis   
-## Call: psych::alpha(x = cmaq)
-## 
-##   raw_alpha std.alpha G6(smc) average_r S/N    ase mean  sd median_r
-##       0.98      0.98    0.99      0.89  65 0.0036  8.3 4.1     0.89
-## 
-##  lower alpha upper     95% confidence boundaries
-## 0.98 0.98 0.99 
-## 
-##  Reliability if an item is dropped:
-##      raw_alpha std.alpha G6(smc) average_r S/N alpha se   var.r med.r
-## t1q1      0.98      0.98    0.98      0.88  53   0.0045 0.00122  0.88
-## t1q2      0.98      0.98    0.98      0.88  52   0.0046 0.00098  0.88
-## t1q3      0.98      0.98    0.98      0.89  59   0.0040 0.00099  0.89
-## t1q4      0.98      0.98    0.99      0.89  56   0.0042 0.00158  0.88
-## t1q5      0.98      0.98    0.99      0.89  57   0.0041 0.00126  0.89
-## t1q6      0.98      0.98    0.98      0.89  55   0.0043 0.00156  0.88
-## t1q7      0.98      0.98    0.99      0.90  62   0.0038 0.00117  0.90
-## t1q8      0.98      0.98    0.99      0.90  63   0.0038 0.00123  0.90
-## 
-##  Item statistics 
-##       n raw.r std.r r.cor r.drop mean  sd
-## t1q1 40  0.97  0.97  0.97   0.96  7.7 4.8
-## t1q2 40  0.98  0.98  0.98   0.97  8.5 4.6
-## t1q3 40  0.94  0.94  0.94   0.92  8.4 4.2
-## t1q4 40  0.95  0.95  0.95   0.94  8.7 4.3
-## t1q5 40  0.95  0.95  0.94   0.94  8.2 4.7
-## t1q6 40  0.96  0.96  0.96   0.95  8.0 4.3
-## t1q7 40  0.93  0.93  0.92   0.91  8.4 3.9
-## t1q8 40  0.92  0.93  0.91   0.90  8.3 4.0</code></pre>
-<p>In the output - focus on the raw alpha. In this example the Cronbach’s alpha is .98, which is very high - indicating very good internal reliability (Cronbach’s alpha with young kids are rarely this high - outing me for making up this data).</p>
-<p>When Cronbach’s alphas are less than .70, researchers have to revise and reconsider items. The purpose of the rest of the output is to get a sense of what Cronbach’s alpha would be without an item. (Here is a good reference for more information about the rest of the alpha() function output if you are interested: <a href="https://rpubs.com/hauselin/reliabilityanalysis" class="uri">https://rpubs.com/hauselin/reliabilityanalysis</a>)</p>
+<p>Once the data is opened in RStudio, we will first calculate internal reliability statistics. Cronbach’s alpha is the traditional measure psychologists use to assess whether a measurement scale has internal reliability. Cronbach’s alpha is similar to the average correlation of the correlations between each item of the scale, or the average inter-item correlation (AIC). For example, for a 3-item scale the AIC is the average of the correlations between item 1 and 2, item 1 and 3, and item 2 and 3. Ideally AICs should be between .15 to .50 (Clark &amp; Watson, 2019). Anything less than .15 would suggest that the items are not related to each other. Anything over .50 would suggest that the items are redundant.</p>
+<p>Cronbach’s alpha mathematically combines the AIC and the numbers of items in a scale. The closer a Cronbach’s alpha is to 1, the better a scale’s internal reliability (because the correlations between the scale items are higher). Cronbach’s alphas of over .70 are considered acceptable in psychology.</p>
+<p>McDonald’s omega is an “up and coming” measure of internal reliability. It is becoming an increasingly popular alternative to Cronbach’s alpha because it takes the hierarchical structure of the data into account (i.e., that the items in a scale are probably not independent from one another). McDonald’s omegas over .70 are considered acceptable (Dunn, Baguley, &amp; Brunseden, 2013).</p>
+<p>Next assess the test-retest reliability with scatterplots and correlation statistics. Positive and strong (r ≥ .50) correlations between the time 1 and time 2 scores establish good test-retest reliability.</p>
+<p>Scatterplots and correlation statistics are also used to assess criterion, convergent, and discriminant validity. However, there are not cut-offs and benchmarks that indicate good validity. Instead the scatterplots and correlation statistics are used to establish that the pattern of how a measure is related to other measures makes sense. For example, Children who report high levels of spatial anxiety on the CSAQ should have high heart rates during the geography lesson, while those who report low levels of spatial anxiety should have low heart rates during the lesson. Moreover, a positive association between CSAQ scores and the other measure of spatial anxiety (the CSAS) would indicate convergent validity. Finally, a zero association between the CSAQ scores and general anxiety scores would establish discriminant validity.</p>
+</div>
+<div id="open-data-2" class="section level2">
+<h2><span class="header-section-number">6.4</span> OPEN DATA</h2>
+<p>First assign the dataset to an object called csaqpilot (or whatever you prefer). You can do this with the point and click method by selecting from the environment menu:</p>
+<p>IMPORT DATASET -&gt; FROM TEXT (READR)</p>
+<p><img src="img/4r.1.png" />
+If you use this method - remember to change the object name to csaqpilot in the preview box if you want to match my work.</p>
+<p>Or you could use the following code:</p>
+<p><code>library(readr)</code><br />
+<code>csaqpilot &lt;- read_csv("csaqp.csv")</code></p>
+<p>Then load the tidyverse and psych packages (if they are not loaded already):</p>
+<p><code>library(tidyverse)</code><br />
+<code>library(psych)</code></p>
+</div>
+<div id="internal-reliability" class="section level2">
+<h2><span class="header-section-number">6.5</span> INTERNAL RELIABILITY</h2>
+<p>Measure the internal reliability of the CSAQ with Cronbach’s alpha and McDonald’s omega.</p>
+<div id="cronbachs-alpha" class="section level3">
+<h3><span class="header-section-number">6.5.1</span> Cronbach’s Alpha</h3>
+<p>In order to calculate Cronbach’s alpha in R you have to create a new object with only the items of the measurement scale. Do this with the select function of the tidyverse package:</p>
+<p><code>csaq &lt;- csaqpilot %&gt;%</code><br />
+<code>select(csaqi1, csaqi2, csaqi3, csaqi4, csaqi5, csaqi6, csaqi7, csaqi8)</code></p>
+<ul>
+<li>This command tells R to select the variables listed in the select function from the csaqpilot object and save it as csaq.</li>
+</ul>
+<p>After the command is run, a new object called csaq will appear in your environment.</p>
+<p><img src="img/4r.2.png" /></p>
+<p>Then use the alpha function of the psych package to compute the Cronbach’s alpha of the 8 items of the CSAQ by putting the csaq subset in the parentheses of the alpha function like this:</p>
+<p><code>alpha(csaq)</code></p>
+<p>Other packages in R also have functions called alpha (for example the Hmisc and tidyverse package both have alpha functions). When multiple packages with alpha functions are loaded, R can get confused about which alpha function to use. This can be avoided by telling R which package to use. To do this put the package name before the command followed by two colons like this:</p>
+<p><code>psych::alpha(csaq)</code></p>
+<p>Here is the output of the alpha command:</p>
+<p><img src="img/4r.3.png" /></p>
+<p>Cronbach’s alpha is reported under the raw alpha. The Cronbach’s alpha of the CSAQ is .60. The next line reports the 95% confidence interval, which is .52 to .69.</p>
+<p>While the Cronbach’s alpha of the CSAQ is below the .70 cut off that many researchers consider a benchmark for good internal reliability, Cronbach’s alphas with young kids tend to be lower. Internal reliabilities below 0.70 are quite common when studying elementary school-age children.</p>
+<p>The average_r reports the AIC. In this example the AIC is .16, which is within the acceptable range of .15 to .50.</p>
+<p>The mean and sd report the respective statistics for the scale if the items are averaged for each participant, which is how the CSAQ is scored. If a scale uses a sum score instead of an average, the numbers reported here would not be the correct mean and sd.</p>
+<p>The purpose of the ‘Reliability if an item is dropped’ table is to get a sense of what Cronbach’s alpha would be without an item. When Cronbach’s alphas are lower than acceptable, researchers have to revise and reconsider items. Each row of this table reports the Cronbach’s alpha statistics if an item was deleted. For example, the first row reports the Cronbach’s alpha statistics if the first items of the CSAQ (i.e., “How do you feel being asked to say which direction is right or left?”) was dropped. If this item was dropped, the Cronbach’s alpha would be .61.</p>
+<p>The ‘Item statistics’ table shows how each item of a scale is related to the rest of the scale. The raw.r column reports the correlation between the item and the total score with that item still in it. The r.drop column reports the correlation between the item and the total score without the item. The mean and sd report the means and standard deviations of the scale if that item is dropped.</p>
+<p>The last table summarizes the proportions of the responses for each item. The CSAQ is on a 5-point scale, so here we can see the proportion of responses that were 1, 2, 3, 4, 5, or missing. For the first item most children selected 5 (44%) and very few children selected 2 (4%). This table is useful for checking the distribution of responses. There should be variability in participants’ responses. The scale would not be meaningful if everyone is giving the same response.</p>
+</div>
+<div id="mcdonalds-omega" class="section level3">
+<h3><span class="header-section-number">6.5.2</span> Mcdonald’s Omega</h3>
+<p>The psych package has an omega function, but a package called GPArotation must be installed in order to use it. This package only needs to be installed; you do not need to load it. So, if you have not done so already, first install the package with the following code: (Remember that you only have to install a package once.)</p>
+<p><code>install.packages("GPArotation")</code></p>
+<p>To compute McDonald’s omega of the 8 items of the CSAQ put the csaq subset in the parentheses of the omega function, followed by nfactors = 1. The nfactors = 1 tells R that you think that the items are all measuring the same thing (spatial anxiety). It means “the number of factors equals one”. Here is what the command should look like:</p>
+<p><code>psych::omega(csaq, nfactors = 1)</code></p>
+<p>The output of the omega function is long and pulls on advanced statistics, so I suggest focusing on the first table and not worrying about the rest for now.</p>
+<p><img src="img/4r.4.png" />
+McDonald’s omega can be found in the last row of the first table, next to Omega Total. The McDonald’s omega of the CSAQ scale is .61. Note that this omega function also computes Cronbach’s alpha (see the first row of the table).</p>
 </div>
 <div id="test-retest-reliability" class="section level3">
-<h3><span class="header-section-number">7.2.2</span> Test-retest reliability</h3>
-<p>Test-retest reliability refers to consistency of a measure over time. To test this we will use scatterplots and correlation coefficients.</p>
-<p>Let’s first create a scatterplot of the relation between the cmaq and the t2cmaq variable.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="measurement.html#cb26-1"></a><span class="kw">ggplot</span>(cmaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>cmaq, <span class="dt">y=</span>t2cmaq)) <span class="op">+</span></span>
-<span id="cb26-2"><a href="measurement.html#cb26-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
-<p>This scatterplot looks highly positive.</p>
-<p>Let’s next calculate a correlation coefficient between the cmaq and the t2cmaq variable. We will use the <code>corr()</code> function to calculate the confidence interval, effect size, and NHST (Null Hypothesis Significance Testing). The <code>corr.test()</code> function is part of the Psych package and the organization of the code below uses Tidyverse, so you should have both packages loaded.</p>
-<p>Here is the code to compute the correlation coefficient between the cmaq and the t2cmaq variable:</p>
-<p><code>cmaqpilot %&gt;%</code><br />
-<code>select(cmaq, t2cmaq) %&gt;%</code><br />
+<h3><span class="header-section-number">6.5.3</span> TEST-RETEST RELIABILITY</h3>
+<p>We will use scatterplots and correlation coefficients to assess the test-retest reliability of the CSAQ.</p>
+<p>Let’s first create a scatterplot of the relation between the students’ scores the first time they took the CSAQ and the second time they took it (i.e., the csaq and csaqt2 variables). The command using ggplots of the tidyverse package looks like:</p>
+<p><code>ggplot(csaqpilot, aes(x=csaq, y=csaqt2)) +</code><br />
+<code>geom_point()</code></p>
+<ul>
+<li>csaqpilot tells R to use the data in the csaqpilot object<br />
+</li>
+<li>The variables (csaq and t2cmaq) are listed in the aesthetics<br />
+</li>
+<li>geom_point tells R that you want a scatterplot</li>
+</ul>
+<p>Here is the graph:</p>
+<p><img src="img/4r.5.png" /></p>
+<p>Each data point in the graph is a child. The scatterplot shows that the children who reported that they felt anxious about spatial tasks the first time also reported being anxious the second time. That is, it looks like there is a strong positive correlation.</p>
+<p>Let’s next calculate a correlation between the time 1 and 2 spatial anxiety scores. We will use the corr.test function to calculate the correlation and its associated statistics. The corr.test function is part of the psych package and the organization of the code below uses tidyverse. Here is the basic command:</p>
+<p><code>DataObject %&gt;%</code><br />
+<code>select(Variable1Name, Variable2Name) %&gt;%</code><br />
 <code>corr.test() %&gt;%</code><br />
 <code>print(short=FALSE)</code></p>
 <ul>
-<li>Add <code>method="spearman"</code> within the <code>corr.test()</code> parentheses for ranked data (For example: <code>corr.test(method = "spearman")</code>)</li>
-<li>The <code>short = FALSE</code> in the <code>print()</code> parentheses prints the confidence intervals</li>
-<li>Use <code>?corr.test</code> for more options</li>
+<li>Replace DataObject with the name of the object that is storing the data.<br />
+</li>
+<li>Replace Variable1Name with the name of one of the variables.<br />
+</li>
+<li>Replace Variable2Name with the name of the other variable.</li>
 </ul>
-<pre><code>## Call:corr.test(x = .)
-## Correlation matrix 
-##        cmaq t2cmaq
-## cmaq   1.00   0.98
-## t2cmaq 0.98   1.00
-## Sample Size 
-## [1] 40
-## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
-##        cmaq t2cmaq
-## cmaq      0      0
-## t2cmaq    0      0
-## 
-##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
-##            raw.lower raw.r raw.upper raw.p lower.adj upper.adj
-## cmaq-t2cmq      0.96  0.98      0.99     0      0.96      0.99</code></pre>
-<p>The first correlation matrix shows that the correlation between the cmaq and t2cmaq is .98.</p>
-<p>The second matrix shows the NHST estimates the likelihood of getting results as extreme or more extreme given the null is true (i.e., given there is really no association between the variables). If this likelihood is sufficiently small (less than 5%), than we reject the null hypothesis and conclude that the association is more extreme than zero. When the probability value is listed as 0, you should report it as p &lt; .001.</p>
-<p>The last part of the output gives the confidence intervals around the correlation coefficient. The confidence interval provides an interval estimate of a parameter. Here the parameter is the true correlation between the two variables. In the present example, the correlation coefficient (r = 0.98) is a point estimate of the true association between the CMAQ at time 1 and 2. The confidence interval gives us an interval estimate of this association (it is between .96 to .99). Larger confidence intervals indicate more uncertainty about the true size of the association.</p>
-<p>The scatterplot and correlation coefficient suggest that the CMAQ has test-retest reliability - they both show that the children responded to the CMAQ items consistently over time.</p>
-</div>
-<div id="interrater-reliability" class="section level3">
-<h3><span class="header-section-number">7.2.3</span> Interrater reliability</h3>
-<p>Interrater reliability refers to the consistency of coding ratings between different raters. Since we are interested in the construct validity of a self-report measure here, interrater reliability is not relevant. But the process of creating scatterplots and calculating the correlation coefficient would be the same, here you would use the two raters’ observations.</p>
+<p>Here is the command in the current example:</p>
+<p><code>csaqpilot %&gt;%</code><br />
+<code>select(csaq, csaqt2) %&gt;%</code><br />
+<code>corr.test() %&gt;%</code><br />
+<code>print(short=FALSE)</code></p>
+<ul>
+<li>The csaqpilot tells R to use the data in the csaqpilot object<br />
+</li>
+<li>The select(csaq, csaqt2)tells R to select the variables that we want to include in the correlation matrix. Without this, every variable in the csaqpilot dataset would be included in the correlation matrix.<br />
+</li>
+<li>The short = FALSE in the print parentheses prints the confidence intervals<br />
+</li>
+<li>Use ?corr.test for more options</li>
+</ul>
+<p>Here are the results:</p>
+<p><img src="img/4r.6.png" /></p>
+<p>The first table of the output is the correlation matrix. Each cell in the correlation matrix shows the correlation between two variables. The variable names appear at the top of the columns and the rows. The line of 1.00s is called the diagonal and is the correlation of each variable with itself. The coefficients above and below the diagonal are redundant. The correlation between csaq and csaqt2 is .91. (test-retest reliability with children is rarely this high, outing my fake data).</p>
+<p>The next table shows the probability associated with the correlation coefficients listed in the first table. These probabilities are the p-values from null hypothesis significance testing (NHST). NHST estimates the likelihood of getting results as extreme or more extreme given the null is true (i.e., given there is really no association between the variables). If this likelihood is sufficiently small (less than 5%), than we reject the null hypothesis and conclude that the association is more extreme than zero.</p>
+<p>The table reports that the p-values associated with the correlation between csaq and csaqt2 is 0. This means that it is less than .001 (the default is for R to report 0 if the number is sufficiently small to save space - but we know that 0 is never an option in NHST because the tails of the distribution are asymptotic).</p>
+<p>The last table shows the confidence intervals. The confidence interval provides an interval estimate of a parameter. Here the parameter is the true correlation between two observations. This range fairly often contains the true association (population level) between the variables.</p>
+<p>In the present example, the correlation coefficient between the time 1 and 2 CSAQ scores (r = 0.91) is a point estimate of the true association between the variables. The confidence interval gives us an interval estimate of this association and it can be found in the first row, that begins with csaq-csqt2. The raw.lower reports the lower bound of the confidence interval, .89. The raw.upper reports the upper bound of the confidence interval, .93.</p>
 </div>
 </div>
-<div id="validity" class="section level2">
-<h2><span class="header-section-number">7.3</span> Validity</h2>
-<p>The next step in establishing the construct validity of the CMAQ is to establish that is has validity. <strong>Validity</strong> refers to accuracy. We will focus on the 3 empirical ways to assess validity here.</p>
-<div id="criterion-validity" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> Criterion validity</h3>
-<p>Criterion validity refers to whether a measure is related to relevant behavioral outcomes.</p>
-<p>In the current example, we will test whether the CMAQ is related to the students’ heart rate during a math lesson. Students with high math anxiety experience increased
-heart rate during math related tasks (Plaisance, 2009).</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="measurement.html#cb28-1"></a><span class="kw">ggplot</span>(cmaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>cmaq, <span class="dt">y=</span>bpm)) <span class="op">+</span></span>
-<span id="cb28-2"><a href="measurement.html#cb28-2"></a><span class="st">  </span><span class="kw">geom_point</span>() </span></code></pre></div>
-<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
-<p>This plot suggests that the CMAQ is strongly (and positively) correlated to students’ heart rate, which is evidence for criterion validity of the CMAQ.</p>
-<p>You could add the regression line to the scatterplot by adding <code>geom_smooth(method='lm')</code> to your code.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="measurement.html#cb29-1"></a><span class="kw">ggplot</span>(cmaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>cmaq, <span class="dt">y=</span>bpm)) <span class="op">+</span></span>
-<span id="cb29-2"><a href="measurement.html#cb29-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb29-3"><a href="measurement.html#cb29-3"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&#39;lm&#39;</span>)</span></code></pre></div>
-<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
-<p>Some think that it is easier to see that the data points are close to the regression line. It also allows you to see the slope of the line - steeper lines indicate stronger relations.</p>
-<p>Next calculate the correlation coefficient:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="measurement.html#cb30-1"></a>cmaqpilot <span class="op">%&gt;%</span></span>
-<span id="cb30-2"><a href="measurement.html#cb30-2"></a><span class="st">  </span><span class="kw">select</span>(cmaq, bpm) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb30-3"><a href="measurement.html#cb30-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb30-4"><a href="measurement.html#cb30-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<div id="criterion-convergent-and-discriminant-validity" class="section level2">
+<h2><span class="header-section-number">6.6</span> CRITERION, CONVERGENT, AND DISCRIMINANT VALIDITY</h2>
+<p>Scatterplots and correlation statistics are also used to establish criterion, convergent, and discriminant validity.</p>
+<p>Use ggplot to create the scatterplots. Here is the command to create the scatterplot of the participants’ CSAQ scores and their average heart rate during the geography lesson (i.e., the csaq and geobpm variables):</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="measurement.html#cb12-1"></a><span class="kw">ggplot</span>(csaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>geobpm)) <span class="op">+</span></span>
+<span id="cb12-2"><a href="measurement.html#cb12-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>This plot shows that CSAQ scores are strongly (and positively) correlated to heart rate during a geography lesson. The children with high CSAQ scores had higher heart rates, while those with lower CSAQ scores had lower hear rates.</p>
+<p>Next use the following command to create the scatterplot of the participants’ CSAQ and CSAS scores:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="measurement.html#cb13-1"></a><span class="kw">ggplot</span>(csaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>csas)) <span class="op">+</span></span>
+<span id="cb13-2"><a href="measurement.html#cb13-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>The figure shows a positive relation between the CSAQ and CSAS scores. Children who reported high spatial anxiety on the CSAQ also reported high spatial anxiety on the CSAS, and vice-versa.</p>
+<p>Finally, here is the command to create the scatterplot of the participants’ CSAQ and general anxiety scores:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="measurement.html#cb14-1"></a><span class="kw">ggplot</span>(csaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>genanx)) <span class="op">+</span></span>
+<span id="cb14-2"><a href="measurement.html#cb14-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>The graph shows a zero association between CSAQ scores and general anxiety scores. Some of the children who reported high levels of spatial anxiety also reported high levels of general anxiety while others reported low levels of general anxiety. Similarly, some of the children who reported low levels of spatial anxiety reported high levels of general anxiety while others reported low levels. There is no clear pattern.</p>
+<p>Next calculate correlation statistics for the relation between the CSAQ scores, the geography lesson heart rate, the CSAS scores, and the general anxiety scores.</p>
+<p>Here is the command to create the correlation matrix:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="measurement.html#cb15-1"></a>csaqpilot <span class="op">%&gt;%</span></span>
+<span id="cb15-2"><a href="measurement.html#cb15-2"></a><span class="st">  </span><span class="kw">select</span>(csaq, geobpm, csas, genanx) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-3"><a href="measurement.html#cb15-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-4"><a href="measurement.html#cb15-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
 <pre><code>## Call:corr.test(x = .)
 ## Correlation matrix 
-##      cmaq  bpm
-## cmaq 1.00 0.95
-## bpm  0.95 1.00
+##         csaq geobpm  csas genanx
+## csaq    1.00   0.90  0.92  -0.04
+## geobpm  0.90   1.00  0.81   0.04
+## csas    0.92   0.81  1.00  -0.06
+## genanx -0.04   0.04 -0.06   1.00
 ## Sample Size 
-## [1] 40
+## [1] 198
 ## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
-##      cmaq bpm
-## cmaq    0   0
-## bpm     0   0
+##        csaq geobpm csas genanx
+## csaq   0.00   0.00 0.00      1
+## geobpm 0.00   0.00 0.00      1
+## csas   0.00   0.00 0.00      1
+## genanx 0.55   0.58 0.39      0
 ## 
 ##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
-##          raw.lower raw.r raw.upper raw.p lower.adj upper.adj
-## cmaq-bpm       0.9  0.95      0.97     0       0.9      0.97</code></pre>
-<p>CMAQ scores were positively related to students’ heart rate (r = .95, p &lt; .001, CI.95 = .90 to .97).</p>
-<p>The scatterplot and correlation show that the CMAQ is highly related to a heart rate - which is a known physical manifestation of math anxiety.</p>
+##             raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## csaq-gebpm       0.87  0.90      0.93  0.00      0.86      0.93
+## csaq-csas        0.90  0.92      0.94  0.00      0.89      0.95
+## csaq-gennx      -0.18 -0.04      0.10  0.55     -0.20      0.12
+## gebpm-csas       0.75  0.81      0.85  0.00      0.74      0.86
+## gebpm-gennx     -0.10  0.04      0.18  0.58     -0.10      0.18
+## csas-gennx      -0.20 -0.06      0.08  0.39     -0.23      0.11</code></pre>
+<p>A correlation matrix with more than two variables is interpreted in the same way as those with two variables. Each cell contains correlation statistics between the variable listed at the top of the column and the beginning of the row.</p>
+<p>In this example, we are interested in the correlations between the children CSAQ scores and the geography lesson heart rate, the CSAS scores, and the general anxiety scores. So, focus on the csaq column. The correlation between the csaq and geobpm variables is .90. The correlation between the csaq and csas variables is .92. Finally, the correlation between the csaq and genanx variables is -.04.</p>
+<p>The next table shows the probabilities associated with the correlation coefficients listed in the first table. Again, focus on the csaq column. The results show that the p-values associated with the correlations between the csaq and geobpm variables and the csaq and csas variables are 0, which means that they are less than .001 - so these associations are statistically significant. The probability value associated with correlation between the csaq and genanx variables is .55, which is above the .05 cutoff for statistical significance.</p>
+<p>The last table shows the confidence intervals. Here the statistics for each correlation are listed in each row. The first column shows the variable names – sometimes R drops the vowels in the names here to save space). In this example the first row reports statistics for the relationship between the csaq and geobpm variables. The lower bound of the confidence interval is .87 (under the raw.lower) and the upper bound is .93 (under raw.upper). The second row reports the confidence interval for the correlation between the csaq and csas variables, which is .90 to .94. The third row reports the confidence interval for the correlation between the csaq and genanx variables, which is -0.18 to .10. Note that this confidence interval includes zero, which is consistent with NHST because both are saying that zero is a likely correlation between the variables.</p>
 </div>
-<div id="convergent-and-discriminant-validity" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> Convergent and Discriminant Validity</h3>
-<p>Convergent and discriminant validity are often considered together. Convergent validity is whether a measure is related to similar measures. Discriminant validity is whether a measure is not related to dissimilar measures.</p>
-<p>In the current example, we will test whether the CMAQ is related to the SEMA, which is another measure of math anxiety. Remember that higher scores on the SEMA indicates high levels of math anxiety. While low scores on the CMAQ indicate high levels of math anxiety. So a negative relation here would indicate convergent validity.</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="measurement.html#cb32-1"></a><span class="kw">ggplot</span>(cmaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>cmaq, <span class="dt">y=</span>sema)) <span class="op">+</span></span>
-<span id="cb32-2"><a href="measurement.html#cb32-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb32-3"><a href="measurement.html#cb32-3"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&#39;lm&#39;</span>)</span></code></pre></div>
-<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
-<p>The figure shows that the CMAQ is negatively correlated to the SEMA.</p>
-<p>Next calculate the correlation coefficient:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="measurement.html#cb33-1"></a>cmaqpilot <span class="op">%&gt;%</span></span>
-<span id="cb33-2"><a href="measurement.html#cb33-2"></a><span class="st">  </span><span class="kw">select</span>(cmaq, sema) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb33-3"><a href="measurement.html#cb33-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb33-4"><a href="measurement.html#cb33-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
-<pre><code>## Call:corr.test(x = .)
-## Correlation matrix 
-##      cmaq sema
-## cmaq  1.0 -0.8
-## sema -0.8  1.0
-## Sample Size 
-## [1] 40
-## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
-##      cmaq sema
-## cmaq    0    0
-## sema    0    0
-## 
-##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
-##           raw.lower raw.r raw.upper raw.p lower.adj upper.adj
-## cmaq-sema     -0.89  -0.8     -0.65     0     -0.89     -0.65</code></pre>
-<p>CMAQ scores were negatively related to students’ SEMA scores (r = -.80, p &lt; .001, CI.95 = -.89 to -.65). That is, children reported equal levels of math anxiety on the CMAQ and SEMA.</p>
-<p>In the current example, we will test discriminant validity by testing whether the CMAQ is related to general anxiety. Here a zero relation would indicate convergent validity.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="measurement.html#cb35-1"></a><span class="kw">ggplot</span>(cmaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>cmaq, <span class="dt">y=</span>genanx)) <span class="op">+</span></span>
-<span id="cb35-2"><a href="measurement.html#cb35-2"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb35-3"><a href="measurement.html#cb35-3"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&#39;lm&#39;</span>)</span></code></pre></div>
-<p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
-<p>The figure shows a zero correlation between CMAQ and SEMA.</p>
-<p>Next calculate the correlation coefficient:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="measurement.html#cb36-1"></a>cmaqpilot <span class="op">%&gt;%</span></span>
-<span id="cb36-2"><a href="measurement.html#cb36-2"></a><span class="st">  </span><span class="kw">select</span>(cmaq, genanx) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb36-3"><a href="measurement.html#cb36-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb36-4"><a href="measurement.html#cb36-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
-<pre><code>## Call:corr.test(x = .)
-## Correlation matrix 
-##         cmaq genanx
-## cmaq    1.00  -0.12
-## genanx -0.12   1.00
-## Sample Size 
-## [1] 40
-## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
-##        cmaq genanx
-## cmaq   0.00   0.47
-## genanx 0.47   0.00
-## 
-##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
-##            raw.lower raw.r raw.upper raw.p lower.adj upper.adj
-## cmaq-gennx     -0.41 -0.12       0.2  0.47     -0.41       0.2</code></pre>
-<p>CMAQ scores were not related to students’ general anxiety scores (r = -.12, p = . 47, CI.95 = -.41 to .20). Note that the confidence interval here includes zero, which is consistent with NHST because both are saying that zero is a likely correlation between the variables.</p>
-<p>Taken together, the CMAQ seems to have convergent and discriminant validity because it is highly related to another measure of math anxiety and it is not related to general anxiety.</p>
+<div id="apa-style-write-up" class="section level2">
+<h2><span class="header-section-number">6.7</span> APA-STYLE WRITE-UP</h2>
+<p>Spatial anxiety was measured with the Child Spatial Anxiety Questionnaire (CSAQ). Items ask children how nervous they would feel during situations involving spatial tasks (e.g., “How do you feel being asked to say which direction is right or left?”). Children responded using five smiley faces displaying emotions ranging from “not nervous at all” to “very, very nervous” (1–5 scale). Internal reliability was moderate (Cronbach’s alpha (⍺) = .60, 95% CI = .52 to .69; McDonald’s Omega (⍵) = .61). The children were administered the CSAQ two times – 1 week apart. Test-retest reliability was high (r = .91, p &lt; .001, 95% CI = .89 to .93).</p>
+<p>The validity of the CSAQ was also considered. CSAQ scores were positively related to children’s heart rate during a geography lesson (r = .90, p &lt; .001, 95% CI = .87 to .93), establishing criterion validity of the CSAQ. CSAQ scores were positively related to another measure of spatial anxiety, the CSAS (r = .92, p &lt; .001, 95% CI = .90 to .94), establishing convergent validity. Moreover, the CSAQ scores were not related to general anxiety scores (r = -.04, p = . 55, CI.95 = -0.18 to .10), establishing discriminant validity.</p>
 
-</div>
 </div>
 </div>
             </section>
