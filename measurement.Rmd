@@ -139,8 +139,9 @@ We will use scatterplots and correlation coefficients to assess the test-retest 
   
 Let's first create a scatterplot of the relation between the students’ scores the first time they took the CSAQ and the second time they took it (i.e., the csaq and csaqt2 variables). The command using ggplots of the tidyverse package looks like:   
   
-`ggplot(csaqpilot, aes(x=csaq, y=csaqt2)) +`  
-  `geom_point()`  
+`csaqpilot %>%`  
+`ggplotaes(x=csaq, y=csaqt2)) +`    
+  `geom_point()`   
     
 *	csaqpilot tells R to use the data in the csaqpilot object  
 *	The variables (csaq and t2cmaq) are listed in the aesthetics   
@@ -199,7 +200,8 @@ Use ggplot to create the scatterplots. Here is the command to create the scatter
 
 ```{r message=FALSE, warning=FALSE}
 
-ggplot(csaqpilot, aes(x=csaq, y=geobpm)) +
+csaqpilot %>% 
+  ggplot(aes(x=csaq, y=geobpm)) +
   geom_point()
 
 
@@ -211,7 +213,8 @@ Next use the following command to create the scatterplot of the participants’ 
 
 ```{r message=FALSE, warning=FALSE}
 
-ggplot(csaqpilot, aes(x=csaq, y=csas)) +
+csaqpilot %>% 
+  ggplot(aes(x=csaq, y=csas)) +
   geom_point()
 
 
@@ -224,7 +227,8 @@ Finally, here is the command to create the scatterplot of the participants’ CS
 
 ```{r message=FALSE, warning=FALSE}
 
-ggplot(csaqpilot, aes(x=csaq, y=genanx)) +
+csaqpilot %>% 
+ggplot(aes(x=csaq, y=genanx)) +
   geom_point()
 
 

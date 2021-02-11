@@ -10,6 +10,7 @@ library(psych)
 
 
 # 1. histograms
+
 # using ggplots
 ggplot(cara, aes(x=opquest)) +
   geom_histogram(binwidth=1)

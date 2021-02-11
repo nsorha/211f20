@@ -120,7 +120,7 @@
 
 \title{Tools for Working with Data}
 \author{Nicole Sorhagen, Ph.D.}
-\date{2021-02-08}
+\date{2021-02-11}
 
 \begin{document}
 \maketitle
@@ -1618,7 +1618,8 @@ We will use scatterplots and correlation coefficients to assess the test-retest 
 
 Let's first create a scatterplot of the relation between the students' scores the first time they took the CSAQ and the second time they took it (i.e., the csaq and csaqt2 variables). The command using ggplots of the tidyverse package looks like:
 
-\texttt{ggplot(csaqpilot,\ aes(x=csaq,\ y=csaqt2))\ +}\\
+\texttt{csaqpilot\ \%\textgreater{}\%}\\
+\texttt{ggplotaes(x=csaq,\ y=csaqt2))\ +}~\\
 \texttt{geom\_point()}
 
 \begin{itemize}
@@ -1696,7 +1697,8 @@ Use ggplot to create the scatterplots. Here is the command to create the scatter
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(csaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{csaq, }\DataTypeTok{y=}\NormalTok{geobpm)) }\OperatorTok{+}
+\NormalTok{csaqpilot }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{csaq, }\DataTypeTok{y=}\NormalTok{geobpm)) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{geom_point}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
@@ -1709,7 +1711,8 @@ Next use the following command to create the scatterplot of the participants' CS
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(csaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{csaq, }\DataTypeTok{y=}\NormalTok{csas)) }\OperatorTok{+}
+\NormalTok{csaqpilot }\OperatorTok{%>%}\StringTok{ }
+\StringTok{  }\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{csaq, }\DataTypeTok{y=}\NormalTok{csas)) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{geom_point}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
@@ -1722,7 +1725,8 @@ Finally, here is the command to create the scatterplot of the participants' CSAQ
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{(csaqpilot, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{csaq, }\DataTypeTok{y=}\NormalTok{genanx)) }\OperatorTok{+}
+\NormalTok{csaqpilot }\OperatorTok{%>%}\StringTok{ }
+\KeywordTok{ggplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{csaq, }\DataTypeTok{y=}\NormalTok{genanx)) }\OperatorTok{+}
 \StringTok{  }\KeywordTok{geom_point}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}

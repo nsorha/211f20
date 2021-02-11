@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Sorhagen, Ph.D." />
 
 
-<meta name="date" content="2021-02-08" />
+<meta name="date" content="2021-02-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -303,7 +303,8 @@ McDonald’s omega can be found in the last row of the first table, next to Omeg
 <h3><span class="header-section-number">6.5.3</span> TEST-RETEST RELIABILITY</h3>
 <p>We will use scatterplots and correlation coefficients to assess the test-retest reliability of the CSAQ.</p>
 <p>Let’s first create a scatterplot of the relation between the students’ scores the first time they took the CSAQ and the second time they took it (i.e., the csaq and csaqt2 variables). The command using ggplots of the tidyverse package looks like:</p>
-<p><code>ggplot(csaqpilot, aes(x=csaq, y=csaqt2)) +</code><br />
+<p><code>csaqpilot %&gt;%</code><br />
+<code>ggplotaes(x=csaq, y=csaqt2)) +</code><br />
 <code>geom_point()</code></p>
 <ul>
 <li>csaqpilot tells R to use the data in the csaqpilot object<br />
@@ -354,18 +355,21 @@ McDonald’s omega can be found in the last row of the first table, next to Omeg
 <h2><span class="header-section-number">6.6</span> CRITERION, CONVERGENT, AND DISCRIMINANT VALIDITY</h2>
 <p>Scatterplots and correlation statistics are also used to establish criterion, convergent, and discriminant validity.</p>
 <p>Use ggplot to create the scatterplots. Here is the command to create the scatterplot of the participants’ CSAQ scores and their average heart rate during the geography lesson (i.e., the csaq and geobpm variables):</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="measurement.html#cb12-1"></a><span class="kw">ggplot</span>(csaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>geobpm)) <span class="op">+</span></span>
-<span id="cb12-2"><a href="measurement.html#cb12-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="measurement.html#cb12-1"></a>csaqpilot <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-2"><a href="measurement.html#cb12-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>geobpm)) <span class="op">+</span></span>
+<span id="cb12-3"><a href="measurement.html#cb12-3"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>This plot shows that CSAQ scores are strongly (and positively) correlated to heart rate during a geography lesson. The children with high CSAQ scores had higher heart rates, while those with lower CSAQ scores had lower hear rates.</p>
 <p>Next use the following command to create the scatterplot of the participants’ CSAQ and CSAS scores:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="measurement.html#cb13-1"></a><span class="kw">ggplot</span>(csaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>csas)) <span class="op">+</span></span>
-<span id="cb13-2"><a href="measurement.html#cb13-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="measurement.html#cb13-1"></a>csaqpilot <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb13-2"><a href="measurement.html#cb13-2"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>csas)) <span class="op">+</span></span>
+<span id="cb13-3"><a href="measurement.html#cb13-3"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>The figure shows a positive relation between the CSAQ and CSAS scores. Children who reported high spatial anxiety on the CSAQ also reported high spatial anxiety on the CSAS, and vice-versa.</p>
 <p>Finally, here is the command to create the scatterplot of the participants’ CSAQ and general anxiety scores:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="measurement.html#cb14-1"></a><span class="kw">ggplot</span>(csaqpilot, <span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>genanx)) <span class="op">+</span></span>
-<span id="cb14-2"><a href="measurement.html#cb14-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="measurement.html#cb14-1"></a>csaqpilot <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb14-2"><a href="measurement.html#cb14-2"></a><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>csaq, <span class="dt">y=</span>genanx)) <span class="op">+</span></span>
+<span id="cb14-3"><a href="measurement.html#cb14-3"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <p><img src="Tools-for-working-with-data-211_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>The graph shows a zero association between CSAQ scores and general anxiety scores. Some of the children who reported high levels of spatial anxiety also reported high levels of general anxiety while others reported low levels of general anxiety. Similarly, some of the children who reported low levels of spatial anxiety reported high levels of general anxiety while others reported low levels. There is no clear pattern.</p>
 <p>Next calculate correlation statistics for the relation between the CSAQ scores, the geography lesson heart rate, the CSAS scores, and the general anxiety scores.</p>
