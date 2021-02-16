@@ -185,10 +185,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5" data-path="measurement.html"><a href="measurement.html#internal-reliability"><i class="fa fa-check"></i><b>6.5</b> INTERNAL RELIABILITY</a><ul>
 <li class="chapter" data-level="6.5.1" data-path="measurement.html"><a href="measurement.html#cronbachs-alpha"><i class="fa fa-check"></i><b>6.5.1</b> Cronbach’s Alpha</a></li>
 <li class="chapter" data-level="6.5.2" data-path="measurement.html"><a href="measurement.html#mcdonalds-omega"><i class="fa fa-check"></i><b>6.5.2</b> Mcdonald’s Omega</a></li>
-<li class="chapter" data-level="6.5.3" data-path="measurement.html"><a href="measurement.html#test-retest-reliability"><i class="fa fa-check"></i><b>6.5.3</b> TEST-RETEST RELIABILITY</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="measurement.html"><a href="measurement.html#criterion-convergent-and-discriminant-validity"><i class="fa fa-check"></i><b>6.6</b> CRITERION, CONVERGENT, AND DISCRIMINANT VALIDITY</a></li>
-<li class="chapter" data-level="6.7" data-path="measurement.html"><a href="measurement.html#apa-style-write-up"><i class="fa fa-check"></i><b>6.7</b> APA-STYLE WRITE-UP</a></li>
+<li class="chapter" data-level="6.6" data-path="measurement.html"><a href="measurement.html#test-retest-reliability"><i class="fa fa-check"></i><b>6.6</b> TEST-RETEST RELIABILITY</a></li>
+<li class="chapter" data-level="6.7" data-path="measurement.html"><a href="measurement.html#criterion-convergent-and-discriminant-validity"><i class="fa fa-check"></i><b>6.7</b> CRITERION, CONVERGENT, AND DISCRIMINANT VALIDITY</a></li>
+<li class="chapter" data-level="6.8" data-path="measurement.html"><a href="measurement.html#apa-style-write-up"><i class="fa fa-check"></i><b>6.8</b> APA-STYLE WRITE-UP</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -299,8 +299,9 @@ If you use this method - remember to change the object name to csaqpilot in the 
 <p><img src="img/4r.4.png" />
 McDonald’s omega can be found in the last row of the first table, next to Omega Total. The McDonald’s omega of the CSAQ scale is .61. Note that this omega function also computes Cronbach’s alpha (see the first row of the table).</p>
 </div>
-<div id="test-retest-reliability" class="section level3">
-<h3><span class="header-section-number">6.5.3</span> TEST-RETEST RELIABILITY</h3>
+</div>
+<div id="test-retest-reliability" class="section level2">
+<h2><span class="header-section-number">6.6</span> TEST-RETEST RELIABILITY</h2>
 <p>We will use scatterplots and correlation coefficients to assess the test-retest reliability of the CSAQ.</p>
 <p>Let’s first create a scatterplot of the relation between the students’ scores the first time they took the CSAQ and the second time they took it (i.e., the csaq and csaqt2 variables). The command using ggplots of the tidyverse package looks like:</p>
 <p><code>csaqpilot %&gt;%</code><br />
@@ -350,9 +351,8 @@ McDonald’s omega can be found in the last row of the first table, next to Omeg
 <p>The last table shows the confidence intervals. The confidence interval provides an interval estimate of a parameter. Here the parameter is the true correlation between two observations. This range fairly often contains the true association (population level) between the variables.</p>
 <p>In the present example, the correlation coefficient between the time 1 and 2 CSAQ scores (r = 0.91) is a point estimate of the true association between the variables. The confidence interval gives us an interval estimate of this association and it can be found in the first row, that begins with csaq-csqt2. The raw.lower reports the lower bound of the confidence interval, .89. The raw.upper reports the upper bound of the confidence interval, .93.</p>
 </div>
-</div>
 <div id="criterion-convergent-and-discriminant-validity" class="section level2">
-<h2><span class="header-section-number">6.6</span> CRITERION, CONVERGENT, AND DISCRIMINANT VALIDITY</h2>
+<h2><span class="header-section-number">6.7</span> CRITERION, CONVERGENT, AND DISCRIMINANT VALIDITY</h2>
 <p>Scatterplots and correlation statistics are also used to establish criterion, convergent, and discriminant validity.</p>
 <p>Use ggplot to create the scatterplots. Here is the command to create the scatterplot of the participants’ CSAQ scores and their average heart rate during the geography lesson (i.e., the csaq and geobpm variables):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="measurement.html#cb1-1"></a>csaqpilot <span class="op">%&gt;%</span><span class="st"> </span></span>
@@ -408,7 +408,7 @@ McDonald’s omega can be found in the last row of the first table, next to Omeg
 <p>The last table shows the confidence intervals. Here the statistics for each correlation are listed in each row. The first column shows the variable names – sometimes R drops the vowels in the names here to save space). In this example the first row reports statistics for the relationship between the csaq and geobpm variables. The lower bound of the confidence interval is .87 (under the raw.lower) and the upper bound is .93 (under raw.upper). The second row reports the confidence interval for the correlation between the csaq and csas variables, which is .90 to .94. The third row reports the confidence interval for the correlation between the csaq and genanx variables, which is -0.18 to .10. Note that this confidence interval includes zero, which is consistent with NHST because both are saying that zero is a likely correlation between the variables.</p>
 </div>
 <div id="apa-style-write-up" class="section level2">
-<h2><span class="header-section-number">6.7</span> APA-STYLE WRITE-UP</h2>
+<h2><span class="header-section-number">6.8</span> APA-STYLE WRITE-UP</h2>
 <p>Spatial anxiety was measured with the Child Spatial Anxiety Questionnaire (CSAQ). Items ask children how nervous they would feel during situations involving spatial tasks (e.g., “How do you feel being asked to say which direction is right or left?”). Children responded using five smiley faces displaying emotions ranging from “not nervous at all” to “very, very nervous” (1–5 scale). Internal reliability was moderate (Cronbach’s alpha (⍺) = .60, 95% CI = .52 to .69; McDonald’s Omega (⍵) = .61). The children were administered the CSAQ two times – 1 week apart. Test-retest reliability was high (r = .91, p &lt; .001, 95% CI = .89 to .93).</p>
 <p>The validity of the CSAQ was also considered. CSAQ scores were positively related to children’s heart rate during a geography lesson (r = .90, p &lt; .001, 95% CI = .87 to .93), establishing criterion validity of the CSAQ. CSAQ scores were positively related to another measure of spatial anxiety, the CSAS (r = .92, p &lt; .001, 95% CI = .90 to .94), establishing convergent validity. Moreover, the CSAQ scores were not related to general anxiety scores (r = -.04, p = . 55, CI.95 = -0.18 to .10), establishing discriminant validity.</p>
 
