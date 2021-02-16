@@ -133,7 +133,7 @@ The output of the omega function is long and pulls on advanced statistics, so I 
 ![](img/4R.4.png)
 McDonald’s omega can be found in the last row of the first table, next to Omega Total. The McDonald’s omega of the CSAQ scale is .61. Note that this omega function also computes Cronbach’s alpha (see the first row of the table).   
 
-### TEST-RETEST RELIABILITY 
+## TEST-RETEST RELIABILITY 
 
 We will use scatterplots and correlation coefficients to assess the test-retest reliability of the CSAQ.   
   
